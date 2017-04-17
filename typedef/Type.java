@@ -8,22 +8,25 @@
 
 package typedef ;
 
+import java.awt.* ;
+
 
 public enum Type {
 	
-	Vide (""),
-	LocoElec1500 ("Electrique 1500V"),
-	LocoElec25000 ("Electrique 25000V"),
-	LocoElecBi ("Electrique bicourante"),
-	LocoTher ("Thermique"),
-	Automotrice ("Automotrice"),
-	Autorail ("Autorail"),
-	Bimode ("Bimode"),
-	LOCMA ("Manoeuvre") ;
+	Vide ("", Color.black),
+	LocoElec1500 ("Electrique 1500V", Color.red),
+	LocoElec25000 ("Electrique 25000V", Color.cyan),
+	LocoElecBi ("Electrique bicourante", new Color(148, 0, 211)),
+	LocoTher ("Thermique", new Color(100, 200, 0)),
+	Automotrice ("Automotrice", Color.orange),
+	Autorail ("Autorail", Color.darkGray),
+	Bimode ("Bimode", Color.blue),
+	LOCMA ("Manoeuvre", Color.magenta) ;
 	
 	// Attributs de chaque élément de l'énumération.
 	private final String symbol ;
 	private final String name ;
+	private final Color color ;
 	
 	
 	/**
@@ -31,9 +34,10 @@ public enum Type {
 	    @param pName		Nom du type d'engin moteur de type 'String'.
 	    @return				Aucun.
 	*/
-	private Type(String pName) {
+	private Type(String pName, Color pColor) {
 		symbol = this.toString() ;
 		name = pName ;
+		color = pColor ;
 	}
 	
 	
@@ -54,6 +58,16 @@ public enum Type {
 	*/
 	public String getName() {
 		return name ;
+	}
+	
+	
+	/**
+		RENVOIE LA COULEUR ASSOCIEE AU TYPE.
+	    @param 			Aucun.
+	    @return	color	Couleur de police utilisée pour représenter le type, de type 'Color'.
+	*/
+	public Color getColor() {
+		return color ;
 	}
 	
 	

@@ -102,7 +102,7 @@ public class RechercheEngin extends JFrame implements ActionListener, DocumentLi
 		
 		gbc.gridx = 0 ;
 		gbc.gridy = 1 ;
-		choixIdentifiant = new JComboBox<String>(Identifiant.getNames()) ; 
+		choixIdentifiant = new JComboBox<String>(Identifiant.getNames()) ;
 		choixIdentifiant.setFont(Interface.police) ;
 		choixIdentifiant.addItemListener(new ItemState()) ;
 		panel.add(choixIdentifiant, gbc) ;
@@ -211,6 +211,17 @@ public class RechercheEngin extends JFrame implements ActionListener, DocumentLi
 	public void setEnginCourant(Engin newEngin) {
 		if (newEngin != null) {
 			enginCourant = newEngin ;
+			// Sélection de l'identifiant.
+			String identifiantCourant = enginCourant.getSerie().getIdentifiant().getName() ;
+			String[] listeIdentifiants = Identifiant.getNames() ;
+			int k = 0 ;
+			for (k=0 ; k<listeIdentifiants.length ; k++) {
+				if (listeIdentifiants[k].compareTo(identifiantCourant) == 0) {
+					break ;
+				}
+			}
+			choixIdentifiant.setSelectedIndex(k) ;
+			// Sélection du numéro.
 			champRecherche.setText(Integer.toString(enginCourant.getNumero())) ;
 			chercher() ;
 		}
@@ -251,13 +262,14 @@ public class RechercheEngin extends JFrame implements ActionListener, DocumentLi
 		}
 		else {
 			rechercher.setEnabled(true) ;
-			Engin preTest = p.rechercherEngin(identifiantCourant, test+1) ;
-			if (preTest != null) {
-				suivant.setEnabled(true) ;
-			}
-			preTest = p.rechercherEngin(identifiantCourant, test-1) ;
-			if (preTest != null) {
-				precedent.setEnabled(true) ;
+			Engin eC = p.rechercherEngin(identifiantCourant, test) ;
+			if (eC != null) {
+				if (eC.getIndice() < eC.getSerie().getEffectif()) {
+					suivant.setEnabled(true) ;
+				}
+				if (eC.getIndice() > 1) {
+					precedent.setEnabled(true) ;
+				}
 			}
 		}
 	}
@@ -289,13 +301,17 @@ public class RechercheEngin extends JFrame implements ActionListener, DocumentLi
 			enable = true ;
 		}
 		if (e.getSource() == suivant) {
-			int newNum = Serie.stringToInteger(champRecherche.getText())+1 ;
+			Engin eC = p.rechercherEngin(identifiantCourant, Serie.stringToInteger(champRecherche.getText())) ;
+			Serie sC = eC.getSerie() ;
+			int newNum = sC.rechercherNumero(eC.getIndice()+1) ;
 			champRecherche.setText(Integer.toString(newNum)) ;
 			i.afficherResultat(chercher(), remarque) ;
 			enable = true ;
 		}
 		if (e.getSource() == precedent) {
-			int newNum = Serie.stringToInteger(champRecherche.getText())-1 ;
+			Engin eC = p.rechercherEngin(identifiantCourant, Serie.stringToInteger(champRecherche.getText())) ;
+			Serie sC = eC.getSerie() ;
+			int newNum = sC.rechercherNumero(eC.getIndice()-1) ;
 			champRecherche.setText(Integer.toString(newNum)) ;
 			i.afficherResultat(chercher(), remarque) ;
 			enable = true ;

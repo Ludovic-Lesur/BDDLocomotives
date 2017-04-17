@@ -8,7 +8,7 @@
 
 package typedef ;
 
-import java.awt.Color;
+import java.awt.* ;
 
 
 public enum Depot {

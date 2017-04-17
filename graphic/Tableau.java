@@ -555,35 +555,7 @@ public class Tableau extends JPanel {
 	        switch (column) {
 	        case 0 :
 	        	// Couleur de la série en fonction du type
-	        	switch (serieCourante.getType()) {
-	        	case LocoElec1500 :
-	        		setForeground(Color.red) ;
-	        		break ;
-	        	case LocoElec25000 :
-	        		setForeground(Color.blue) ;
-	        		break ;
-	        	case LocoElecBi :
-	        		setForeground(new Color(148, 0, 211)) ;
-	        		break ;
-	        	case LocoTher :
-	        		setForeground(new Color(100, 200, 0)) ;
-	        		break ;
-	        	case Automotrice :
-	        		setForeground(Color.yellow) ;
-	        		break ;
-	        	case Autorail :
-	        		setForeground(Color.orange) ;
-	        		break ;
-	        	case Bimode :
-	        		setForeground(Color.blue) ;
-	        		break ;
-	        	case LOCMA :
-	        		setForeground(Color.pink) ;
-	        		break ;
-	        	default :
-	        		setForeground(Color.black) ;
-	        		break ;
-	        	}
+	        	setForeground(serieCourante.getType().getColor()) ;
 	        	break ;
 	        case 3 :
 	        	setForeground(new Color(100, 200, 0)) ;

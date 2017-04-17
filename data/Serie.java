@@ -249,9 +249,10 @@ public class Serie implements Comparable<Serie> {
 	*/
 	public LocalDate getJourMESMin() {
 		LocalDate dateMESMin = LocalDate.now() ;
-		int num = 0 ;
-		for (num=(serie+1) ; num<=(serie+effectif) ; num++) {
-			Engin e = rechercherEngin(num, Parc.dossierParc) ;
+		int k = 0 ;
+		for (k=1 ; k<=effectif ; k++) {
+			int numCherche = rechercherNumero(k) ;
+			Engin e = rechercherEngin(numCherche, Parc.dossierParc) ;
 			if (e != null) {
 				LocalDate dateMES = e.getDateMES() ;
 				// On ne prend pas en compte les engins en attente...
@@ -273,9 +274,10 @@ public class Serie implements Comparable<Serie> {
 	*/
 	public String getAnneeMESMin() {
 		int resultat = Integer.MAX_VALUE ;
-		int num = 0 ;
-		for (num=(serie+1) ; num<=(serie+effectif) ; num++) {
-			Engin e = rechercherEngin(num, Parc.dossierParc) ;
+		int k = 0 ;
+		for (k=1 ; k<=effectif ; k++) {
+			int numCherche = rechercherNumero(k) ;
+			Engin e = rechercherEngin(numCherche, Parc.dossierParc) ;
 			if (e != null) {
 				LocalDate dateMES = e.getDateMES() ;
 				// On ne prend pas en compte les engins en attente...
@@ -297,9 +299,10 @@ public class Serie implements Comparable<Serie> {
 	*/
 	public String getAnneeMESMax() {
 		int resultat = Integer.MIN_VALUE ;
-		int num = 0 ;
-		for (num=(serie+1) ; num<=(serie+effectif) ; num++) {
-			Engin e = rechercherEngin(num, Parc.dossierParc) ;
+		int k = 0 ;
+		for (k=1 ; k<=effectif ; k++) {
+			int numCherche = rechercherNumero(k) ;
+			Engin e = rechercherEngin(numCherche, Parc.dossierParc) ;
 			if (e != null) {
 				LocalDate dateMES = e.getDateMES() ;
 				// On ne prend pas en compte les engins en attente...
@@ -321,14 +324,15 @@ public class Serie implements Comparable<Serie> {
 	*/
 	public int getNbEnginsVus() {
 		int nbEnginsVus = 0 ;
-		int num = 0 ;
-		for (num=(serie+1) ; num<=(serie+effectif) ; num++) {
-			Engin enginCourant = rechercherEngin(num, Parc.dossierParc) ;
-			if (enginCourant != null) {
-				if (enginCourant.getNbVues() > 0) {
+		int k = 0 ;
+		for (k=1 ; k<=effectif ; k++) {
+			int numCherche = rechercherNumero(k) ;
+			Engin e = rechercherEngin(numCherche, Parc.dossierParc) ;
+			if (e != null) {
+				if (e.getNbVues() > 0) {
 					nbEnginsVus++ ;
 				}
-			}	
+			}
 		}
 		return nbEnginsVus ;
 	}
@@ -347,12 +351,14 @@ public class Serie implements Comparable<Serie> {
 		Iterator<Element> itEngins = listEngins.iterator() ;
 		int numCourant ;
 		int renumCourante ;
+		int k = 0 ; // Compteur pour l'indice.
 		while(itEngins.hasNext()) {
 			Element enginCourant = (Element)itEngins.next() ;
+			k++ ;
 			numCourant = stringToInteger(enginCourant.getChild(BaliseXML.XML_NUMERO).getText()) ;
 			renumCourante = stringToInteger(enginCourant.getChild(BaliseXML.XML_RENUMEROTATION).getText()) ;
 			if ((numCourant == numCherche) || (renumCourante == numCherche)) {
-				// Engin trouvé -> création de l'objet à partir des données XML
+				// Engin trouvé -> création de l'objet à partir des données XML.
 				enginTrouve = new Engin() ;
 				enginTrouve.setSerie(this) ;
 				enginTrouve.setIdentifiant(identifiant) ;
@@ -365,15 +371,16 @@ public class Serie implements Comparable<Serie> {
 				enginTrouve.calculerAge() ;
 				enginTrouve.setLivree(enginCourant.getChild(BaliseXML.XML_LIVREE).getText()) ;
 				enginTrouve.setDepot(enginCourant.getChild(BaliseXML.XML_DEPOT).getText()) ;
-				// Photo
+				enginTrouve.setIndice(k) ;
+				// Photo.
 				String dossierPhoto = dossierParc + "/photos/" + identifiant.getName().toLowerCase() + serie ;
 				enginTrouve.chercherPhoto(dossierPhoto) ;
-				// Boucle des vues
+				// Boucle des vues.
 				List<Element> listeVues = enginCourant.getChildren(BaliseXML.XML_VUE) ;
 				Iterator<Element> itVues = listeVues.iterator() ;
 				while(itVues.hasNext()) {
 				    Element vueCourante = (Element)itVues.next() ;
-				    // Vue trouvée -> création de l'objet à partir des données XML
+				    // Vue trouvée -> création de l'objet à partir des données XML.
 				    Vue resVue = new Vue() ;
 				    resVue.setDate(stringToDate(vueCourante.getChild(BaliseXML.XML_DATEVUE).getText())) ;
 				    resVue.setLieu(vueCourante.getChild(BaliseXML.XML_LIEU).getText()) ;
@@ -385,22 +392,46 @@ public class Serie implements Comparable<Serie> {
 				    resVue.setVideo(stringToBoolean(vueCourante.getChild(BaliseXML.XML_VIDEO).getText())) ;
 				    enginTrouve.ajouterVue(resVue) ;
 				}
-				// Boucle des remarques
+				// Boucle des remarques.
 				List<Element> listeRemarques = enginCourant.getChildren(BaliseXML.XML_REM) ;
 				Iterator<Element> itRemarques = listeRemarques.iterator() ;
 				while(itRemarques.hasNext()) {
 				    Element remarqueCourante = (Element)itRemarques.next() ;
-				    // Remarque trouvée -> création de l'objet à partir des données XML
+				    // Remarque trouvée -> création de l'objet à partir des données XML.
 				    Remarque resRemarque = new Remarque() ;
 				    resRemarque.setDate(stringToDate(remarqueCourante.getChild(BaliseXML.XML_DATEREM).getText())) ;
 				    resRemarque.setTexte(remarqueCourante.getChild(BaliseXML.XML_TEXTE).getText()) ;
 				    enginTrouve.ajouterRem(resRemarque) ;
 				}
-				// On sort de la boucle while de recherche
+				// On sort de la boucle while de recherche.
 				break ;
 			}
 		}
 		return enginTrouve ;
+	}
+	
+	
+	/**
+		RENVOIE LE NUMERO DE L'ENGIN CORREPONDANT A UN INDICE DONNE.
+	    @param indiceCherche	Indice recherché de type 'int'.
+	    @return	resultat		Numéro de l'engin moteur correspondant à l'indice cherché.
+	*/
+	public int rechercherNumero(int indiceCherche) {
+		int resultat = 0 ;
+		if (indiceCherche >= 1 && indiceCherche <= effectif) {
+			List<Element> listEngins = racine.getChildren(BaliseXML.XML_ENGIN) ;
+			Iterator<Element> itEngins = listEngins.iterator() ;
+			int k = 0 ; // Compteur pour l'indice.
+			while(itEngins.hasNext()) {
+				Element enginCourant = (Element)itEngins.next() ;
+				k++ ;
+				if (k == indiceCherche) {
+					resultat = stringToInteger(enginCourant.getChild(BaliseXML.XML_NUMERO).getText()) ;
+					break ;
+				}
+			}
+		}
+		return resultat ;
 	}
 
 	
@@ -846,9 +877,10 @@ public class Serie implements Comparable<Serie> {
 	*/
 	public Vector<Engin> getEngins() {
 		Vector<Engin> serieEngins = new Vector<Engin>() ;
-		int num = 0 ;
-		for (num=(serie+1) ; num<=(serie+effectif) ; num++) {
-			Engin e = rechercherEngin(num, Parc.dossierParc) ;
+		int k = 0 ;
+		for (k=1 ; k<=effectif ; k++) {
+			int numCherche = rechercherNumero(k) ;
+			Engin e = rechercherEngin(numCherche, Parc.dossierParc) ;
 			if (e != null) {
 				serieEngins.add(e) ;
 			}
@@ -864,12 +896,13 @@ public class Serie implements Comparable<Serie> {
 	*/
 	public Vector<Engin> getAnniversaires(LocalDate date) {
 		Vector<Engin> resultat = new Vector<Engin>() ;
-		int num = 0 ;
-		for (num=(serie+1) ; num<=(serie+effectif) ; num++) {
-			Engin enginCourant = rechercherEngin(num, Parc.dossierParc) ;
-			if (enginCourant != null) {
-				if (enginCourant.anniversaire(date)) {
-					resultat.add(enginCourant) ;
+		int k = 0 ;
+		for (k=1 ; k<=effectif ; k++) {
+			int numCherche = rechercherNumero(k) ;
+			Engin e = rechercherEngin(numCherche, Parc.dossierParc) ;
+			if (e != null) {
+				if (e.anniversaire(date)) {
+					resultat.add(e) ;
 				}
 			}
 		}
@@ -885,11 +918,12 @@ public class Serie implements Comparable<Serie> {
 	*/
 	public LocalDate getDerniereVue() {
 		LocalDate oldest = LocalDate.of(1994, 10, 16) ;
-		int num = 0 ;
-		for (num=(serie+1) ; num<=(serie+effectif) ; num++) {
-			Engin e = rechercherEngin(num, Parc.dossierParc) ;
+		int k = 0 ;
+		for (k=1 ; k<=effectif ; k++) {
+			int numCherche = rechercherNumero(k) ;
+			Engin e = rechercherEngin(numCherche, Parc.dossierParc) ;
 			if (e != null) {
-				LocalDate currentDate = rechercherEngin(num, Parc.dossierParc).getDerniereVue() ;
+				LocalDate currentDate = e.getDerniereVue() ;
 				if (currentDate.isAfter(oldest)) {
 					oldest = currentDate ;
 				}

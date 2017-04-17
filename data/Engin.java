@@ -29,6 +29,7 @@ public class Engin {
 	private Period age ;
 	private Livree livree ;
 	private Depot depot ;
+	private int indice ; // Rang de l'engin moteur dans la série.
 	// Photo
 	private boolean photo ;
 	private String cheminPhoto ;
@@ -59,6 +60,7 @@ public class Engin {
 		age = Period.between(dateMES, dateRAD) ;
 		livree = Livree.Vide ;
 		depot = Depot.Vide ;
+		indice = 0 ;
 		// Photo
 		photo = false ;
 		cheminPhoto = cheminPhotoVide ;
@@ -350,6 +352,26 @@ public class Engin {
 			resultat = Double.toString(ageFloat) ;
 		}
 		return resultat ;
+	}
+	
+	
+	/**
+		RETOURNE LE RANG DE L'ENGIN MOTEUR DANS SA SERIE.
+	    @param 	Aucun.
+	    @return	Indice de l'engin moteur de type 'int'.
+	*/
+	public int getIndice() {
+		return indice ;
+	}
+	
+	
+	/**
+		MODIFIE LE RANG DE L'ENGIN MOTEUR DANS SA SERIE.
+	    @param newIndice	Nouvel indice de l'engin moteur de type 'int'.
+	    @return				Aucun.
+	*/
+	public void setIndice(int newIndice) {
+		indice = newIndice ;
 	}
 	
 	
