@@ -275,22 +275,26 @@ public class Serie implements Comparable<Serie> {
 	 *         de type 'String'.
 	 */
 	public String getAnneeMESMin() {
-		int resultat = Integer.MAX_VALUE;
-		int k = 0;
-		for (k = 1; k <= effectif; k++) {
-			String numCherche = rechercherNumero(k);
-			Engin e = rechercherEngin(numCherche, Parc.dossierParc);
-			if (e != null) {
-				LocalDate dateMES = e.getDateMES();
-				// On ne prend pas en compte les engins en attente...
-				if (dateMES != null) {
-					if (dateMES.getYear() < resultat) {
-						resultat = dateMES.getYear();
+		String ret = "...";
+		if (enAttente < effectif) {
+			int resultat = Integer.MAX_VALUE;
+			int k = 0;
+			for (k = 1; k <= effectif; k++) {
+				String numCherche = rechercherNumero(k);
+				Engin e = rechercherEngin(numCherche, Parc.dossierParc);
+				if (e != null) {
+					LocalDate dateMES = e.getDateMES();
+					// On ne prend pas en compte les engins en attente...
+					if (dateMES != null) {
+						if (dateMES.getYear() < resultat) {
+							resultat = dateMES.getYear();
+						}
 					}
 				}
 			}
+			ret = Integer.toString(resultat);
 		}
-		return Integer.toString(resultat);
+		return ret;
 	}
 
 	/**
@@ -301,22 +305,26 @@ public class Serie implements Comparable<Serie> {
 	 *         de type 'String'.
 	 */
 	public String getAnneeMESMax() {
-		int resultat = Integer.MIN_VALUE;
-		int k = 0;
-		for (k = 1; k <= effectif; k++) {
-			String numCherche = rechercherNumero(k);
-			Engin e = rechercherEngin(numCherche, Parc.dossierParc);
-			if (e != null) {
-				LocalDate dateMES = e.getDateMES();
-				// On ne prend pas en compte les engins en attente...
-				if (dateMES != null) {
-					if (dateMES.getYear() > resultat) {
-						resultat = dateMES.getYear();
+		String ret = "...";
+		if (enAttente == 0) {
+			int resultat = Integer.MIN_VALUE;
+			int k = 0;
+			for (k = 1; k <= effectif; k++) {
+				String numCherche = rechercherNumero(k);
+				Engin e = rechercherEngin(numCherche, Parc.dossierParc);
+				if (e != null) {
+					LocalDate dateMES = e.getDateMES();
+					// On ne prend pas en compte les engins en attente...
+					if (dateMES != null) {
+						if (dateMES.getYear() > resultat) {
+							resultat = dateMES.getYear();
+						}
 					}
 				}
 			}
+			ret = Integer.toString(resultat);
 		}
-		return Integer.toString(resultat);
+		return ret;
 	}
 
 	/**

@@ -11,7 +11,10 @@ public enum Gare {
 
 	Vide(""),
 	AG("Agen"),
+	AMB("Ambérieu"),
 	AER("Assier"),
+	AUG("Augsburg"),
+	AV("Avignon"),
 	BLG("Brive-la-Gaillarde"),
 	BLV("Blainville"),
 	BRI("Briançon"),
@@ -27,22 +30,28 @@ public enum Gare {
 	ISS("Issoire"),
 	LNG("Langeac"),
 	LGG("Langogne"),
+	LDC("Latour-de-Carol"),
 	LS("Limoges"),
 	LCX("Lus-La-Croix-Haute"),
+	LY("Lyon-Mouche"),
 	LYD("Lyon Part-Dieu"),
 	MSC("Marseille-Saint-Charles"),
 	MAU("Millau"),
 	MBN("Montauban"),
+	MLO("Montlouis"),
 	MN("Mohon"),
 	MSE("Mulhouse"),
 	NA("Narbonne"),
+	NI("Nîmes"),
 	NEU("Neussargues"),
 	TE("Toulouse"),
 	TS("Tarbes"),
 	TDC("Thédirac-Peyrilles"),
+	THS("Thuès-les-Bains"),
 	RDZ("Rodez"),
 	SYH("Saint-Chely-d'Apcher"),
 	SJY("Saint-Jory");
+	
 
 	// Attributs de chaque élément de l'énumération.
 	private final String symbol;

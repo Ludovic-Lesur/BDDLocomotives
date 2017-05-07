@@ -476,9 +476,9 @@ public class Engin {
 		// Pour chaque fichier trouvé dans le dossier...
 		for (i = 0; i < (fichiers.length); i++) {
 			File f = fichiers[i];
-			String nomF = f.getName().substring(0, f.getName().length() - 4);
-			// Si le nom du fichier est égal au numéro de l'engin -> photo
-			// trouvée.
+			String nomF = f.getName().substring(0, f.getName().length()-4);
+			nomF = nomF.replace('-', '/'); // Pour les numérotations appariées.
+			// Si le nom du fichier est égal au numéro de l'engin -> photo trouvée.
 			if ((f.isFile()) && (nomF.compareTo(numero) == 0)) {
 				photo = true;
 				cheminPhoto = f.getAbsolutePath();

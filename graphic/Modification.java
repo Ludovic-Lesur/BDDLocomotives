@@ -11,6 +11,7 @@ import data.*;
 import java.util.*;
 import java.awt.*;
 import java.awt.event.*;
+
 import javax.swing.*;
 
 public class Modification extends JFrame implements ActionListener {
@@ -191,7 +192,7 @@ public class Modification extends JFrame implements ActionListener {
 		gbc.fill = GridBagConstraints.EAST;
 		gbc.gridx = 0;
 		gbc.gridy = 11;
-		update = new JLabel("Mise à jour : " + i.getUpdate());
+		update = new JLabel("Mise à jour : " + Interface.dateToString(i.getUpdate(), false));
 		update.setFont(new Font(Interface.police.getFontName(), 1, Interface.police.getSize()));
 		update.setForeground(Color.white);
 		panel.add(update, gbc);
@@ -258,6 +259,16 @@ public class Modification extends JFrame implements ActionListener {
 		navigation.setEnabled(true);
 		navigation.setText("Afficher série " + selectedSerie.getNomComplet());
 		modeNavigation = true;
+	}
+	
+	/**
+	 * RECALCULE LA DATE DE MISE A JOUR DE LA BASE DE DONNEES.
+	 * 
+	 * @param 	Aucun.
+	 * @return Aucun.
+	 */
+	public void updateUpdate(String newDate) {
+		update.setText("Mise à jour : " + newDate);
 	}
 
 	/**

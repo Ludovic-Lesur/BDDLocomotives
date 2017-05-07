@@ -19,12 +19,13 @@ public class FenetreSerie extends JFrame implements ActionListener, DocumentList
 	private static final long serialVersionUID = 1L;
 
 	// Lien avec les autres classes graphiques.
+	private Interface i;
+	private Parc parc;
 	private JFrame fenetre;
 	private JPanel panel;
 	private GridBagConstraints gbc;
 
 	// Elements graphiques et attributs.
-	private Parc parc;
 	private JLabel identifiant;
 	private JComboBox<String> choixIdentifiant;
 	private Identifiant identifiantCourant;
@@ -46,8 +47,9 @@ public class FenetreSerie extends JFrame implements ActionListener, DocumentList
 	 *            type 'Parc'.
 	 * @return Aucun.
 	 */
-	public FenetreSerie(Parc pParc) {
+	public FenetreSerie(Interface pI, Parc pParc) {
 
+		i = pI ;
 		parc = pParc;
 
 		// Création de l'interface
@@ -95,14 +97,7 @@ public class FenetreSerie extends JFrame implements ActionListener, DocumentList
 		choixIdentifiant.setFont(Interface.police);
 		choixIdentifiant.addItemListener(new ItemState());
 		panel.add(choixIdentifiant, gbc);
-		identifiantCourant = Identifiant.values()[choixIdentifiant.getSelectedIndex() + 1]; // +1
-																							// car
-																							// "INC"
-																							// n'est
-																							// pas
-																							// dans
-																							// la
-																							// liste
+		identifiantCourant = Identifiant.values()[choixIdentifiant.getSelectedIndex() + 1]; // +1 car "INC" n'est pas dans la liste.
 
 		gbc.gridx = 1;
 		gbc.gridy = 1;
@@ -123,7 +118,7 @@ public class FenetreSerie extends JFrame implements ActionListener, DocumentList
 		gbc.gridwidth = 3;
 		gbc.gridx = 0;
 		gbc.gridy = 2;
-		appariement = new JCheckBox("Numérotation apparillée");
+		appariement = new JCheckBox("Numérotation appariée");
 		appariement.setFont(Interface.police);
 		appariement.addActionListener(this);
 		appariement.setBackground(Color.gray);
@@ -211,14 +206,7 @@ public class FenetreSerie extends JFrame implements ActionListener, DocumentList
 
 		public void itemStateChanged(ItemEvent e) {
 			if (e.getSource() == choixIdentifiant) {
-				identifiantCourant = Identifiant.values()[choixIdentifiant.getSelectedIndex() + 1]; // +1
-																									// car
-																									// "INC"
-																									// n'est
-																									// pas
-																									// dans
-																									// la
-																									// liste
+				identifiantCourant = Identifiant.values()[choixIdentifiant.getSelectedIndex() + 1]; // +1 car "INC" n'est pas dans la liste.
 			}
 		}
 	}
@@ -232,7 +220,8 @@ public class FenetreSerie extends JFrame implements ActionListener, DocumentList
 	 */
 	public void actionPerformed(ActionEvent e) {
 		if (e.getSource() == ok) {
-			parc.creerSerie(identifiantCourant, serieCourante, effectifCourant, appariement.isSelected());
+			Serie s = parc.creerSerie(identifiantCourant, serieCourante, effectifCourant, appariement.isSelected());
+			i.addSerie(s) ;
 			fenetre.setVisible(false);
 			fenetre.dispose();
 		}

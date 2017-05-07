@@ -11,7 +11,9 @@ public enum Livree {
 
 	Vide(""),
 	V("Verte"),
+	BL("Bleue"),
 	GC("Grand Confort"),
+	MAU("Maurienne"),
 	ISAB("Bleue isabelle"),
 	B("Béton"),
 	M("Multiservice"),
@@ -20,7 +22,7 @@ public enum Livree {
 	C("Carmillon"),
 	F("Fret"),
 	I("Infra"),
-	BL("Bleue"),
+	TER_GRISE("TER Grise"),
 	TER_BLEUE("TER Bleue"),
 	TER_ROUGE("TER Rouge"),
 	TER_JAUNE("TER Jaune"),

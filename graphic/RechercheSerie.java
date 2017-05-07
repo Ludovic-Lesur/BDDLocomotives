@@ -97,6 +97,16 @@ public class RechercheSerie extends JFrame implements ActionListener {
 
 		mainPanel.add(panel, mainGbc);
 	}
+	
+	/**
+	 * MODIFIE LA LISTE DES SERIES DE LA LISTE DEROULANTE.
+	 * 
+	 * @param 	Aucun.
+	 * @return 	Aucun.
+	 */
+	public void addSerie(Serie newSerie) {
+		listeSeries.addItem(newSerie.getNomComplet());
+	}
 
 	/**
 	 * RENVOIE LA SERIE CHERCHE.
@@ -153,7 +163,7 @@ public class RechercheSerie extends JFrame implements ActionListener {
 			i.setEnableFalse();
 		}
 		if (e.getSource() == creer) {
-			new FenetreSerie(p);
+			new FenetreSerie(i, p);
 		}
 	}
 }

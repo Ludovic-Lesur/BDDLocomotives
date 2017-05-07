@@ -31,6 +31,7 @@ public class Interface extends JFrame {
 	public static final String dossierData = "C:/Users/Ludovic/Documents/Eclipse/BDD_Locos/data";
 
 	private RechercheEngin rechercheEngin;
+	private RechercheSerie rechercheSerie;
 	private Modification modification;
 	private Infos infos;
 	private Tableau tableauVues;
@@ -63,7 +64,7 @@ public class Interface extends JFrame {
 
 		// Ajout des éléments
 		gbc.anchor = GridBagConstraints.WEST;
-		new RechercheSerie(this, panel, gbc, parcEngins);
+		rechercheSerie = new RechercheSerie(this, panel, gbc, parcEngins);
 		infos = new Infos(panel, gbc);
 
 		gbc.anchor = GridBagConstraints.CENTER;
@@ -222,6 +223,16 @@ public class Interface extends JFrame {
 		modification.enableModifAttributs();
 		modification.enableModifSuppr();
 	}
+	
+	/**
+	 * MODIFIE LA LISTE DES SERIES DE LA LISTE DEROULANTE.
+	 * 
+	 * @param 	Aucun.
+	 * @return 	Aucun.
+	 */
+	public void addSerie(Serie newSerie) {
+		rechercheSerie.addSerie(newSerie);
+	}
 
 	/**
 	 * DESACTIVE LE MENU DE MODIFICATION.
@@ -253,8 +264,19 @@ public class Interface extends JFrame {
 	 * @return Date de vue la plus récente de la base de données de type
 	 *         'String'.
 	 */
-	public String getUpdate() {
-		return dateToString(parcEngins.getDerniereVue(), false);
+	public LocalDate getUpdate() {
+		return parcEngins.getUpdate();
+	}
+	
+	/**
+	 * RECALCULE LA DATE DE MISE A JOUR DE LA BASE DE DONNEES.
+	 * 
+	 * @param 	Aucun.
+	 * @return Aucun.
+	 */
+	public void updateUpdate() {
+		parcEngins.updateMiseAJour();
+		modification.updateUpdate(dateToString(parcEngins.getUpdate(), false));
 	}
 
 	/**

@@ -620,14 +620,7 @@ public class FenetreVue extends JFrame implements ActionListener {
 		if (e.getSource() == lieu) {
 			enableLieu();
 			disableVoyage();
-			lieuCourant = Lieu.values()[choixLieu.getSelectedIndex() + 1]; // +1
-																			// car
-																			// "Vide"
-																			// n'est
-																			// pas
-																			// dans
-																			// la
-																			// liste
+			lieuCourant = Lieu.values()[choixLieu.getSelectedIndex() + 1]; // +1 car "Vide" n'est pas dans la liste.
 			departCourant = Gare.Vide;
 			arriveeCourante = Gare.Vide;
 		}
@@ -653,6 +646,7 @@ public class FenetreVue extends JFrame implements ActionListener {
 			}
 
 			Engin enginUpdated = engin.getSerie().rechercherEngin(engin.getNumero(), Parc.dossierParc);
+			i.updateUpdate();
 			i.afficherResultat(enginUpdated, false);
 
 			fenetre.setVisible(false);

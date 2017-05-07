@@ -13,7 +13,13 @@ public enum Association {
 	CDT("la ", "Cité du Train", Gare.MSE),
 	CDTM("la ", "Cité du Train", Gare.MN),
 	CFTB("le ", "C.F. Traction", Gare.BLV),
-	APCR("l' ", "APCR1126", Gare.TE);
+	APCR("l'", "APCR1126", Gare.TE),
+	ARCET("l'", "ARCET", Gare.LY),
+	BAHN("au ", "Musée Bahnpark", Gare.AUG),
+	SIMIL6500("", "SIMIL6500", Gare.LY),
+	APMFS("l'", "APMFS", Gare.AMB),
+	SL6575("", "Sauvons la CC6575", Gare.NI),
+	APCC6570("l'", "APCC6570", Gare.AV);
 
 	// Attributs de chaque élément de l'énumération.
 	private final String symbol;

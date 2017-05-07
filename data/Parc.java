@@ -25,6 +25,7 @@ public class Parc {
 	private int nbEnginsActuel;
 	Vector<Serie> listeSeries;
 	public static final String SYM_ALL = "Toutes les séries   ";
+	private LocalDate miseAJour;
 
 	/**
 	 * CONSTRUCTEUR DE LA CLASSE PARC.
@@ -64,6 +65,7 @@ public class Parc {
 			}
 		}
 		Collections.sort(listeSeries);
+		updateMiseAJour();
 	}
 
 	/**
@@ -273,7 +275,7 @@ public class Parc {
 	 *            paire (automotrices et autorails).
 	 * @return Aucun.
 	 */
-	public void creerSerie(Identifiant pIdentifiant, int pSerie, int effectif, boolean appariement) {
+	public Serie creerSerie(Identifiant pIdentifiant, int pSerie, int effectif, boolean appariement) {
 		String nomRacine = pIdentifiant.getSymbol().toLowerCase() + Integer.toString(pSerie);
 		Element newRacine = new Element(nomRacine);
 		DocType xmlFormat = new DocType(nomRacine, "format.dtd");
@@ -335,8 +337,12 @@ public class Parc {
 			nbSeries++;
 			nbEngins = nbEngins + s.getEffectif();
 			System.out.println("Ajout de la série " + s.getNomComplet());
-		} catch (java.io.IOException e) {
+			return s ;
 		}
+		catch (java.io.IOException e) {
+			return null;
+		}
+		
 	}
 
 	/**
@@ -410,24 +416,45 @@ public class Parc {
 		}
 		return enginsTrouves;
 	}
-
+	
 	/**
-	 * RETOURNE LA DATE DE VUE LA PLUS RECENTE PARMI TOUS LES ENGINS. (UTILISE
-	 * POUR DETERMINER LA DATE DE MISE A JOUR DE LA BASE DE DONNEES).
+	 * RENVOIE LA DATE DE VUE LA DATE DE MISE A JOUR DE LA BASE DE DONNEES.
 	 * 
 	 * @param Aucun.
 	 * @return derniere Date de la dernière vue enregistrée, de type
 	 *         'LocalDate'.
 	 */
-	public LocalDate getDerniereVue() {
-		LocalDate derniere = LocalDate.of(1994, 10, 16);
+	public LocalDate getUpdate() {
+		return miseAJour;
+	}
+	
+	/**
+	 * MODIFIE LA DATE DE VUE LA DATE DE MISE A JOUR DE LA BASE DE DONNEES.
+	 * 
+	 * @param Aucun.
+	 * @return derniere Date de la dernière vue enregistrée, de type
+	 *         'LocalDate'.
+	 */
+	public void setUpdate(LocalDate newDate) {
+		miseAJour = newDate;
+	}
+
+	/**
+	 * RECALCULE LA DATE DE VUE LA DATE DE MISE A JOUR DE LA BASE DE DONNEES.
+	 * 
+	 * @param Aucun.
+	 * @return derniere Date de la dernière vue enregistrée, de type
+	 *         'LocalDate'.
+	 */
+	public LocalDate updateMiseAJour() {
+		miseAJour = LocalDate.of(1994, 10, 16);
 		Iterator<Serie> i = listeSeries.iterator();
 		while (i.hasNext()) {
 			LocalDate currentDate = i.next().getDerniereVue();
-			if (currentDate.isAfter(derniere)) {
-				derniere = currentDate;
+			if (currentDate.isAfter(miseAJour)) {
+				miseAJour = currentDate;
 			}
 		}
-		return derniere;
+		return miseAJour;
 	}
 }

@@ -149,6 +149,7 @@ public class FenetreSuppression extends JFrame implements ActionListener {
 		if (e.getSource() == oui) {
 			if (remarque == false) {
 				enginCourant.getSerie().deleteXML(enginCourant.getNumero(), vueCourante);
+				i.updateUpdate();
 			} else {
 				enginCourant.getSerie().deleteXML(enginCourant.getNumero(), remarqueCourante);
 			}
