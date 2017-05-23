@@ -41,6 +41,7 @@ public enum Lieu {
 	LYD_G("Gare de Lyon Part-Dieu"),
 	MSC_G("Gare de Marseille Saint-Charles"),
 	MBN_G("Gare de Montauban"),
+	MNL_G("Gare de Montlaur"),
 	MLO_G("Gare de Montlouis"),
 	MPZ_G("Gare de Montpezat-de-Quercy"),
 	NA_G("Gare de Narbonne"),

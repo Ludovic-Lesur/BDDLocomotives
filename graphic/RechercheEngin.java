@@ -110,14 +110,7 @@ public class RechercheEngin extends JFrame implements ActionListener, DocumentLi
 		choixIdentifiant.setFont(Interface.police);
 		choixIdentifiant.addItemListener(new ItemState());
 		panel.add(choixIdentifiant, gbc);
-		identifiantCourant = Identifiant.values()[choixIdentifiant.getSelectedIndex() + 1]; // +1
-																							// car
-																							// "Vide"
-																							// n'est
-																							// pas
-																							// dans
-																							// la
-																							// liste.
+		identifiantCourant = Identifiant.values()[choixIdentifiant.getSelectedIndex() + 1]; // +1 car "Vide" n'est pas dans la liste.
 
 		gbc.gridx = 1;
 		gbc.gridy = 1;
@@ -205,9 +198,12 @@ public class RechercheEngin extends JFrame implements ActionListener, DocumentLi
 		if (enginTrouve == null) {
 			resultat.setText("Aucun résultat.");
 			resultat.setForeground(Color.orange);
+			precedent.setEnabled(false);
+			suivant.setEnabled(false);
 		} else {
 			resultat.setText("1 résultat.");
 			resultat.setForeground(Color.green);
+			checkNumero();
 		}
 		return enginTrouve;
 	}
@@ -277,8 +273,14 @@ public class RechercheEngin extends JFrame implements ActionListener, DocumentLi
 				if (eC.getIndice() < eC.getSerie().getEffectif()) {
 					suivant.setEnabled(true);
 				}
+				else {
+					suivant.setEnabled(false);
+				}
 				if (eC.getIndice() > 1) {
 					precedent.setEnabled(true);
+				}
+				else {
+					precedent.setEnabled(false);
 				}
 			}
 		}
@@ -294,14 +296,7 @@ public class RechercheEngin extends JFrame implements ActionListener, DocumentLi
 
 		public void itemStateChanged(ItemEvent e) {
 			if (e.getSource() == choixIdentifiant) {
-				identifiantCourant = Identifiant.values()[choixIdentifiant.getSelectedIndex() + 1]; // +1
-																									// car
-																									// "Vide"
-																									// n'est
-																									// pas
-																									// dans
-																									// la
-																									// liste.
+				identifiantCourant = Identifiant.values()[choixIdentifiant.getSelectedIndex() + 1]; // +1 car "Vide" n'est pas dans la liste.
 			}
 		}
 	}
