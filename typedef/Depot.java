@@ -77,7 +77,7 @@ public enum Depot {
 	 * RENVOIE LE SYMBOLE DU DEPOT.
 	 * 
 	 * @param Aucun.
-	 * @return symbol Symbole de l'association utilisé dans les fichiers XML, de
+	 * @return symbol Symbole du dépôt utilisé dans les fichiers XML, de
 	 *         type 'String'.
 	 */
 	public String getSymbol() {

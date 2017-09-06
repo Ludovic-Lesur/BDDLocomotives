@@ -173,7 +173,7 @@ public class Interface extends JFrame {
 	 * TRANSMETS LA VUE SELECTIONNEE DU TABLEAU A LA CLASSE MODIFICATION.
 	 * 
 	 * @param newVue
-	 *            Objet 'Vue' sélectionnée dans le tableau principal.
+	 *            Objet 'Vue' sélectionné dans le tableau principal.
 	 * @return Aucun.
 	 */
 	public void setVue(Vue newVue) {
@@ -184,7 +184,7 @@ public class Interface extends JFrame {
 	 * TRANSMETS LA REMARQUE SELECTIONNEE DU TABLEAU A LA CLASSE MODIFICATION.
 	 * 
 	 * @param newRemarque
-	 *            Objet 'Remarque' sélectionnée dans le tableau principal.
+	 *            Objet 'Remarque' sélectionné dans le tableau principal.
 	 * @return Aucun.
 	 */
 	public void setRemarque(Remarque newRemarque) {
@@ -206,7 +206,7 @@ public class Interface extends JFrame {
 	 * TRANSMETS LA SERIE SELECTIONNEE DU TABLEAU A LA CLASSE MODIFICATION.
 	 * 
 	 * @param newRemarque
-	 *            Objet 'Serie' sélectionnée dans le tableau principal.
+	 *            Objet 'Serie' sélectionné dans le tableau principal.
 	 * @return Aucun.
 	 */
 	public void setSerie(Serie newSerie) {
