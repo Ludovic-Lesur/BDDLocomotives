@@ -53,6 +53,7 @@ public enum Lieu {
 	SYH_G("Gare de Saint-Chely-d'Apcher"),
 	SFC_G("Gare de Saint-Flour"),
 	SJY_G("Gare de Saint-Jory"),
+	SL_G("Gare de Sarlat"),
 	SOU_G("Gare de Souillac"),
 	TDC_G("Gare de Thédirac-Peyrilles"),
 	TE_G("Gare de Toulouse-Matabiau"),

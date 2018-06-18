@@ -28,7 +28,7 @@ public class Interface extends JFrame {
 	private JPanel panel;
 	private GridBagConstraints gbc;
 	private Parc parcEngins;
-	public static final String dossierData = "C:/Users/Ludovic/Documents/Eclipse/BDD_Locos/data";
+	public static final String dossierData = "C:/Users/Ludovic/Documents/Eclipse/LDBGI/data";
 
 	private RechercheEngin rechercheEngin;
 	private RechercheSerie rechercheSerie;
