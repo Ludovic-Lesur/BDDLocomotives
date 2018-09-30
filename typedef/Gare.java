@@ -23,6 +23,7 @@ public enum Gare {
 	CMX("Carmaux"),
 	CMS("Clelles-Mens"),
 	CLE("Clermont-Ferrand"),
+	COB("Connerré-Beille"),
 	DIP("Dieupentale"),
 	FIG("Figeac"),
 	GO("Gourdon"),
@@ -50,7 +51,8 @@ public enum Gare {
 	THS("Thuès-les-Bains"),
 	RDZ("Rodez"),
 	SYH("Saint-Chely-d'Apcher"),
-	SJY("Saint-Jory");
+	SJY("Saint-Jory"),
+	V("Vierzon");
 	
 
 	// Attributs de chaque élément de l'énumération.

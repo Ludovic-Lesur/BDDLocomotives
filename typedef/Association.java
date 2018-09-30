@@ -19,7 +19,9 @@ public enum Association {
 	SIMIL6500("", "SIMIL6500", Gare.LY),
 	APMFS("l'", "APMFS", Gare.AMB),
 	SL6575("", "Sauvons la CC6575", Gare.NI),
-	APCC6570("l'", "APCC6570", Gare.AV);
+	APCC6570("l'", "APCC6570", Gare.AV),
+	CFTST("", "CFTST Touraine", Gare.V),
+	CFT("", "CFT Transvap", Gare.COB);
 
 	// Attributs de chaque élément de l'énumération.
 	private final String symbol;

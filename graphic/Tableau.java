@@ -578,6 +578,9 @@ public class Tableau extends JPanel {
 			case 6:
 				setForeground(Color.orange);
 				break;
+			case 7:
+				setBackground(new Color(255, 246, 143));
+				break;
 			default:
 				setForeground(Color.black);
 				break;
