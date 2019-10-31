@@ -55,6 +55,7 @@ public enum Lieu {
 	SJY_G("Gare de Saint-Jory"),
 	SL_G("Gare de Sarlat"),
 	SOU_G("Gare de Souillac"),
+	TRC_G("Gare de Tarascon-sur-Ariege"),
 	TDC_G("Gare de Thédirac-Peyrilles"),
 	TE_G("Gare de Toulouse-Matabiau"),
 	TEW_G("Gare de Toulouse-Saint-Cyprien-Arènes"),
