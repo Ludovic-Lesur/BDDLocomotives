@@ -70,11 +70,11 @@ public class FenetreEtat extends JFrame implements ActionListener {
 	 * CONSTRUCTEUR DE LA CLASSE FENETREETAT.
 	 * 
 	 * @param pI
-	 *            Interface graphique mère, de type 'Interface'.
+	 *            Interface graphique mere, de type 'Interface'.
 	 * @param pEngin
-	 *            Engin moteur dont on doit modifier l'état, de type 'Engin'.
+	 *            Engin moteur dont on doit modifier l'etat, de type 'Engin'.
 	 * @param pRemarque
-	 *            Booléen indiquant le type de vue actuellement sélectionné.
+	 *            Booleen indiquant le type de vue actuellement selectionne.
 	 *            'true' = affichage des remarques. 'false' = affichage des
 	 *            vues.
 	 * @return Aucun.
@@ -85,9 +85,9 @@ public class FenetreEtat extends JFrame implements ActionListener {
 		engin = pEngin;
 		remarque = pRemarque;
 
-		// Création de l'interface
+		// Creation de l'interface
 		fenetre = new JFrame();
-		fenetre.setTitle("Modifier état");
+		fenetre.setTitle("Modifier etat");
 		fenetre.setSize(400, 420);
 		fenetre.setResizable(false);
 		fenetre.setLocationRelativeTo(null);
@@ -142,7 +142,7 @@ public class FenetreEtat extends JFrame implements ActionListener {
 
 		gbc.gridx = 1;
 		gbc.gridy = 2;
-		radie = new JRadioButton("Radié");
+		radie = new JRadioButton("Radie");
 		radie.setFont(Interface.police);
 		radie.setOpaque(false);
 		radie.setForeground(Color.white);
@@ -152,7 +152,7 @@ public class FenetreEtat extends JFrame implements ActionListener {
 		gbc.insets.bottom = 10;
 		gbc.gridx = 1;
 		gbc.gridy = 3;
-		preserve = new JRadioButton("Préservé");
+		preserve = new JRadioButton("Preserve");
 		preserve.setFont(Interface.police);
 		preserve.setOpaque(false);
 		preserve.setForeground(Color.white);
@@ -245,7 +245,7 @@ public class FenetreEtat extends JFrame implements ActionListener {
 
 		gbc.gridx = 0;
 		gbc.gridy = 6;
-		preservation = new JLabel("Préservation");
+		preservation = new JLabel("Preservation");
 		preservation.setFont(Interface.police);
 		preservation.setForeground(Color.yellow);
 		panel.add(preservation, gbc);
@@ -262,7 +262,7 @@ public class FenetreEtat extends JFrame implements ActionListener {
 		gbc.gridwidth = 1;
 		gbc.gridx = 0;
 		gbc.gridy = 7;
-		renumerotation = new JLabel("Renumérotation");
+		renumerotation = new JLabel("Renumerotation");
 		renumerotation.setFont(Interface.police);
 		renumerotation.setForeground(Color.yellow);
 		panel.add(renumerotation, gbc);
@@ -293,7 +293,7 @@ public class FenetreEtat extends JFrame implements ActionListener {
 
 		selectEtat(engin);
 
-		// Affichage de la fenêtre
+		// Affichage de la fenetre
 		fenetre.setContentPane(panel);
 		fenetre.setVisible(true);
 	}
@@ -302,7 +302,7 @@ public class FenetreEtat extends JFrame implements ActionListener {
 	 * SELECTIONNE L'ITEM CORRECT EN FONCTION DE L'ETAT ACTUEL.
 	 * 
 	 * @param e
-	 *            Engin moteur dont on doit modifier l'état, de type 'Engin'.
+	 *            Engin moteur dont on doit modifier l'etat, de type 'Engin'.
 	 * @return Aucun.
 	 */
 	private void selectEtat(Engin e) {
@@ -342,7 +342,7 @@ public class FenetreEtat extends JFrame implements ActionListener {
 	 * SELECTIONNE LA DATE DE MISE EN SERVICE ACTUELLE DE L'ENGIN.
 	 * 
 	 * @param e
-	 *            Engin moteur dont on doit modifier l'état, de type 'Engin'.
+	 *            Engin moteur dont on doit modifier l'etat, de type 'Engin'.
 	 * @return Aucun.
 	 */
 	private void selectDateMES(Engin e) {
@@ -365,7 +365,7 @@ public class FenetreEtat extends JFrame implements ActionListener {
 	 * SELECTIONNE LA DATE DE RADIATION ACTUELLE DE L'ENGIN.
 	 * 
 	 * @param e
-	 *            Engin moteur dont on doit modifier l'état, de type 'Engin'.
+	 *            Engin moteur dont on doit modifier l'etat, de type 'Engin'.
 	 * @return Aucun.
 	 */
 	private void selectDateRAD(Engin e) {
@@ -388,7 +388,7 @@ public class FenetreEtat extends JFrame implements ActionListener {
 	 * SELECTIONNE LA PRESERVATION DE L'ENGIN.
 	 * 
 	 * @param e
-	 *            Engin moteur dont on doit modifier l'état, de type 'Engin'.
+	 *            Engin moteur dont on doit modifier l'etat, de type 'Engin'.
 	 * @return Aucun.
 	 */
 	private void selectPreservation(Engin e) {
@@ -411,7 +411,7 @@ public class FenetreEtat extends JFrame implements ActionListener {
 	 * SELECTIONNE LA RENUMEROTATION ACTUELLE DE L'ENGIN.
 	 * 
 	 * @param e
-	 *            Engin moteur dont on doit modifier l'état, de type 'Engin'.
+	 *            Engin moteur dont on doit modifier l'etat, de type 'Engin'.
 	 * @return Aucun.
 	 */
 	private void selectRenumerotation(Engin e) {
@@ -468,7 +468,7 @@ public class FenetreEtat extends JFrame implements ActionListener {
 					checkDateRAD();
 				}
 			}
-			// Préservation
+			// Preservation
 			if (e.getSource() == choixPreservation) {
 				preservationCourante = Association.values()[choixPreservation.getSelectedIndex() + 1]; // +1
 																										// car
@@ -597,7 +597,7 @@ public class FenetreEtat extends JFrame implements ActionListener {
 	 * DEFINIT LES ACTIONS DES BOUTONS.
 	 * 
 	 * @param e
-	 *            Evènement déclenché par l'appui sur un bouton.
+	 *            Evenement declenche par l'appui sur un bouton.
 	 * @return Aucun.
 	 */
 	public void actionPerformed(ActionEvent e) {

@@ -23,7 +23,7 @@ public class Modification extends JFrame implements ActionListener {
 	private JPanel panel;
 	private GridBagConstraints gbc;
 
-	// Eléments graphiques.
+	// Elements graphiques.
 	private JLabel titre1;
 	private JLabel espace1;
 	private JLabel nombre;
@@ -46,17 +46,17 @@ public class Modification extends JFrame implements ActionListener {
 	private Serie selectedSerie;
 	boolean remarque;
 	boolean modeNavigation; // 0 = vers un engin.
-							// 1 = vers une série.
+							// 1 = vers une serie.
 
 	/**
 	 * CONSTRUCTEUR DE LA CLASSE MODIFICATION.
 	 * 
 	 * @param pI
-	 *            Interface graphique mère, de type 'Interface'.
+	 *            Interface graphique mere, de type 'Interface'.
 	 * @param mainPanel
-	 *            Panel de l'interface graphique mère, de type 'JPanel'.
+	 *            Panel de l'interface graphique mere, de type 'JPanel'.
 	 * @param mainGbc
-	 *            Contraintes de l'interface graphique mère, de type
+	 *            Contraintes de l'interface graphique mere, de type
 	 *            'GridBagConstraints'.
 	 * @return Aucun.
 	 */
@@ -135,21 +135,21 @@ public class Modification extends JFrame implements ActionListener {
 
 		gbc.gridx = 0;
 		gbc.gridy = 4;
-		modifierEtat = new JButton("Modifier état");
+		modifierEtat = new JButton("Modifier etat");
 		modifierEtat.setFont(Interface.police);
 		modifierEtat.addActionListener(this);
 		panel.add(modifierEtat, gbc);
 
 		gbc.gridx = 0;
 		gbc.gridy = 5;
-		modifierLivree = new JButton("Modifier livrée");
+		modifierLivree = new JButton("Modifier livree");
 		modifierLivree.setFont(Interface.police);
 		modifierLivree.addActionListener(this);
 		panel.add(modifierLivree, gbc);
 
 		gbc.gridx = 0;
 		gbc.gridy = 6;
-		modifierDepot = new JButton("Modifier dépôt");
+		modifierDepot = new JButton("Modifier depot");
 		modifierDepot.setFont(Interface.police);
 		modifierDepot.addActionListener(this);
 		panel.add(modifierDepot, gbc);
@@ -192,7 +192,7 @@ public class Modification extends JFrame implements ActionListener {
 		gbc.fill = GridBagConstraints.EAST;
 		gbc.gridx = 0;
 		gbc.gridy = 11;
-		update = new JLabel("Mise à jour : " + Interface.dateToString(i.getUpdate(), false));
+		update = new JLabel("Mise a jour : " + Interface.dateToString(i.getUpdate(), false));
 		update.setFont(new Font(Interface.police.getFontName(), 1, Interface.police.getSize()));
 		update.setForeground(Color.white);
 		panel.add(update, gbc);
@@ -214,7 +214,7 @@ public class Modification extends JFrame implements ActionListener {
 	 * DEFINIT LA VUE COURANTE.
 	 * 
 	 * @param newVue
-	 *            Vue sélectionnée dans le tableau de type 'Vue'.
+	 *            Vue selectionnee dans le tableau de type 'Vue'.
 	 * @return Aucun.
 	 */
 	public void setVue(Vue newVue) {
@@ -225,7 +225,7 @@ public class Modification extends JFrame implements ActionListener {
 	 * DEFINIT LA REMARQUE COURANTE.
 	 * 
 	 * @param newRemarque
-	 *            Remarque sélectionnée dans le tableau de type 'Remarque'.
+	 *            Remarque selectionnee dans le tableau de type 'Remarque'.
 	 * @return Aucun.
 	 */
 	public void setRemarque(Remarque newRemarque) {
@@ -236,7 +236,7 @@ public class Modification extends JFrame implements ActionListener {
 	 * DEFINIT L'ENGIN COURANT.
 	 * 
 	 * @param newEngin
-	 *            Engin sélectionné dans le tableau de type 'Engin'.
+	 *            Engin selectionne dans le tableau de type 'Engin'.
 	 * @return Aucun.
 	 */
 	public void setEngin(Engin newEngin) {
@@ -250,14 +250,14 @@ public class Modification extends JFrame implements ActionListener {
 	 * DEFINIT LA SERIE COURANTE.
 	 * 
 	 * @param newSerie
-	 *            Série d'engins moteurs sélectionnée dans le tableau de type
+	 *            Serie d'engins moteurs selectionnee dans le tableau de type
 	 *            'Serie'.
 	 * @return Aucun.
 	 */
 	public void setSerie(Serie newSerie) {
 		selectedSerie = newSerie;
 		navigation.setEnabled(true);
-		navigation.setText("Afficher série " + selectedSerie.getNomComplet());
+		navigation.setText("Afficher serie " + selectedSerie.getNomComplet());
 		modeNavigation = true;
 	}
 	
@@ -268,16 +268,16 @@ public class Modification extends JFrame implements ActionListener {
 	 * @return Aucun.
 	 */
 	public void updateUpdate(String newDate) {
-		update.setText("Mise à jour : " + newDate);
+		update.setText("Mise a jour : " + newDate);
 	}
 
 	/**
 	 * DEFINIT L'AFFICHAGE POUR UN ENGIN MOTEUR.
 	 * 
 	 * @param e
-	 *            Engin moteur actuellement affiché de type 'Engin'.
+	 *            Engin moteur actuellement affiche de type 'Engin'.
 	 * @param pRemarque
-	 *            Booléen indiquant le type de vue. 'true' = affichage des
+	 *            Booleen indiquant le type de vue. 'true' = affichage des
 	 *            remarques de l'engin. 'false' = affichage des vues de l'engin.
 	 * @return Aucun.
 	 */
@@ -294,7 +294,7 @@ public class Modification extends JFrame implements ActionListener {
 			enableModifAttributs();
 			ajouter.setEnabled(true);
 			navigation.setEnabled(true);
-			navigation.setText("Afficher série " + e.getNomSerie());
+			navigation.setText("Afficher serie " + e.getNomSerie());
 			modeNavigation = true;
 			nb.setForeground(Color.white);
 			if (remarque == false) {
@@ -315,7 +315,7 @@ public class Modification extends JFrame implements ActionListener {
 	 * DEFINIT L'AFFICHAGE POUR UNE SERIE D'ENGINS MOTEURS.
 	 * 
 	 * @param s
-	 *            Série d'engins moteurs actuellement affichée de type 'Serie'.
+	 *            Serie d'engins moteurs actuellement affichee de type 'Serie'.
 	 * @return Aucun.
 	 */
 	public void update(Serie s) {
@@ -337,7 +337,7 @@ public class Modification extends JFrame implements ActionListener {
 	 * DEFINIT L'AFFICHAGE POUR UN PARC D'ENGINS MOTEURS.
 	 * 
 	 * @param p
-	 *            Parc d'engins moteurs actuellement affiché de type 'Parc'.
+	 *            Parc d'engins moteurs actuellement affiche de type 'Parc'.
 	 * @return Aucun.
 	 */
 	public void update(Parc p) {
@@ -426,7 +426,7 @@ public class Modification extends JFrame implements ActionListener {
 	 * DEFINIT LES ACTIONS DES BOUTONS.
 	 * 
 	 * @param e
-	 *            Evènement déclenché par l'appui sur un bouton.
+	 *            Evenement declenche par l'appui sur un bouton.
 	 * @return Aucun.
 	 */
 	public void actionPerformed(ActionEvent e) {

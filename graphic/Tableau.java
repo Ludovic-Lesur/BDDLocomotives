@@ -23,7 +23,7 @@ public class Tableau extends JPanel {
 	// Lien avec les autres classes graphiques.
 	private Interface i;
 
-	// Eléments graphiques.
+	// Elements graphiques.
 	private JScrollPane scroll;
 	private DefaultTableModel modeleVue;
 	private DefaultTableModel modeleRemarques;
@@ -33,10 +33,10 @@ public class Tableau extends JPanel {
 	int mode; // 0 = liste de vues.
 				// 1 = liste de remarques.
 				// 2 = liste d'engins.
-				// 3 = liste de séries.
+				// 3 = liste de series.
 
 	private Vector<Serie> listeSeries; // Affichage du parc.
-	private Vector<Engin> listeEngins; // Affichage d'une série et des
+	private Vector<Engin> listeEngins; // Affichage d'une serie et des
 										// anniversaires.
 	private Vector<Vue> listeVues; // Affichage d'un engin - vues.
 	private Vector<Remarque> listeRemarques; // Affichage d'un engin -
@@ -46,11 +46,11 @@ public class Tableau extends JPanel {
 	 * CONSTRUCTEUR DE LA CLASSE TABLEAU.
 	 * 
 	 * @param pI
-	 *            Interface graphique mère, de type 'Interface'.
+	 *            Interface graphique mere, de type 'Interface'.
 	 * @param mainPanel
-	 *            Panel de l'interface graphique mère, de type 'JPanel'.
+	 *            Panel de l'interface graphique mere, de type 'JPanel'.
 	 * @param mainGbc
-	 *            Contraintes de l'interface graphique mère, de type
+	 *            Contraintes de l'interface graphique mere, de type
 	 *            'GridBagConstraints'.
 	 * @return Aucun.
 	 */
@@ -113,7 +113,7 @@ public class Tableau extends JPanel {
 		dimensionnerTableau(null, false);
 		mode = 0;
 
-		// Détection du clic souris.
+		// Detection du clic souris.
 		tableau.addMouseListener(new MouseAdapter() {
 			public void mouseClicked(MouseEvent evnt) {
 				if (evnt.getClickCount() == 1) {
@@ -133,7 +133,7 @@ public class Tableau extends JPanel {
 					case 2:
 						i.setEngin(listeEngins.elementAt(ind));
 						break;
-					// Liste de séries.
+					// Liste de series.
 					case 3:
 						i.setSerie(listeSeries.elementAt(ind));
 						break;
@@ -151,7 +151,7 @@ public class Tableau extends JPanel {
 	 * TESTE SI UNE LIGNE DU TABLEAU A ETE SELECTIONNEE.
 	 * 
 	 * @param Aucun.
-	 * @return 'true' si une ligne du tableau a été sélectionnée. 'false' sinon.
+	 * @return 'true' si une ligne du tableau a ete selectionnee. 'false' sinon.
 	 */
 	public boolean rowIsSelected() {
 		return (tableau.getSelectedRow() != -1);
@@ -161,10 +161,10 @@ public class Tableau extends JPanel {
 	 * DIMENSIONNE LE TABLEAU POUR L'AFFICHAGE D'UN ENGIN MOTEUR.
 	 * 
 	 * @param e
-	 *            Engin moteur dont on doit afficher les caractéristiques, de
+	 *            Engin moteur dont on doit afficher les caracteristiques, de
 	 *            type 'Engin'.
 	 * @param remarque
-	 *            Booléen indiquant les caractéristiques à afficher. 'true' =
+	 *            Booleen indiquant les caracteristiques a afficher. 'true' =
 	 *            affichage des remarques. 'false' = affichage des vues.
 	 * @return Aucun.
 	 */
@@ -215,7 +215,7 @@ public class Tableau extends JPanel {
 	 * DIMENSIONNE LE TABLEAU POUR L'AFFICHAGE D'UNE SERIE D'ENGINS MOTEURS.
 	 * 
 	 * @param s
-	 *            Série d'engins moteurs à afficher, de type 'Serie'.
+	 *            Serie d'engins moteurs a afficher, de type 'Serie'.
 	 * @return Aucun.
 	 */
 	private void dimensionnerTableau(Serie s) {
@@ -250,7 +250,7 @@ public class Tableau extends JPanel {
 	 * DIMENSIONNE LE TABLEAU POUR L'AFFICHAGE D'UN PARC D'ENGINS MOTEURS.
 	 * 
 	 * @param p
-	 *            Parc d'engins moteurs à afficher, de type 'Parc'.
+	 *            Parc d'engins moteurs a afficher, de type 'Parc'.
 	 * @return Aucun.
 	 */
 	private void dimensionnerTableau(Parc p) {
@@ -320,10 +320,10 @@ public class Tableau extends JPanel {
 	 * DEFINIT L'AFFICHAGE POUR UN ENGIN MOTEUR.
 	 * 
 	 * @param e
-	 *            Engin moteur dont on doit afficher les caractéristiques, de
+	 *            Engin moteur dont on doit afficher les caracteristiques, de
 	 *            type 'Engin'.
 	 * @param remarque
-	 *            Booléen indiquant les caractéristiques à afficher. 'true' =
+	 *            Booleen indiquant les caracteristiques a afficher. 'true' =
 	 *            affichage des remarques. 'false' = affichage des vues.
 	 * @return Aucun.
 	 */
@@ -377,7 +377,7 @@ public class Tableau extends JPanel {
 	 * DEFINIT L'AFFICHAGE POUR UNE SERIE D'ENGINS MOTEURS.
 	 * 
 	 * @param s
-	 *            Série d'engins moteurs à afficher, de type 'Serie'.
+	 *            Serie d'engins moteurs a afficher, de type 'Serie'.
 	 * @return Aucun.
 	 */
 	public void update(Serie s) {
@@ -412,7 +412,7 @@ public class Tableau extends JPanel {
 	 * DEFINIT L'AFFICHAGE POUR UN PARC D'ENGINS MOTEURS.
 	 * 
 	 * @param p
-	 *            Parc d'engins moteurs à afficher, de type 'Parc'.
+	 *            Parc d'engins moteurs a afficher, de type 'Parc'.
 	 * @return Aucun.
 	 */
 	public void update(Parc p) {
@@ -458,7 +458,7 @@ public class Tableau extends JPanel {
 				Engin enginCourant = j.next();
 				String numero = enginCourant.getNomComplet();
 				String miseEnService = Interface.dateToString(enginCourant.getDateMES(), false);
-				// Age absolu quelque-soit l'état
+				// Age absolu quelque-soit l'etat
 				Period ageAbsolu = Period.between(enginCourant.getDateMES(), LocalDate.now());
 				double ageFloat = ageAbsolu.getYears() + ageAbsolu.getMonths() / 12.0 + ageAbsolu.getDays() / 365.0;
 				ageFloat = Math.floor(ageFloat * 100) / 100.0;
@@ -510,13 +510,13 @@ public class Tableau extends JPanel {
 			} else {
 				enginCourant = listeAnniv.elementAt(row);
 			}
-			// Ligne sur fond jaune si l'engin a été vu
+			// Ligne sur fond jaune si l'engin a ete vu
 			if (enginCourant.getNbVues() > 0) {
 				setBackground(new Color(255, 246, 143));
 			} else {
 				setBackground(Color.white);
 			}
-			// Ecriture de couleur en fonction de l'état
+			// Ecriture de couleur en fonction de l'etat
 			if ((column == 0) || (column == 2) || (column == 3)) {
 				if (enginCourant.getEtat() == Etat.R) {
 					setForeground(Color.red);
@@ -526,7 +526,7 @@ public class Tableau extends JPanel {
 			} else {
 				setForeground(Color.black);
 			}
-			// Coloration des dépôts
+			// Coloration des depots
 			if (column == 5) {
 				setForeground(enginCourant.getDepot().getColor());
 			}
@@ -554,8 +554,8 @@ public class Tableau extends JPanel {
 			super.getTableCellRendererComponent(table, value, isSelected, hasFocus, row, column);
 			Serie serieCourante = listeSeries.elementAt(row);
 			setForeground(Color.black);
-			// Ligne sur fond jaune si la série n'est pas encore entièrement
-			// enregistrée dans la base.
+			// Ligne sur fond jaune si la serie n'est pas encore entierement
+			// enregistree dans la base.
 			if (serieCourante.getEffectifActuel() < serieCourante.getEffectif()) {
 				setBackground(new Color(255, 246, 143));
 			} else {
@@ -563,7 +563,7 @@ public class Tableau extends JPanel {
 			}
 			switch (column) {
 			case 0:
-				// Couleur de la série en fonction du type
+				// Couleur de la serie en fonction du type
 				setForeground(serieCourante.getType().getColor());
 				break;
 			case 3:
@@ -607,7 +607,7 @@ public class Tableau extends JPanel {
 		public Component getTableCellRendererComponent(JTable table, Object value, boolean isSelected, boolean hasFocus,
 				int row, int column) {
 			super.getTableCellRendererComponent(table, value, isSelected, hasFocus, row, column);
-			// Ligne sur fond jaune si une photo ou une vidéo est associée à la
+			// Ligne sur fond jaune si une photo ou une video est associee a la
 			// vue
 			Vue vueCourante = listeVues.elementAt(row);
 			setForeground(Color.black);
@@ -626,7 +626,7 @@ public class Tableau extends JPanel {
 					setForeground(new Color(255, 114, 86));
 				}
 			}
-			// Vidéo
+			// Video
 			if (column == 5) {
 				if (vueCourante.getVideo() == true) {
 					setBackground(new Color(127, 255, 0));

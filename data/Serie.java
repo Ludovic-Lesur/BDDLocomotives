@@ -46,7 +46,7 @@ public class Serie implements Comparable<Serie> {
 	 * 
 	 * @param sourceXML
 	 *            Chemin absolu de type 'String' du fichier XML contenant les
-	 *            données de la série.
+	 *            donnees de la serie.
 	 * @return Aucun.
 	 */
 	public Serie(File sourceXML) {
@@ -61,14 +61,14 @@ public class Serie implements Comparable<Serie> {
 		preserves = 0;
 		radies = 0;
 
-		// On crée un nouveau document JDOM avec en argument le fichier XML
+		// On cree un nouveau document JDOM avec en argument le fichier XML
 		SAXBuilder sxb = new SAXBuilder();
 		try {
 			document = sxb.build(sourceXML);
 			racine = document.getRootElement();
 			calculerAttributs();
 		} catch (IOException e) {
-			System.out.println("Fichier non trouvé.");
+			System.out.println("Fichier non trouve.");
 		} catch (JDOMException e) {
 			System.out.println("Erreur de parsing.");
 		}
@@ -87,14 +87,14 @@ public class Serie implements Comparable<Serie> {
 		preserves = 0;
 		radies = 0;
 
-		// On crée un nouveau document JDOM avec en argument le fichier XML
+		// On cree un nouveau document JDOM avec en argument le fichier XML
 		SAXBuilder sxb = new SAXBuilder();
 		try {
 			document = sxb.build(fichierXML);
 			racine = document.getRootElement();
 			calculerAttributs();
 		} catch (IOException e) {
-			System.out.println("Fichier non trouvé.");
+			System.out.println("Fichier non trouve.");
 		} catch (JDOMException e) {
 			System.out.println("Erreur de parsing.");
 		}
@@ -141,7 +141,7 @@ public class Serie implements Comparable<Serie> {
 	 * RETOURNE L'IDENTIFIANT DE LA SERIE.
 	 * 
 	 * @param Aucun.
-	 * @return identifiant Identifiant de la série de type 'Identifiant'.
+	 * @return identifiant Identifiant de la serie de type 'Identifiant'.
 	 */
 	public Identifiant getIdentifiant() {
 		return identifiant;
@@ -151,7 +151,7 @@ public class Serie implements Comparable<Serie> {
 	 * RETOURNE LE TYPE DE LA SERIE.
 	 * 
 	 * @param Aucun.
-	 * @return type Type de la série de type 'Type'.
+	 * @return type Type de la serie de type 'Type'.
 	 */
 	public Type getType() {
 		return type;
@@ -161,7 +161,7 @@ public class Serie implements Comparable<Serie> {
 	 * RETOURNE LE TYPE DE LA SERIE.
 	 * 
 	 * @param Aucun.
-	 * @return type Type de la série de type 'String'.
+	 * @return type Type de la serie de type 'String'.
 	 */
 	public String getTypeString() {
 		return type.getName();
@@ -171,7 +171,7 @@ public class Serie implements Comparable<Serie> {
 	 * RETOURNE LE NOM COMPLET DE LA SERIE.
 	 * 
 	 * @param Aucun.
-	 * @return Nom complet de la série (identifiant et numéro de série).
+	 * @return Nom complet de la serie (identifiant et numero de serie).
 	 */
 	public String getNomComplet() {
 		return (identifiant.getName() + " " + serie);
@@ -181,7 +181,7 @@ public class Serie implements Comparable<Serie> {
 	 * RETOURNE L'EFFECTIF DE LA SERIE.
 	 * 
 	 * @param Aucun.
-	 * @return effectif Nombre d'engins moteurs de la série de type 'int'.
+	 * @return effectif Nombre d'engins moteurs de la serie de type 'int'.
 	 */
 	public int getEffectif() {
 		return effectif;
@@ -192,7 +192,7 @@ public class Serie implements Comparable<Serie> {
 	 * DONNEE.
 	 * 
 	 * @param Aucun.
-	 * @return Nombre d'engins moteurs enregistrés de type 'int'.
+	 * @return Nombre d'engins moteurs enregistres de type 'int'.
 	 */
 	public int getEffectifActuel() {
 		return (enAttente + enService + radies + preserves);
@@ -202,7 +202,7 @@ public class Serie implements Comparable<Serie> {
 	 * RETOURNE L'EFFECTIF EN SERVICE DE LA SERIE.
 	 * 
 	 * @param Aucun.
-	 * @return enService Nombre d'engins moteurs de la série en service.
+	 * @return enService Nombre d'engins moteurs de la serie en service.
 	 */
 	public int getEnService() {
 		return enService;
@@ -212,7 +212,7 @@ public class Serie implements Comparable<Serie> {
 	 * RETOURNE L'EFFECTIF EN ATTENTE DE MISE EN SERVICE DE LA SERIE.
 	 * 
 	 * @param Aucun.
-	 * @return eAttente Nombre d'engins moteurs de la série en attente de mise
+	 * @return eAttente Nombre d'engins moteurs de la serie en attente de mise
 	 *         en service.
 	 */
 	public int getEnAttente() {
@@ -223,7 +223,7 @@ public class Serie implements Comparable<Serie> {
 	 * RETOURNE L'EFFECTIF RADIE DE LA SERIE.
 	 * 
 	 * @param Aucun.
-	 * @return radies Nombre d'engins moteurs de la série radiés.
+	 * @return radies Nombre d'engins moteurs de la serie radies.
 	 */
 	public int getRadies() {
 		return radies;
@@ -233,7 +233,7 @@ public class Serie implements Comparable<Serie> {
 	 * RETOURNE L'EFFECTIF PRESERVE DE LA SERIE.
 	 * 
 	 * @param Aucun.
-	 * @return preserves Nombre d'engins moteurs de la série préservés.
+	 * @return preserves Nombre d'engins moteurs de la serie preserves.
 	 */
 	public int getPreserves() {
 		return preserves;
@@ -245,7 +245,7 @@ public class Serie implements Comparable<Serie> {
 	 * 'TABLEAU'.
 	 * 
 	 * @param Aucun.
-	 * @return dateMESMin Date de mise en service la plus ancienne de la série
+	 * @return dateMESMin Date de mise en service la plus ancienne de la serie
 	 *         de type 'LocalDate'.
 	 */
 	public LocalDate getJourMESMin() {
@@ -271,7 +271,7 @@ public class Serie implements Comparable<Serie> {
 	 * RETOURNE L'ANNEE DE MISE EN SERVICE LA PLUS ANCIENNE DE LA SERIE.
 	 * 
 	 * @param Aucun.
-	 * @return dateMESMin Annee de mise en service la plus ancienne de la série
+	 * @return dateMESMin Annee de mise en service la plus ancienne de la serie
 	 *         de type 'String'.
 	 */
 	public String getAnneeMESMin() {
@@ -301,7 +301,7 @@ public class Serie implements Comparable<Serie> {
 	 * RETOURNE L'ANNEE DE MISE EN SERVICE LA PLUS RECENTE DE LA SERIE.
 	 * 
 	 * @param Aucun.
-	 * @return dateMESMin Annee de mise en service la plus récente de la série
+	 * @return dateMESMin Annee de mise en service la plus recente de la serie
 	 *         de type 'String'.
 	 */
 	public String getAnneeMESMax() {
@@ -331,7 +331,7 @@ public class Serie implements Comparable<Serie> {
 	 * RETOURNE LE NOMBRE D'ENGINS VUS DE LA SERIE.
 	 * 
 	 * @param Aucun.
-	 * @return nbEnginsVus Nombre d'engins moteurs de la série ayant été vus au
+	 * @return nbEnginsVus Nombre d'engins moteurs de la serie ayant ete vus au
 	 *         moins une fois.
 	 */
 	public int getNbEnginsVus() {
@@ -353,11 +353,11 @@ public class Serie implements Comparable<Serie> {
 	 * RECHERCHE UN ENGIN DANS LA SERIE A PARTIR DE SON NUMERO.
 	 * 
 	 * @param numCherche
-	 *            Numéro de l'engin cherché de type 'int'.
+	 *            Numero de l'engin cherche de type 'int'.
 	 * @param dossierParc
-	 *            Chemin absolu dossier du parc d'engins moteurs, où se trouve
-	 *            le fichier XML de la série.
-	 * @return enginTrouve Engin trouvé de type 'Engin' si la recherche aboutit.
+	 *            Chemin absolu dossier du parc d'engins moteurs, ou se trouve
+	 *            le fichier XML de la serie.
+	 * @return enginTrouve Engin trouve de type 'Engin' si la recherche aboutit.
 	 *         'null' sinon.
 	 */
 	public Engin rechercherEngin(String numCherche, String dossierParc) {
@@ -373,21 +373,21 @@ public class Serie implements Comparable<Serie> {
 			Element enginCourant = (Element) itEngins.next();
 			k++;
 			numRaw = enginCourant.getChild(BaliseXML.XML_NUMERO).getText();
-			// Check du type de numéro (numéro seul ou appariement).
+			// Check du type de numero (numero seul ou appariement).
 			if (numRaw.contains("/")) {
-				// Extraction des deux numéros à partir du format "xxxxx/xxxxx".
+				// Extraction des deux numeros a partir du format "xxxxx/xxxxx".
 				int indiceSlash = numRaw.indexOf('/');
 				numCourant1 = numRaw.substring(0, indiceSlash);
 				numCourant2 = numRaw.substring(indiceSlash + 1);
 			} else {
 				numCourant1 = enginCourant.getChild(BaliseXML.XML_NUMERO).getText();
 			}
-			// Renumérotation.
+			// Renumerotation.
 			renumCourante = enginCourant.getChild(BaliseXML.XML_RENUMEROTATION).getText();
 
 			if ((numCourant1.compareTo(numCherche) == 0) || (numCourant2.compareTo(numCherche) == 0)
 					|| (renumCourante.compareTo(numCherche) == 0) || (numRaw.compareTo(numCherche) == 0)) {
-				// Engin trouvé -> création de l'objet à partir des données XML.
+				// Engin trouve -> creation de l'objet a partir des donnees XML.
 				enginTrouve = new Engin();
 				enginTrouve.setSerie(this);
 				enginTrouve.setIdentifiant(identifiant);
@@ -409,7 +409,7 @@ public class Serie implements Comparable<Serie> {
 				Iterator<Element> itVues = listeVues.iterator();
 				while (itVues.hasNext()) {
 					Element vueCourante = (Element) itVues.next();
-					// Vue trouvée -> création de l'objet à partir des données
+					// Vue trouvee -> creation de l'objet a partir des donnees
 					// XML.
 					Vue resVue = new Vue();
 					resVue.setDate(stringToDate(vueCourante.getChild(BaliseXML.XML_DATEVUE).getText()));
@@ -428,8 +428,8 @@ public class Serie implements Comparable<Serie> {
 				Iterator<Element> itRemarques = listeRemarques.iterator();
 				while (itRemarques.hasNext()) {
 					Element remarqueCourante = (Element) itRemarques.next();
-					// Remarque trouvée -> création de l'objet à partir des
-					// données XML.
+					// Remarque trouvee -> creation de l'objet a partir des
+					// donnees XML.
 					Remarque resRemarque = new Remarque();
 					resRemarque.setDate(stringToDate(remarqueCourante.getChild(BaliseXML.XML_DATEREM).getText()));
 					resRemarque.setTexte(remarqueCourante.getChild(BaliseXML.XML_TEXTE).getText());
@@ -446,9 +446,9 @@ public class Serie implements Comparable<Serie> {
 	 * RENVOIE LE NUMERO DE L'ENGIN CORREPONDANT A UN INDICE DONNE.
 	 * 
 	 * @param indiceCherche
-	 *            Indice recherché de type 'int'.
-	 * @return resultat Numéro de l'engin moteur correspondant à l'indice
-	 *         cherché.
+	 *            Indice recherche de type 'int'.
+	 * @return resultat Numero de l'engin moteur correspondant a l'indice
+	 *         cherche.
 	 */
 	public String rechercherNumero(int indiceCherche) {
 		String resultat = "";
@@ -491,21 +491,21 @@ public class Serie implements Comparable<Serie> {
 	 * MODIFIE L'ETAT D'UN ENGIN MOTEUR DE LA SERIE DANS LE FICHIER XML.
 	 * 
 	 * @param numero
-	 *            Numéro de l'engin à modifier de type 'String'.
+	 *            Numero de l'engin a modifier de type 'String'.
 	 * @param e
-	 *            Nouvel état de l'engin de type 'Etat'.
+	 *            Nouvel etat de l'engin de type 'Etat'.
 	 * @return Aucun.
 	 */
 	public void modifyXML(String numero, Etat e) {
 		List<Element> listEngins = racine.getChildren(BaliseXML.XML_ENGIN);
 		Iterator<Element> itEngins = listEngins.iterator();
-		// On cherche l'engin à modifier
+		// On cherche l'engin a modifier
 		while (itEngins.hasNext()) {
 			Element enginCourant = (Element) itEngins.next();
 			String strNum = enginCourant.getChild(BaliseXML.XML_NUMERO).getText();
 			if (strNum.compareTo(numero) == 0) {
 				enginCourant.getChild(BaliseXML.XML_ETAT).setText(e.getSymbol());
-				System.out.println("Modification de l'état de l'engin " + identifiant + " " + strNum);
+				System.out.println("Modification de l'etat de l'engin " + identifiant + " " + strNum);
 				break;
 			}
 		}
@@ -517,21 +517,21 @@ public class Serie implements Comparable<Serie> {
 	 * XML.
 	 * 
 	 * @param numero
-	 *            Numéro de l'engin à modifier de type 'String'.
+	 *            Numero de l'engin a modifier de type 'String'.
 	 * @param strRenumerotation
-	 *            Nouvelle renumérotation de l'engin de type 'String'.
+	 *            Nouvelle renumerotation de l'engin de type 'String'.
 	 * @return Aucun.
 	 */
 	public void modifyXML(String numero, String strRenumerotation) {
 		List<Element> listEngins = racine.getChildren(BaliseXML.XML_ENGIN);
 		Iterator<Element> itEngins = listEngins.iterator();
-		// On cherche l'engin à modifier
+		// On cherche l'engin a modifier
 		while (itEngins.hasNext()) {
 			Element enginCourant = (Element) itEngins.next();
 			String strNum = enginCourant.getChild(BaliseXML.XML_NUMERO).getText();
 			if (strNum.compareTo(numero) == 0) {
 				enginCourant.getChild(BaliseXML.XML_RENUMEROTATION).setText(strRenumerotation);
-				System.out.println("Modification de la renumérotation de l'engin " + identifiant + " " + strNum);
+				System.out.println("Modification de la renumerotation de l'engin " + identifiant + " " + strNum);
 				break;
 			}
 		}
@@ -543,18 +543,18 @@ public class Serie implements Comparable<Serie> {
 	 * LA SERIE DANS LE FICHIER XML.
 	 * 
 	 * @param numero
-	 *            Numéro de l'engin à modifier de type 'String'.
+	 *            Numero de l'engin a modifier de type 'String'.
 	 * @param d
 	 *            Nouvelle date de type 'LocalDate'.
 	 * @param mes
 	 *            Mode de la fonction de type 'boolean'. true = date de mise en
-	 *            service modifiée. false = date de radiation modfiée.
+	 *            service modifiee. false = date de radiation modfiee.
 	 * @return Aucun.
 	 */
 	public void modifyXML(String numero, LocalDate d, boolean mes) {
 		List<Element> listEngins = racine.getChildren(BaliseXML.XML_ENGIN);
 		Iterator<Element> itEngins = listEngins.iterator();
-		// On cherche l'engin à modifier
+		// On cherche l'engin a modifier
 		while (itEngins.hasNext()) {
 			Element enginCourant = (Element) itEngins.next();
 			String strNum = enginCourant.getChild(BaliseXML.XML_NUMERO).getText();
@@ -585,16 +585,16 @@ public class Serie implements Comparable<Serie> {
 	 * XML.
 	 * 
 	 * @param numero
-	 *            Numéro de l'engin à modifier de type 'String'.
+	 *            Numero de l'engin a modifier de type 'String'.
 	 * @param a
-	 *            Nouvelle association de préservation de l'engin de type
+	 *            Nouvelle association de preservation de l'engin de type
 	 *            'Association'.
 	 * @return Aucun.
 	 */
 	public void modifyXML(String numero, Association a) {
 		List<Element> listEngins = racine.getChildren(BaliseXML.XML_ENGIN);
 		Iterator<Element> itEngins = listEngins.iterator();
-		// On cherche l'engin à modifier
+		// On cherche l'engin a modifier
 		while (itEngins.hasNext()) {
 			Element enginCourant = (Element) itEngins.next();
 			String strNum = enginCourant.getChild(BaliseXML.XML_NUMERO).getText();
@@ -604,7 +604,7 @@ public class Serie implements Comparable<Serie> {
 				} else {
 					enginCourant.getChild(BaliseXML.XML_PRESERVATION).setText(Association.Vide.getSymbol());
 				}
-				System.out.println("Modification de la préservation de l'engin " + identifiant + " " + strNum);
+				System.out.println("Modification de la preservation de l'engin " + identifiant + " " + strNum);
 				break;
 			}
 		}
@@ -615,21 +615,21 @@ public class Serie implements Comparable<Serie> {
 	 * MODIFIE LA LIVREE D'UN ENGIN MOTEUR DE LA SERIE DANS LE FICHIER XML.
 	 * 
 	 * @param numero
-	 *            Numéro de l'engin à modifier de type 'String'.
+	 *            Numero de l'engin a modifier de type 'String'.
 	 * @param l
-	 *            Nouvelle livrée de l'engin de type 'Livree'.
+	 *            Nouvelle livree de l'engin de type 'Livree'.
 	 * @return Aucun.
 	 */
 	public void modifyXML(String numero, Livree l) {
 		List<Element> listEngins = racine.getChildren(BaliseXML.XML_ENGIN);
 		Iterator<Element> itEngins = listEngins.iterator();
-		// On cherche l'engin à modifier
+		// On cherche l'engin a modifier
 		while (itEngins.hasNext()) {
 			Element enginCourant = (Element) itEngins.next();
 			String strNum = enginCourant.getChild(BaliseXML.XML_NUMERO).getText();
 			if (strNum.compareTo(numero) == 0) {
 				enginCourant.getChild(BaliseXML.XML_LIVREE).setText(l.getSymbol());
-				System.out.println("Modification de la livrée de l'engin " + identifiant + " " + strNum);
+				System.out.println("Modification de la livree de l'engin " + identifiant + " " + strNum);
 				break;
 			}
 		}
@@ -640,21 +640,21 @@ public class Serie implements Comparable<Serie> {
 	 * MODIFIE LE DEPOT D'UN ENGIN MOTEUR DE LA SERIE DANS LE FICHIER XML.
 	 * 
 	 * @param numero
-	 *            Numéro de l'engin à modifier de type 'String'.
+	 *            Numero de l'engin a modifier de type 'String'.
 	 * @param d
-	 *            Nouveau dépôt de l'engin de type 'Depot'.
+	 *            Nouveau depot de l'engin de type 'Depot'.
 	 * @return Aucun.
 	 */
 	public void modifyXML(String numero, Depot d) {
 		List<Element> listEngins = racine.getChildren(BaliseXML.XML_ENGIN);
 		Iterator<Element> itEngins = listEngins.iterator();
-		// On cherche l'engin à modifier
+		// On cherche l'engin a modifier
 		while (itEngins.hasNext()) {
 			Element enginCourant = (Element) itEngins.next();
 			String strNum = enginCourant.getChild(BaliseXML.XML_NUMERO).getText();
 			if (strNum.compareTo(numero) == 0) {
 				enginCourant.getChild(BaliseXML.XML_DEPOT).setText(d.getSymbol());
-				System.out.println("Modification du dépôt de l'engin " + identifiant + " " + strNum);
+				System.out.println("Modification du depot de l'engin " + identifiant + " " + strNum);
 				break;
 			}
 		}
@@ -665,7 +665,7 @@ public class Serie implements Comparable<Serie> {
 	 * AJOUTE UNE VUE A UN ENGIN MOTEUR DE LA SERIE DANS LE FICHIER XML.
 	 * 
 	 * @param numero
-	 *            Numéro de l'engin à modifier de type 'String'.
+	 *            Numero de l'engin a modifier de type 'String'.
 	 * @param v
 	 *            Nouvelle vue de l'engin de type 'Vue'.
 	 * @return Aucun.
@@ -673,7 +673,7 @@ public class Serie implements Comparable<Serie> {
 	public void addXML(String numero, Vue v) {
 		List<Element> listEngins = racine.getChildren(BaliseXML.XML_ENGIN);
 		Iterator<Element> itEngins = listEngins.iterator();
-		// On cherche l'engin à modifier
+		// On cherche l'engin a modifier
 		while (itEngins.hasNext()) {
 			Element enginCourant = (Element) itEngins.next();
 			String strNum = enginCourant.getChild(BaliseXML.XML_NUMERO).getText();
@@ -719,9 +719,9 @@ public class Serie implements Comparable<Serie> {
 	 * MODIFIE LA VUE D'UN ENGIN MOTEUR DE LA SERIE DANS LE FICHIER XML.
 	 * 
 	 * @param numero
-	 *            Numéro de l'engin à modifier de type 'String'.
+	 *            Numero de l'engin a modifier de type 'String'.
 	 * @param oldVue
-	 *            Ancienne vue de l'engin à modifier, de type 'Vue'.
+	 *            Ancienne vue de l'engin a modifier, de type 'Vue'.
 	 * @param newVue
 	 *            Nouvelle vue de type 'Vue' qui remplacera 'oldVue'.
 	 * @return Aucun.
@@ -729,18 +729,18 @@ public class Serie implements Comparable<Serie> {
 	public void modifyXML(String numero, Vue oldVue, Vue newVue) {
 		List<Element> listEngins = racine.getChildren(BaliseXML.XML_ENGIN);
 		Iterator<Element> itEngins = listEngins.iterator();
-		// On cherche l'engin à modifier
+		// On cherche l'engin a modifier
 		while (itEngins.hasNext()) {
 			Element enginCourant = (Element) itEngins.next();
 			String strNum = enginCourant.getChild(BaliseXML.XML_NUMERO).getText();
 			if (strNum.compareTo(numero) == 0) {
-				// On cherche la vue à supprimer en fonction de la date, du
-				// lieu, du départ et de l'arrivée
+				// On cherche la vue a supprimer en fonction de la date, du
+				// lieu, du depart et de l'arrivee
 				List<Element> listVues = enginCourant.getChildren(BaliseXML.XML_VUE);
 				Iterator<Element> itVues = listVues.iterator();
 				while (itVues.hasNext()) {
 					Element vueCourante = (Element) itVues.next();
-					// On reconstruit un objet Vue à partir des données XML
+					// On reconstruit un objet Vue a partir des donnees XML
 					Vue vue = new Vue();
 					vue.setDate(stringToDate(vueCourante.getChild(BaliseXML.XML_DATEVUE).getText()));
 					vue.setLieu(vueCourante.getChild(BaliseXML.XML_LIEU).getText());
@@ -751,7 +751,7 @@ public class Serie implements Comparable<Serie> {
 					vue.setCabine(stringToBoolean(vueCourante.getChild(BaliseXML.XML_CABINE).getText()));
 					vue.setPhoto(stringToBoolean(vueCourante.getChild(BaliseXML.XML_PHOTO).getText()));
 					vue.setVideo(stringToBoolean(vueCourante.getChild(BaliseXML.XML_VIDEO).getText()));
-					// Et on la compare à la vue à modifier
+					// Et on la compare a la vue a modifier
 					if (oldVue.equals(vue)) {
 						// Modification avec newVue
 						vueCourante.getChild(BaliseXML.XML_DATEVUE)
@@ -777,26 +777,26 @@ public class Serie implements Comparable<Serie> {
 	 * SUPPRIME UNE VUE D'UN ENGIN MOTEUR DE LA SERIE DANS LE FICHIER XML.
 	 * 
 	 * @param numero
-	 *            Numéro de l'engin à modifier de type 'String'.
+	 *            Numero de l'engin a modifier de type 'String'.
 	 * @param v
-	 *            Vue de l'engin à supprimer, de type 'Vue'.
+	 *            Vue de l'engin a supprimer, de type 'Vue'.
 	 * @return Aucun.
 	 */
 	public void deleteXML(String numero, Vue v) {
 		List<Element> listEngins = racine.getChildren(BaliseXML.XML_ENGIN);
 		Iterator<Element> itEngins = listEngins.iterator();
-		// On cherche l'engin à modifier
+		// On cherche l'engin a modifier
 		while (itEngins.hasNext()) {
 			Element enginCourant = (Element) itEngins.next();
 			String strNum = enginCourant.getChild(BaliseXML.XML_NUMERO).getText();
 			if (strNum.compareTo(numero) == 0) {
-				// On cherche la vue à supprimer en fonction de la date, du
-				// lieu, du départ et de l'arrivée
+				// On cherche la vue a supprimer en fonction de la date, du
+				// lieu, du depart et de l'arrivee
 				List<Element> listVues = enginCourant.getChildren(BaliseXML.XML_VUE);
 				Iterator<Element> itVues = listVues.iterator();
 				while (itVues.hasNext()) {
 					Element vueCourante = (Element) itVues.next();
-					// On reconstruit un objet Vue à partir des données XML
+					// On reconstruit un objet Vue a partir des donnees XML
 					Vue vue = new Vue();
 					vue.setDate(stringToDate(vueCourante.getChild(BaliseXML.XML_DATEVUE).getText()));
 					vue.setLieu(vueCourante.getChild(BaliseXML.XML_LIEU).getText());
@@ -807,8 +807,8 @@ public class Serie implements Comparable<Serie> {
 					vue.setCabine(stringToBoolean(vueCourante.getChild(BaliseXML.XML_CABINE).getText()));
 					vue.setPhoto(stringToBoolean(vueCourante.getChild(BaliseXML.XML_PHOTO).getText()));
 					vue.setVideo(stringToBoolean(vueCourante.getChild(BaliseXML.XML_VIDEO).getText()));
-					System.out.println("Test d'égalité");
-					// Et on la compare à la vue à supprimer
+					System.out.println("Test d'egalite");
+					// Et on la compare a la vue a supprimer
 					if (v.equals(vue)) {
 						System.out.println("Suppression d'une vue sur l'engin " + identifiant + " " + strNum);
 						enginCourant.removeContent(vueCourante);
@@ -824,7 +824,7 @@ public class Serie implements Comparable<Serie> {
 	 * AJOUTE UNE REMARQUE A UN ENGIN MOTEUR DE LA SERIE DANS LE FICHIER XML.
 	 * 
 	 * @param numero
-	 *            Numéro de l'engin à modifier de type 'String'.
+	 *            Numero de l'engin a modifier de type 'String'.
 	 * @param r
 	 *            Nouvelle remarque de l'engin de type 'Remarque'.
 	 * @return Aucun.
@@ -832,7 +832,7 @@ public class Serie implements Comparable<Serie> {
 	public void addXML(String numero, Remarque r) {
 		List<Element> listEngins = racine.getChildren(BaliseXML.XML_ENGIN);
 		Iterator<Element> itEngins = listEngins.iterator();
-		// On cherche l'engin à modifier
+		// On cherche l'engin a modifier
 		while (itEngins.hasNext()) {
 			Element enginCourant = (Element) itEngins.next();
 			String strNum = enginCourant.getChild(BaliseXML.XML_NUMERO).getText();
@@ -858,9 +858,9 @@ public class Serie implements Comparable<Serie> {
 	 * MODIFIE LA REMARQUE D'UN ENGIN MOTEUR DE LA SERIE DANS LE FICHIER XML.
 	 * 
 	 * @param numero
-	 *            Numéro de l'engin à modifier de type 'String'.
+	 *            Numero de l'engin a modifier de type 'String'.
 	 * @param oldRemarque
-	 *            Ancienne remarque de l'engin à modifier, de type 'Remarque'.
+	 *            Ancienne remarque de l'engin a modifier, de type 'Remarque'.
 	 * @param newRemarque
 	 *            Nouvelle remarque de type 'Remarque' qui remplacera
 	 *            'oldRemarque'.
@@ -869,22 +869,22 @@ public class Serie implements Comparable<Serie> {
 	public void modifyXML(String numero, Remarque oldRemarque, Remarque newRemarque) {
 		List<Element> listEngins = racine.getChildren(BaliseXML.XML_ENGIN);
 		Iterator<Element> itEngins = listEngins.iterator();
-		// On cherche l'engin à modifier
+		// On cherche l'engin a modifier
 		while (itEngins.hasNext()) {
 			Element enginCourant = (Element) itEngins.next();
 			String strNum = enginCourant.getChild(BaliseXML.XML_NUMERO).getText();
 			if (strNum.compareTo(numero) == 0) {
-				// On cherche la remarque à supprimer en fonction de la date et
+				// On cherche la remarque a supprimer en fonction de la date et
 				// du texte
 				List<Element> listRemarques = enginCourant.getChildren(BaliseXML.XML_REM);
 				Iterator<Element> itVues = listRemarques.iterator();
 				while (itVues.hasNext()) {
 					Element remarqueCourante = (Element) itVues.next();
-					// On reconstruit un objet Remarque à partir des données XML
+					// On reconstruit un objet Remarque a partir des donnees XML
 					Remarque remarque = new Remarque();
 					remarque.setDate(stringToDate(remarqueCourante.getChild(BaliseXML.XML_DATEREM).getText()));
 					remarque.setTexte(remarqueCourante.getChild(BaliseXML.XML_TEXTE).getText());
-					// Et on la compare à la vue à modifier
+					// Et on la compare a la vue a modifier
 					if (oldRemarque.equals(remarque)) {
 						// Modification avec newRemarque
 						remarqueCourante.getChild(BaliseXML.XML_DATEREM)
@@ -903,30 +903,30 @@ public class Serie implements Comparable<Serie> {
 	 * SUPPRIME UNE REMARQUE D'UN ENGIN MOTEUR DE LA SERIE DANS LE FICHIER XML.
 	 * 
 	 * @param numero
-	 *            Numéro de l'engin à modifier de type 'String'.
+	 *            Numero de l'engin a modifier de type 'String'.
 	 * @param r
-	 *            Remarque de l'engin à supprimer, de type 'Remarque'.
+	 *            Remarque de l'engin a supprimer, de type 'Remarque'.
 	 * @return Aucun.
 	 */
 	public void deleteXML(String numero, Remarque r) {
 		List<Element> listEngins = racine.getChildren(BaliseXML.XML_ENGIN);
 		Iterator<Element> itEngins = listEngins.iterator();
-		// On cherche l'engin à modifier
+		// On cherche l'engin a modifier
 		while (itEngins.hasNext()) {
 			Element enginCourant = (Element) itEngins.next();
 			String strNum = enginCourant.getChild(BaliseXML.XML_NUMERO).getText();
 			if (strNum.compareTo(numero) == 0) {
-				// On cherche la remarque à supprimer en fonction de la date et
+				// On cherche la remarque a supprimer en fonction de la date et
 				// du texte
 				List<Element> listRemarques = enginCourant.getChildren(BaliseXML.XML_REM);
 				Iterator<Element> itVues = listRemarques.iterator();
 				while (itVues.hasNext()) {
 					Element remarqueCourante = (Element) itVues.next();
-					// On reconstruit un objet Remarque à partir des données XML
+					// On reconstruit un objet Remarque a partir des donnees XML
 					Remarque remarque = new Remarque();
 					remarque.setDate(stringToDate(remarqueCourante.getChild(BaliseXML.XML_DATEREM).getText()));
 					remarque.setTexte(remarqueCourante.getChild(BaliseXML.XML_TEXTE).getText());
-					// Et on la compare à la vue à supprimer
+					// Et on la compare a la vue a supprimer
 					if (r.equals(remarque)) {
 						System.out.println("Suppression d'une remarque sur l'engin " + identifiant + " " + strNum);
 						enginCourant.removeContent(remarqueCourante);
@@ -942,7 +942,7 @@ public class Serie implements Comparable<Serie> {
 	 * RETOURNE LA LISTE DES ENGINS DE LA SERIE.
 	 * 
 	 * @param Aucun.
-	 * @return serieEngins Liste des engins de la série de type Vector<Engin>.
+	 * @return serieEngins Liste des engins de la serie de type Vector<Engin>.
 	 */
 	public Vector<Engin> getEngins() {
 		Vector<Engin> serieEngins = new Vector<Engin>();
@@ -962,8 +962,8 @@ public class Serie implements Comparable<Serie> {
 	 * SERVICE DONNEE.
 	 * 
 	 * @param date
-	 *            Date de mise en service cherchée de type 'LocalDate'.
-	 * @return serieEngins Liste des engins de la série mis en service les mêmes
+	 *            Date de mise en service cherchee de type 'LocalDate'.
+	 * @return serieEngins Liste des engins de la serie mis en service les memes
 	 *         jour et mois que 'date', de type Vector<Engin>.
 	 */
 	public Vector<Engin> getAnniversaires(LocalDate date) {
@@ -987,7 +987,7 @@ public class Serie implements Comparable<Serie> {
 	 * DONNEES).
 	 * 
 	 * @param Aucun.
-	 * @return oldest Date de la dernière vue enregistrée, de type 'LocalDate'.
+	 * @return oldest Date de la derniere vue enregistree, de type 'LocalDate'.
 	 */
 	public LocalDate getDerniereVue() {
 		LocalDate oldest = LocalDate.of(1994, 10, 16);
@@ -1009,10 +1009,10 @@ public class Serie implements Comparable<Serie> {
 	 * COMPARE LA DATE DE MISE EN SERVICE DE DEUX SERIES.
 	 * 
 	 * @param s
-	 *            Serie dont la date de mise en service est à comparer avec
+	 *            Serie dont la date de mise en service est a comparer avec
 	 *            celle de 'this', de type 'Serie'.
 	 * @return resultat -1 si 'this' est plus ancienne que 's'. 1 si 'this' est
-	 *         plus récente ou du même âge que 's'.
+	 *         plus recente ou du meme age que 's'.
 	 */
 	public int compareTo(Serie s) {
 		int resultat;
@@ -1028,8 +1028,8 @@ public class Serie implements Comparable<Serie> {
 	 * CONVERTIT UNE DATE DU FORMAT 'STRING' VERS LE FORMAT 'LOCALDATE'.
 	 * 
 	 * @param strDate
-	 *            Date à convertir de type 'String'.
-	 * @return resultat Date équivalente de type 'LocalDate'.
+	 *            Date a convertir de type 'String'.
+	 * @return resultat Date equivalente de type 'LocalDate'.
 	 */
 	public static LocalDate stringToDate(String strDate) {
 		LocalDate d = LocalDate.now();
@@ -1046,8 +1046,8 @@ public class Serie implements Comparable<Serie> {
 	 * TESTE SI UNE CHAINE DE CARACTERE CONTIENT UNIQUEMENT DES CHIFFRES.
 	 * 
 	 * @param chaine
-	 *            Chaine de caractère à tester de type 'String'.
-	 * @return 'true' si la chaine peut être convertir en nombre. 'false' sinon.
+	 *            Chaine de caractere a tester de type 'String'.
+	 * @return 'true' si la chaine peut etre convertir en nombre. 'false' sinon.
 	 */
 	public static boolean isNumeric(String chaine) {
 		try {
@@ -1062,8 +1062,8 @@ public class Serie implements Comparable<Serie> {
 	 * CONVERTIT UNE CHAINE DE CARACTERES EN ENTIER SI POSSIBLE.
 	 * 
 	 * @param str
-	 *            Chaine de caractère à convertir de type 'String'.
-	 * @return resultat Nombre entier équivalent à 'str' si la convertion est
+	 *            Chaine de caractere a convertir de type 'String'.
+	 * @return resultat Nombre entier equivalent a 'str' si la convertion est
 	 *         possible. '0' sinon.
 	 */
 	public static int stringToInteger(String str) {
@@ -1078,8 +1078,8 @@ public class Serie implements Comparable<Serie> {
 	 * CONVERTIT UNE CHAINE DE CARACTERES EN BOOLEEN SI POSSIBLE.
 	 * 
 	 * @param str
-	 *            Chaine de caractère à convertir de type 'String'.
-	 * @return resultat Booléen équivalent à 'str' si la convertion est
+	 *            Chaine de caractere a convertir de type 'String'.
+	 * @return resultat Booleen equivalent a 'str' si la convertion est
 	 *         possible. 'false' sinon.
 	 */
 	public static boolean stringToBoolean(String str) {

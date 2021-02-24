@@ -39,11 +39,11 @@ public class AnniversairesMES extends JFrame implements ActionListener {
 	 * CONSTRUCTEUR DE LA CLASSE ANNIVERSAIREMES.
 	 * 
 	 * @param pI
-	 *            Interface graphique mère, de type 'Interface'.
+	 *            Interface graphique mere, de type 'Interface'.
 	 * @param mainPanel
-	 *            Panel de l'interface graphique mère, de type 'JPanel'.
+	 *            Panel de l'interface graphique mere, de type 'JPanel'.
 	 * @param mainGbc
-	 *            Contraintes de l'interface graphique mère, de type
+	 *            Contraintes de l'interface graphique mere, de type
 	 *            'GridBagConstraints'.
 	 * @return Aucun.
 	 */
@@ -177,7 +177,7 @@ public class AnniversairesMES extends JFrame implements ActionListener {
 	 * DEFINIT LES ACTIONS DES BOUTONS.
 	 * 
 	 * @param e
-	 *            Evènement déclenché par l'appui sur un bouton.
+	 *            Evenement declenche par l'appui sur un bouton.
 	 * @return Aucun.
 	 */
 	public void actionPerformed(ActionEvent e) {

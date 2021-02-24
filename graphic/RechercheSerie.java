@@ -22,7 +22,7 @@ public class RechercheSerie extends JFrame implements ActionListener {
 	private JPanel panel;
 	private GridBagConstraints gbc;
 
-	// Eléments graphiques.
+	// Elements graphiques.
 	private JLabel titre;
 	private JComboBox<String> listeSeries;
 	private String serieCourante;
@@ -33,11 +33,11 @@ public class RechercheSerie extends JFrame implements ActionListener {
 	 * CONSTRUCTEUR DE LA CLASSE RECHERCHERSERIE.
 	 * 
 	 * @param pI
-	 *            Interface graphique mère, de type 'Interface'.
+	 *            Interface graphique mere, de type 'Interface'.
 	 * @param mainPanel
-	 *            Panel de l'interface graphique mère, de type 'JPanel'.
+	 *            Panel de l'interface graphique mere, de type 'JPanel'.
 	 * @param mainGbc
-	 *            Contraintes de l'interface graphique mère, de type
+	 *            Contraintes de l'interface graphique mere, de type
 	 *            'GridBagConstraints'.
 	 * @param parcEngins
 	 *            Parc d'engins moteurs dans lequel doit s'effectuer les
@@ -112,8 +112,8 @@ public class RechercheSerie extends JFrame implements ActionListener {
 	 * RENVOIE LA SERIE CHERCHE.
 	 * 
 	 * @param Aucun.
-	 * @return Série d'engins moteurs trouvée si la recherche a donné un
-	 *         résultat. 'null' sinon.
+	 * @return Serie d'engins moteurs trouvee si la recherche a donne un
+	 *         resultat. 'null' sinon.
 	 */
 	private Serie chercher() {
 		return p.rechercherSerie(serieCourante);
@@ -123,7 +123,7 @@ public class RechercheSerie extends JFrame implements ActionListener {
 	 * DEFINIT LA SERIE D'ENGINS MOTEURS COURANTE.
 	 * 
 	 * @param newSerie
-	 *            Série d'engins moteurs courante de type 'Serie'.
+	 *            Serie d'engins moteurs courante de type 'Serie'.
 	 * @return Aucun.
 	 */
 	public void setSerieCourante(Serie newSerie) {
@@ -149,7 +149,7 @@ public class RechercheSerie extends JFrame implements ActionListener {
 	 * DEFINIT LES ACTIONS DES BOUTONS.
 	 * 
 	 * @param e
-	 *            Evènement déclenché par l'appui sur un bouton.
+	 *            Evenement declenche par l'appui sur un bouton.
 	 * @return Aucun.
 	 */
 	public void actionPerformed(ActionEvent e) {

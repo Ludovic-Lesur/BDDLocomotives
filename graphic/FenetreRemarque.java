@@ -50,13 +50,13 @@ public class FenetreRemarque extends JFrame implements ActionListener {
 	 * CONSTRUCTEUR DE LA CLASSE FENETREREMARQUE.
 	 * 
 	 * @param pI
-	 *            Interface graphique mère, de type 'Interface'.
+	 *            Interface graphique mere, de type 'Interface'.
 	 * @param pModif
-	 *            Booléen indiquant si la fenêtre doit s'ouvrir en mode ajout ou
+	 *            Booleen indiquant si la fenetre doit s'ouvrir en mode ajout ou
 	 *            en mode modification. 'true' = modification d'une remarque
 	 *            existante. 'false' = ajout d'une nouvelle remarque.
 	 * @param pRemarque
-	 *            Objet 'Remarque' à modifier si modif = 'true'. 'null' si modif
+	 *            Objet 'Remarque' a modifier si modif = 'true'. 'null' si modif
 	 *            = 'false'.
 	 * @param pEngin
 	 *            Engin moteur dont on doit modifier la remarque, de type
@@ -76,7 +76,7 @@ public class FenetreRemarque extends JFrame implements ActionListener {
 			newRemarque = new Remarque(pRemarque);
 		}
 
-		// Création de l'interface
+		// Creation de l'interface
 		fenetre = new JFrame();
 		if (modif == false) {
 			fenetre.setTitle("Ajouter remarque");
@@ -182,7 +182,7 @@ public class FenetreRemarque extends JFrame implements ActionListener {
 		annuler.addActionListener(this);
 		panel.add(annuler, gbc);
 
-		// Affichage de la fenêtre
+		// Affichage de la fenetre
 		fenetre.setContentPane(panel);
 		fenetre.setVisible(true);
 	}
@@ -191,10 +191,10 @@ public class FenetreRemarque extends JFrame implements ActionListener {
 	 * SELECTIONNE L'ITEM CORRECT EN FONCTION DE LA DATE ACTUELLE.
 	 * 
 	 * @param r
-	 *            Objet 'Remarque' à modifier si modif = 'true'. 'null' si modif
+	 *            Objet 'Remarque' a modifier si modif = 'true'. 'null' si modif
 	 *            = 'false'.
 	 * @param mode
-	 *            Booléen indiquant si la fenêtre doit s'ouvrir en mode ajout ou
+	 *            Booleen indiquant si la fenetre doit s'ouvrir en mode ajout ou
 	 *            en mode modification. 'true' = modification d'une remarque
 	 *            existante. 'false' = ajout d'une nouvelle remarque.
 	 * @return Aucun.
@@ -219,10 +219,10 @@ public class FenetreRemarque extends JFrame implements ActionListener {
 	 * REMPLIT LE CHAMP DE TEXTE DE LA REMARQUE SI ON ES EN MODE MODIFICATION.
 	 * 
 	 * @param r
-	 *            Objet 'Remarque' à modifier si modif = 'true'. 'null' si modif
+	 *            Objet 'Remarque' a modifier si modif = 'true'. 'null' si modif
 	 *            = 'false'.
 	 * @param mode
-	 *            Booléen indiquant si la fenêtre doit s'ouvrir en mode ajout ou
+	 *            Booleen indiquant si la fenetre doit s'ouvrir en mode ajout ou
 	 *            en mode modification. 'true' = modification d'une remarque
 	 *            existante. 'false' = ajout d'une nouvelle remarque.
 	 * @return Aucun.
@@ -277,7 +277,7 @@ public class FenetreRemarque extends JFrame implements ActionListener {
 	 * DEFINIT LES ACTIONS DES BOUTONS.
 	 * 
 	 * @param e
-	 *            Evènement déclenché par l'appui sur un bouton.
+	 *            Evenement declenche par l'appui sur un bouton.
 	 * @return Aucun.
 	 */
 	public void actionPerformed(ActionEvent e) {

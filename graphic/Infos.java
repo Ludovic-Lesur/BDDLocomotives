@@ -14,7 +14,7 @@ import java.awt.*;
 
 public class Infos {
 
-	// Eléments graphiques.
+	// Elements graphiques.
 	private JPanel panel;
 	private GridBagConstraints gbc;
 
@@ -39,9 +39,9 @@ public class Infos {
 	 * CONSTRUCTEUR DE LA CLASSE INFOS.
 	 * 
 	 * @param mainPanel
-	 *            Panel de l'interface graphique mère, de type 'JPanel'.
+	 *            Panel de l'interface graphique mere, de type 'JPanel'.
 	 * @param mainGbc
-	 *            Contraintes de l'interface graphique mère, de type
+	 *            Contraintes de l'interface graphique mere, de type
 	 *            'GridBagConstraints'.
 	 * @return Aucun.
 	 */
@@ -180,9 +180,9 @@ public class Infos {
 	 * AFFICHE UNE PHOTO DANS LE CHAMP DEDIE.
 	 * 
 	 * @param mainPanel
-	 *            Panel de l'interface graphique mère, de type 'JPanel'.
+	 *            Panel de l'interface graphique mere, de type 'JPanel'.
 	 * @param mainGbc
-	 *            Contraintes de l'interface graphique mère, de type
+	 *            Contraintes de l'interface graphique mere, de type
 	 *            'GridBagConstraints'.
 	 * @param chemin
 	 *            Chemin absolu de la photo a afficher de type 'String'.
@@ -202,9 +202,9 @@ public class Infos {
 	 * DEFINIT L'AFFICHAGE POUR UN ENGIN MOTEUR.
 	 * 
 	 * @param mainPanel
-	 *            Panel de l'interface graphique mère, de type 'JPanel'.
+	 *            Panel de l'interface graphique mere, de type 'JPanel'.
 	 * @param mainGbc
-	 *            Contraintes de l'interface graphique mère, de type
+	 *            Contraintes de l'interface graphique mere, de type
 	 *            'GridBagConstraints'.
 	 * @param e
 	 *            Engin dont on doit afficher les informations, de type 'Engin'.
@@ -218,9 +218,9 @@ public class Infos {
 				champ21.setText("Etat");
 				champ22.setForeground(Color.green);
 				champ22.setText(e.getEtat().getName());
-				champ31.setText("Livrée");
+				champ31.setText("Livree");
 				champ32.setText(e.getNomLivree());
-				champ41.setText("Futur dépôt");
+				champ41.setText("Futur depot");
 				champ42.setText(e.getNomDepot());
 				champ51.setForeground(Color.gray);
 				champ52.setForeground(Color.gray);
@@ -237,9 +237,9 @@ public class Infos {
 				champ32.setText(e.getEtat().getName());
 				champ41.setText("Age");
 				champ42.setText(e.getAge(true));
-				champ51.setText("Livrée");
+				champ51.setText("Livree");
 				champ52.setText(e.getNomLivree());
-				champ61.setText("Dépôt");
+				champ61.setText("Depot");
 				champ62.setText(e.getNomDepot());
 				champ71.setForeground(Color.gray);
 				champ72.setForeground(Color.gray);
@@ -252,11 +252,11 @@ public class Infos {
 				champ32.setText(e.getEtat().getName());
 				champ41.setText("Radiation");
 				champ42.setText(Interface.dateToString(e.getDateRAD(), true));
-				champ51.setText("Age à la radiation");
+				champ51.setText("Age a la radiation");
 				champ52.setText(e.getAge(true));
-				champ61.setText("Livrée");
+				champ61.setText("Livree");
 				champ62.setText(e.getNomLivree());
-				champ71.setText("Dépôt");
+				champ71.setText("Depot");
 				champ72.setText(e.getNomDepot());
 				break;
 			case PR:
@@ -269,9 +269,9 @@ public class Infos {
 				champ42.setText(Interface.dateToString(e.getDateRAD(), true));
 				champ51.setText("Age");
 				champ52.setText(e.getAge(true));
-				champ61.setText("Livrée");
+				champ61.setText("Livree");
 				champ62.setText(e.getNomLivree());
-				champ71.setText("Dépôt d'origine");
+				champ71.setText("Depot d'origine");
 				champ72.setText(e.getNomDepot());
 				break;
 			default:
@@ -300,12 +300,12 @@ public class Infos {
 	 * DEFINIT L'AFFICHAGE POUR UNE SERIE D'ENGINS MOTEURS.
 	 * 
 	 * @param mainPanel
-	 *            Panel de l'interface graphique mère, de type 'JPanel'.
+	 *            Panel de l'interface graphique mere, de type 'JPanel'.
 	 * @param mainGbc
-	 *            Contraintes de l'interface graphique mère, de type
+	 *            Contraintes de l'interface graphique mere, de type
 	 *            'GridBagConstraints'.
 	 * @param s
-	 *            Série dont on doit afficher les informations, de type 'Serie'.
+	 *            Serie dont on doit afficher les informations, de type 'Serie'.
 	 * @return Aucun.
 	 */
 	public void update(JPanel mainPanel, GridBagConstraints mainGbc, Serie s) {
@@ -315,7 +315,7 @@ public class Infos {
 			champ11.setText(s.getNomComplet());
 			champ12.setForeground(Color.gray);
 			champ21.setText("Livraison");
-			champ22.setText(s.getAnneeMESMin() + " à " + s.getAnneeMESMax());
+			champ22.setText(s.getAnneeMESMin() + " a " + s.getAnneeMESMax());
 			champ31.setText("Effectif");
 			champ32.setText(Integer.toString(s.getEffectifActuel()));
 			champ41.setText("En attente de mise en service");
@@ -324,10 +324,10 @@ public class Infos {
 			champ51.setText("En service");
 			champ52.setForeground(Color.green);
 			champ52.setText(Integer.toString(s.getEnService()));
-			champ61.setText("Radiés");
+			champ61.setText("Radies");
 			champ62.setForeground(Color.orange);
 			champ62.setText(Integer.toString(s.getRadies()));
-			champ71.setText("Préservés");
+			champ71.setText("Preserves");
 			champ72.setForeground(Color.green);
 			champ72.setText(Integer.toString(s.getPreserves()));
 		} else {
@@ -339,9 +339,9 @@ public class Infos {
 	 * DEFINIT L'AFFICHAGE POUR UN PARC D'ENGINS MOTEURS.
 	 * 
 	 * @param mainPanel
-	 *            Panel de l'interface graphique mère, de type 'JPanel'.
+	 *            Panel de l'interface graphique mere, de type 'JPanel'.
 	 * @param mainGbc
-	 *            Contraintes de l'interface graphique mère, de type
+	 *            Contraintes de l'interface graphique mere, de type
 	 *            'GridBagConstraints'.
 	 * @param p
 	 *            Parc dont on doit afficher les informations, de type 'Parc'.
@@ -352,7 +352,7 @@ public class Infos {
 		afficherPhoto(mainPanel, mainGbc, Engin.cheminPhotoVide);
 		champ11.setText("Parc " + p.getNom());
 		champ12.setForeground(Color.gray);
-		champ21.setText("Séries suivies");
+		champ21.setText("Series suivies");
 		champ22.setText(Integer.toString(p.getNbSeries()));
 		champ31.setText("Engins en attente de mise en service");
 		champ32.setForeground(Color.green);
@@ -360,10 +360,10 @@ public class Infos {
 		champ41.setText("Engins en service");
 		champ42.setForeground(Color.green);
 		champ42.setText(Integer.toString(p.getEnService()));
-		champ51.setText("Engins radiés");
+		champ51.setText("Engins radies");
 		champ52.setForeground(Color.orange);
 		champ52.setText(Integer.toString(p.getRadies()));
-		champ61.setText("Engins préservés");
+		champ61.setText("Engins preserves");
 		champ62.setForeground(Color.green);
 		champ62.setText(Integer.toString(p.getPreserves()));
 		champ71.setText("TOTAL");
@@ -374,9 +374,9 @@ public class Infos {
 	 * DEFINIT L'AFFICHAGE POUR LA LISTE DES ANNIVERSAIRES.
 	 * 
 	 * @param mainPanel
-	 *            Panel de l'interface graphique mère, de type 'JPanel'.
+	 *            Panel de l'interface graphique mere, de type 'JPanel'.
 	 * @param mainGbc
-	 *            Contraintes de l'interface graphique mère, de type
+	 *            Contraintes de l'interface graphique mere, de type
 	 *            'GridBagConstraints'.
 	 * @param listeAnniversaires
 	 *            Liste d'engins moteurs dont c'est l'anniversaire de mise en

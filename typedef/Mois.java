@@ -11,19 +11,19 @@ public enum Mois {
 
 	Vide("", ""),
 	JAN("Janvier", "JANUARY"),
-	FEV("Février", "FEBRUARY"),
+	FEV("Fevrier", "FEBRUARY"),
 	MAR("Mars", "MARCH"),
 	AVR("Avril", "APRIL"),
 	MAI("Mai", "MAY"),
 	JUN("Juin", "JUNE"),
 	JUI("Juillet", "JULY"),
-	AOU("Août", "AUGUST"),
+	AOU("Aout", "AUGUST"),
 	SEP("Septembre", "SEPTEMBER"),
 	OCT("Octobre", "OCTOBER"),
 	NOV("Novembre", "NOVEMBER"),
-	DEC("Décembre", "DECEMBER");
+	DEC("Decembre", "DECEMBER");
 
-	// Attributs de chaque élément de l'énumération.
+	// Attributs de chaque element de l'enumeration.
 	private final String symbol;
 	private final String frenchName;
 	private final String englishName;
@@ -32,7 +32,7 @@ public enum Mois {
 	 * CONSTRUCTEUR DE L'ENUMERATION MOIS.
 	 * 
 	 * @param pFrenchName
-	 *            Nom français du mois de type 'String'.
+	 *            Nom francais du mois de type 'String'.
 	 * @param pEnglishName
 	 *            Nom anglais du mois de type 'String'.
 	 * @return Aucun.
@@ -47,7 +47,7 @@ public enum Mois {
 	 * RENVOIE LE SYMBOLE DU MOIS.
 	 * 
 	 * @param Aucun.
-	 * @return symbol Symbole du mois utilisé dans les fichiers XML, de type
+	 * @return symbol Symbole du mois utilise dans les fichiers XML, de type
 	 *         'String'.
 	 */
 	public String getSymbol() {
@@ -58,7 +58,7 @@ public enum Mois {
 	 * RENVOIE LE NOM FRANCAIS DU MOIS.
 	 * 
 	 * @param Aucun.
-	 * @return frenchName Nom français du mois de type 'String'.
+	 * @return frenchName Nom francais du mois de type 'String'.
 	 */
 	public String getFrenchName() {
 		return frenchName;
@@ -79,9 +79,9 @@ public enum Mois {
 	 * LOCALDATE).
 	 * 
 	 * @param pEnglishName
-	 *            Nom recherché de type 'String'.
-	 * @return affectation Mois associé à 'pEnglishName' si la recherche a donné
-	 *         un résultat. 'Vide' sinon.
+	 *            Nom recherche de type 'String'.
+	 * @return affectation Mois associe a 'pEnglishName' si la recherche a donne
+	 *         un resultat. 'Vide' sinon.
 	 */
 	public static Mois affecter(String pEnglishName) {
 		Mois affectation = Vide;

@@ -15,7 +15,7 @@ public enum Livree {
 	GC("Grand Confort"),
 	MAU("Maurienne"),
 	ISAB("Bleue isabelle"),
-	B("Béton"),
+	B("Beton"),
 	M("Multiservice"),
 	EV("En Voyage..."),
 	G("Grise"),
@@ -26,11 +26,11 @@ public enum Livree {
 	TER_BLEUE("TER Bleue"),
 	TER_ROUGE("TER Rouge"),
 	TER_JAUNE("TER Jaune"),
-	TER_MP("TER Midi-Pyrénées"),
+	TER_MP("TER Midi-Pyrenees"),
 	TER_LR("TER Languedoc"),
 	TER_AU("TER Auvergne"),
 	TER_B("TER Bourgogne"),
-	TER_RHA("TER Rhône-Alpes"),
+	TER_RHA("TER Rhone-Alpes"),
 	TER_PACA("TER P.A.C.A."),
 	TER_NPDC("TER N.P.D.C."),
 	IDF("Ile de France"),
@@ -43,7 +43,7 @@ public enum Livree {
 	TSO("TSO"),
 	ECR("Euro Cargo Rail");
 
-	// Attributs de chaque élément de l'énumération.
+	// Attributs de chaque element de l'enumeration.
 	private final String symbol;
 	private final String name;
 
@@ -51,7 +51,7 @@ public enum Livree {
 	 * CONSTRUCTEUR DE L'ENUMERATION LIVREE.
 	 * 
 	 * @param pName
-	 *            Nom de la livrée de type 'String'.
+	 *            Nom de la livree de type 'String'.
 	 * @return Aucun.
 	 */
 	private Livree(String pName) {
@@ -63,7 +63,7 @@ public enum Livree {
 	 * RENVOIE LE SYMBOLE DE LA LIVREE.
 	 * 
 	 * @param Aucun.
-	 * @return symbol Symbole de la livrée utilisé dans les fichiers XML, de
+	 * @return symbol Symbole de la livree utilise dans les fichiers XML, de
 	 *         type 'String'.
 	 */
 	public String getSymbol() {
@@ -74,7 +74,7 @@ public enum Livree {
 	 * RENVOIE LE NOM DE LA LIVREE.
 	 * 
 	 * @param Aucun.
-	 * @return name Nom de la livrée de type 'String'.
+	 * @return name Nom de la livree de type 'String'.
 	 */
 	public String getName() {
 		return name;
@@ -84,9 +84,9 @@ public enum Livree {
 	 * RENVOIE LA LIVREE CORRESPONDANT A UN SYMBOLE DONNE.
 	 * 
 	 * @param pSymbol
-	 *            Symbole recherché de type 'String'.
-	 * @return affectation Livrée associée au symbole si la recherche a donné un
-	 *         résultat. 'Vide' sinon.
+	 *            Symbole recherche de type 'String'.
+	 * @return affectation Livree associee au symbole si la recherche a donne un
+	 *         resultat. 'Vide' sinon.
 	 */
 	public static Livree affecter(String pSymbol) {
 		Livree affectation = Vide;
@@ -105,7 +105,7 @@ public enum Livree {
 	 * RENVOIE LA LISTE DES ITEMS SAUF VIDE.
 	 * 
 	 * @param Aucun.
-	 * @return resultat Liste des livrées, de type 'String[]'.
+	 * @return resultat Liste des livrees, de type 'String[]'.
 	 */
 	public static String[] getNames() {
 		Livree[] listeLivrees = Livree.values();

@@ -24,14 +24,14 @@ public class Parc {
 	private int nbEngins;
 	private int nbEnginsActuel;
 	Vector<Serie> listeSeries;
-	public static final String SYM_ALL = "Toutes les séries   ";
+	public static final String SYM_ALL = "Toutes les series   ";
 	private LocalDate miseAJour;
 
 	/**
 	 * CONSTRUCTEUR DE LA CLASSE PARC.
 	 * 
 	 * @param pParc
-	 *            Nom du parc d'engins moteurs à creer, de type 'String'.
+	 *            Nom du parc d'engins moteurs a creer, de type 'String'.
 	 * @return Aucun.
 	 */
 	public Parc(String pParc) throws IOException, JDOMException {
@@ -41,25 +41,25 @@ public class Parc {
 		nbEngins = 0;
 		nbEnginsActuel = 0;
 		listeSeries = new Vector<Serie>();
-		// Parcours des fichiers dans le dossier passé en argument...
+		// Parcours des fichiers dans le dossier passe en argument...
 		File dossier = new File(dossierParc);
 		File[] fichiers = dossier.listFiles();
 		int i = 0;
-		// Pour chaque fichier trouvé dans le dossier...
+		// Pour chaque fichier trouve dans le dossier...
 		for (i = 0; i < (fichiers.length); i++) {
 			if (fichiers[i].isFile()) {
 				String nomFichier = fichiers[i].toString();
 				if (nomFichier.lastIndexOf(".") > 0) {
-					// On vérifie l'extention XML.
+					// On verifie l'extention XML.
 					String ext = nomFichier.substring(nomFichier.lastIndexOf("."));
 					if (ext.compareTo(".xml") == 0) {
-						// On crée une structure de données.
+						// On cree une structure de donnees.
 						Serie s = new Serie(fichiers[i]);
 						listeSeries.add(s);
 						nbSeries++;
 						nbEngins = nbEngins + s.getEffectif();
 						nbEnginsActuel = nbEnginsActuel + s.getEffectifActuel();
-						System.out.println("Ajout de la série " + s.getNomComplet());
+						System.out.println("Ajout de la serie " + s.getNomComplet());
 					}
 				}
 			}
@@ -79,19 +79,19 @@ public class Parc {
 		nbEngins = 0;
 		nbEnginsActuel = 0;
 		listeSeries = new Vector<Serie>();
-		// Parcours des fichiers dans le dossier passé en argument...
+		// Parcours des fichiers dans le dossier passe en argument...
 		File dossier = new File(dossierParc);
 		File[] fichiers = dossier.listFiles();
 		int i = 0;
-		// Pour chaque fichier trouvé dans le dossier...
+		// Pour chaque fichier trouve dans le dossier...
 		for (i = 0; i < (fichiers.length); i++) {
 			if (fichiers[i].isFile()) {
 				String nomFichier = fichiers[i].toString();
 				if (nomFichier.lastIndexOf(".") > 0) {
-					// On vérifie l'extention XML.
+					// On verifie l'extention XML.
 					String ext = nomFichier.substring(nomFichier.lastIndexOf("."));
 					if (ext.compareTo(".xml") == 0) {
-						// On crée une structure de données.
+						// On cree une structure de donnees.
 						Serie s = new Serie(fichiers[i]);
 						listeSeries.add(s);
 						nbSeries++;
@@ -118,7 +118,7 @@ public class Parc {
 	 * RETOURNE LE NOMBRE DE SERIES CONSTITUANT LE PARC.
 	 * 
 	 * @param Aucun.
-	 * @return nbSeries Nombre de séries suivies de type 'int'.
+	 * @return nbSeries Nombre de series suivies de type 'int'.
 	 */
 	public int getNbSeries() {
 		return nbSeries;
@@ -139,7 +139,7 @@ public class Parc {
 	 * BASE DE DONNEES.
 	 * 
 	 * @param Aucun.
-	 * @return nbEnginsActuel Nombre d'engins moteurs enregistrés de type 'int'.
+	 * @return nbEnginsActuel Nombre d'engins moteurs enregistres de type 'int'.
 	 */
 	public int getEffectifActuel() {
 		return nbEnginsActuel;
@@ -150,7 +150,7 @@ public class Parc {
 	 * 
 	 * @param Aucun.
 	 * @return nbEnginsVus Nombre d'engins moteurs ayant au moins une vue
-	 *         enregistrée, de type 'int'.
+	 *         enregistree, de type 'int'.
 	 */
 	public int getNbEnginsVus() {
 		int nbEnginsVus = 0;
@@ -200,7 +200,7 @@ public class Parc {
 	 * RETOURNE LE NOMBRE D'ENGINS MOTEURS RADIES.
 	 * 
 	 * @param Aucun.
-	 * @return nbEnginsRadies Nombre d'engins moteurs radiés, de type 'int'.
+	 * @return nbEnginsRadies Nombre d'engins moteurs radies, de type 'int'.
 	 */
 	public int getRadies() {
 		int nbEnginsRadies = 0;
@@ -216,7 +216,7 @@ public class Parc {
 	 * RETOURNE LE NOMBRE D'ENGINS MOTEURS PRESERVES.
 	 * 
 	 * @param Aucun.
-	 * @return nbEnginsPreserves Nombre d'engins moteurs préservés, de type
+	 * @return nbEnginsPreserves Nombre d'engins moteurs preserves, de type
 	 *         'int'.
 	 */
 	public int getPreserves() {
@@ -233,7 +233,7 @@ public class Parc {
 	 * RETOURNE LA LISTE DES SERIES DU PARC.
 	 * 
 	 * @param Aucun.
-	 * @return listeSeries Liste des séries du parc de type 'Vector<Serie>'.
+	 * @return listeSeries Liste des series du parc de type 'Vector<Serie>'.
 	 */
 	public Vector<Serie> getSeries() {
 		Collections.sort(listeSeries);
@@ -245,8 +245,8 @@ public class Parc {
 	 * CARACTERES.
 	 * 
 	 * @param Aucun.
-	 * @return boxSeries Liste des séries du parc de type 'String[]'. Utilisée
-	 *         pour créer la 'JComboBox' des séries dans la classe
+	 * @return boxSeries Liste des series du parc de type 'String[]'. Utilisee
+	 *         pour creer la 'JComboBox' des series dans la classe
 	 *         'RechercheSerie'.
 	 */
 	public String[] getNomSeries() {
@@ -265,13 +265,13 @@ public class Parc {
 	 * CREE UN FICHIER XML VIERGE POUR UNE NOUVELLE SERIE.
 	 * 
 	 * @param pIdentifiant
-	 *            : Identifiant de la nouvelle série de type 'Identifiant'.
+	 *            : Identifiant de la nouvelle serie de type 'Identifiant'.
 	 * @param pSerie
-	 *            : Numéro de la nouvelle série de type 'int'.
+	 *            : Numero de la nouvelle serie de type 'int'.
 	 * @param effectif
-	 *            : Nombre d'engins moteurs de la nouvelle série de type 'int'.
+	 *            : Nombre d'engins moteurs de la nouvelle serie de type 'int'.
 	 * @param appariement
-	 *            : Booléen indiquant si les engins moteurs sont numérotés par
+	 *            : Booleen indiquant si les engins moteurs sont numerotes par
 	 *            paire (automotrices et autorails).
 	 * @return Aucun.
 	 */
@@ -280,7 +280,7 @@ public class Parc {
 		Element newRacine = new Element(nomRacine);
 		DocType xmlFormat = new DocType(nomRacine, "format.dtd");
 		Document newDocument = new Document(newRacine, xmlFormat);
-		// Infos générales
+		// Infos generales
 		Element identifiant = new Element(BaliseXML.XML_IDENTIFIANT);
 		identifiant.setText(pIdentifiant.getSymbol());
 		newRacine.addContent(identifiant);
@@ -292,7 +292,7 @@ public class Parc {
 		for (i = 0; i < effectif; i++) {
 			Element engin = new Element(BaliseXML.XML_ENGIN);
 			newRacine.addContent(engin);
-			// Numéro
+			// Numero
 			Element numero = new Element(BaliseXML.XML_NUMERO);
 			if (appariement == true) {
 				numero.setText(Integer.toString(pSerie + 2 * i + 1) + "/" + Integer.toString(pSerie + 2 * i + 2));
@@ -300,7 +300,7 @@ public class Parc {
 				numero.setText(Integer.toString(pSerie + i + 1));
 			}
 			engin.addContent(numero);
-			// Renumérotation
+			// Renumerotation
 			Element renumerotation = new Element(BaliseXML.XML_RENUMEROTATION);
 			engin.addContent(renumerotation);
 			// Date de mise en service
@@ -309,23 +309,23 @@ public class Parc {
 			// Etat
 			Element etat = new Element(BaliseXML.XML_ETAT);
 			engin.addContent(etat);
-			// Préservation
+			// Preservation
 			Element preservation = new Element(BaliseXML.XML_PRESERVATION);
 			engin.addContent(preservation);
 			// Date de radiation
 			Element dateRAD = new Element(BaliseXML.XML_DATERAD);
 			engin.addContent(dateRAD);
-			// Livrée
+			// Livree
 			Element livree = new Element(BaliseXML.XML_LIVREE);
 			engin.addContent(livree);
-			// Dépôt
+			// Depot
 			Element depot = new Element(BaliseXML.XML_DEPOT);
 			engin.addContent(depot);
 		}
-		// Création du dossier photo
+		// Creation du dossier photo
 		File newDossier = new File(dossierParc + "/photos/" + nomRacine);
 		newDossier.mkdirs();
-		// Création du fichier XML
+		// Creation du fichier XML
 		try {
 			File newFichier = new File(dossierParc + "/" + nomRacine + ".xml");
 			Format f = Format.getPrettyFormat();
@@ -336,7 +336,7 @@ public class Parc {
 			listeSeries.add(s);
 			nbSeries++;
 			nbEngins = nbEngins + s.getEffectif();
-			System.out.println("Ajout de la série " + s.getNomComplet());
+			System.out.println("Ajout de la serie " + s.getNomComplet());
 			return s ;
 		}
 		catch (java.io.IOException e) {
@@ -349,9 +349,9 @@ public class Parc {
 	 * RECHERCHE UNE SERIE DANS LE PARC.
 	 * 
 	 * @param serieCherchee
-	 *            : Nom complet (identifiant + numéro) de la série cherchée, de
+	 *            : Nom complet (identifiant + numero) de la serie cherchee, de
 	 *            type 'String'.
-	 * @return resultat : Série trouvée de type 'Serie'. Le résultat est unique
+	 * @return resultat : Serie trouvee de type 'Serie'. Le resultat est unique
 	 *         et certain par construction.
 	 */
 	public Serie rechercherSerie(String serieCherchee) {
@@ -371,22 +371,22 @@ public class Parc {
 	 * RECHERCHE UN ENGIN MOTEUR DANS LE PARC.
 	 * 
 	 * @param id
-	 *            : Identifiant de l'engin moteur cherché, de type
+	 *            : Identifiant de l'engin moteur cherche, de type
 	 *            'Identifiant'.
 	 * @param numCherche
-	 *            Numéro de l'engin moteur cherche, de type 'int'.
-	 * @return enginTrouve : Engin moteur trouvé de type 'Engin' si la recherche
-	 *         a abouti. Le résultat est dans ce cas unique. 'null' sinon.
+	 *            Numero de l'engin moteur cherche, de type 'int'.
+	 * @return enginTrouve : Engin moteur trouve de type 'Engin' si la recherche
+	 *         a abouti. Le resultat est dans ce cas unique. 'null' sinon.
 	 */
 	public Engin rechercherEngin(Identifiant id, String numCherche) {
 		Engin enginTrouve = null;
-		// On parcourt toutes les séries
+		// On parcourt toutes les series
 		Iterator<Serie> i = listeSeries.iterator();
 		while (i.hasNext()) {
 			Serie serieCourante = i.next();
-			// Si l'identifiant est le même...
+			// Si l'identifiant est le meme...
 			if (serieCourante.getIdentifiant().equals(id)) {
-				// On cherche l'engin moteur avec son numéro
+				// On cherche l'engin moteur avec son numero
 				Engin resultatTemp = serieCourante.rechercherEngin(numCherche, dossierParc);
 				if (resultatTemp != null) {
 					enginTrouve = resultatTemp;
@@ -402,13 +402,13 @@ public class Parc {
 	 * DONNEE.
 	 * 
 	 * @param date
-	 *            : Date de mise en service cherchée, de type 'LocalDate'.
+	 *            : Date de mise en service cherchee, de type 'LocalDate'.
 	 * @return enginsTrouves : Liste des engins moteurs dont la date de mise en
 	 *         service correspond au jour et au mois de 'date'.
 	 */
 	public Vector<Engin> getAnniversaires(LocalDate date) {
 		Vector<Engin> enginsTrouves = new Vector<Engin>();
-		// On parcourt toutes les séries
+		// On parcourt toutes les series
 		Iterator<Serie> i = listeSeries.iterator();
 		while (i.hasNext()) {
 			Vector<Engin> tableau = i.next().getAnniversaires(date);
@@ -421,7 +421,7 @@ public class Parc {
 	 * RENVOIE LA DATE DE VUE LA DATE DE MISE A JOUR DE LA BASE DE DONNEES.
 	 * 
 	 * @param Aucun.
-	 * @return derniere Date de la dernière vue enregistrée, de type
+	 * @return derniere Date de la derniere vue enregistree, de type
 	 *         'LocalDate'.
 	 */
 	public LocalDate getUpdate() {
@@ -432,7 +432,7 @@ public class Parc {
 	 * MODIFIE LA DATE DE VUE LA DATE DE MISE A JOUR DE LA BASE DE DONNEES.
 	 * 
 	 * @param Aucun.
-	 * @return derniere Date de la dernière vue enregistrée, de type
+	 * @return derniere Date de la derniere vue enregistree, de type
 	 *         'LocalDate'.
 	 */
 	public void setUpdate(LocalDate newDate) {
@@ -443,7 +443,7 @@ public class Parc {
 	 * RECALCULE LA DATE DE VUE LA DATE DE MISE A JOUR DE LA BASE DE DONNEES.
 	 * 
 	 * @param Aucun.
-	 * @return derniere Date de la dernière vue enregistrée, de type
+	 * @return derniere Date de la derniere vue enregistree, de type
 	 *         'LocalDate'.
 	 */
 	public LocalDate updateMiseAJour() {

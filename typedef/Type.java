@@ -21,7 +21,7 @@ public enum Type {
 	Bimode("Bimode", Color.blue),
 	LOCMA("Manoeuvre", Color.magenta);
 
-	// Attributs de chaque élément de l'énumération.
+	// Attributs de chaque element de l'enumeration.
 	private final String symbol;
 	private final String name;
 	private final Color color;
@@ -43,7 +43,7 @@ public enum Type {
 	 * RENVOIE LE SYMBOLE DU TYPE.
 	 * 
 	 * @param Aucun.
-	 * @return symbol Symbole du type utilisé dans les fichiers XML, de type
+	 * @return symbol Symbole du type utilise dans les fichiers XML, de type
 	 *         'String'.
 	 */
 	public String getSymbol() {
@@ -64,7 +64,7 @@ public enum Type {
 	 * RENVOIE LA COULEUR ASSOCIEE AU TYPE.
 	 * 
 	 * @param Aucun.
-	 * @return color Couleur de police utilisée pour représenter le type, de
+	 * @return color Couleur de police utilisee pour representer le type, de
 	 *         type 'Color'.
 	 */
 	public Color getColor() {
@@ -75,9 +75,9 @@ public enum Type {
 	 * RENVOIE LE TYPE CORRESPONDANT A UN SYMBOLE DONNE.
 	 * 
 	 * @param pSymbol
-	 *            Symbole recherché de type 'String'.
-	 * @return affectation Type associé au symbole si la recherche a donné un
-	 *         résultat. 'Vide' sinon.
+	 *            Symbole recherche de type 'String'.
+	 * @return affectation Type associe au symbole si la recherche a donne un
+	 *         resultat. 'Vide' sinon.
 	 */
 	public static Type affecter(Identifiant id, int im) {
 		Type affectation = Vide;

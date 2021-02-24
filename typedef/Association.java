@@ -10,12 +10,12 @@ package typedef;
 public enum Association {
 
 	Vide("", "", Gare.Vide),
-	CDT("la ", "Cité du Train", Gare.MSE),
-	CDTM("la ", "Cité du Train", Gare.MN),
+	CDT("la ", "Cite du Train", Gare.MSE),
+	CDTM("la ", "Cite du Train", Gare.MN),
 	CFTB("le ", "C.F. Traction", Gare.BLV),
 	APCR("l'", "APCR1126", Gare.TE),
 	ARCET("l'", "ARCET", Gare.LY),
-	BAHN("au ", "Musée Bahnpark", Gare.AUG),
+	BAHN("au ", "Musee Bahnpark", Gare.AUG),
 	SIMIL6500("", "SIMIL6500", Gare.LY),
 	APMFS("l'", "APMFS", Gare.AMB),
 	SL6575("", "Sauvons la CC6575", Gare.NI),
@@ -23,7 +23,7 @@ public enum Association {
 	CFTST("", "CFTST Touraine", Gare.V),
 	CFT("", "CFT Transvap", Gare.COB);
 
-	// Attributs de chaque élément de l'énumération.
+	// Attributs de chaque element de l'enumeration.
 	private final String symbol;
 	private final String article;
 	private final String name;
@@ -33,12 +33,12 @@ public enum Association {
 	 * CONSTRUCTEUR DE L'ENUMERATION ASSOCIATION.
 	 * 
 	 * @param pArticle
-	 *            Article associé au nom de l'association ('l', 'le' ou 'la'),
+	 *            Article associe au nom de l'association ('l', 'le' ou 'la'),
 	 *            de type 'String'.
 	 * @param pName
 	 *            Nom de l'association de type 'String'.
 	 * @param pGare
-	 *            Lieu de préservation de l'association de type 'Gare'.
+	 *            Lieu de preservation de l'association de type 'Gare'.
 	 * @return Aucun.
 	 */
 	private Association(String pArticle, String pName, Gare pGare) {
@@ -52,7 +52,7 @@ public enum Association {
 	 * RENVOIE LE SYMBOLE D'UNE ASSOCIATION.
 	 * 
 	 * @param Aucun.
-	 * @return symbol Symbole de l'association utilisé dans les fichiers XML, de
+	 * @return symbol Symbole de l'association utilise dans les fichiers XML, de
 	 *         type 'String'.
 	 */
 	public String getSymbol() {
@@ -63,7 +63,7 @@ public enum Association {
 	 * RENVOIE L'ARTICLE ASSOCIE AU NOM DE L'ASSOCIATION.
 	 * 
 	 * @param Aucun.
-	 * @return article Article associé au nom de l'association ('l', 'le' ou
+	 * @return article Article associe au nom de l'association ('l', 'le' ou
 	 *         'la'), de type 'String'.
 	 */
 	public String getArticle() {
@@ -84,7 +84,7 @@ public enum Association {
 	 * RENVOIE LE LIEU DE PRESERVATION DE L'ASSOCIATION.
 	 * 
 	 * @param Aucun.
-	 * @return gare Lieu de préservation de l'association, de type 'Gare'.
+	 * @return gare Lieu de preservation de l'association, de type 'Gare'.
 	 */
 	public Gare getGare() {
 		return gare;
@@ -94,9 +94,9 @@ public enum Association {
 	 * RENVOIE L'ASSOCIATION CORRESPONDANT A UN SYMBOLE DONNE.
 	 * 
 	 * @param pSymbol
-	 *            Symbole recherché de type 'String'.
-	 * @return affectation Association associée au symbole si la recherche a
-	 *         donné un résultat. 'Vide' sinon.
+	 *            Symbole recherche de type 'String'.
+	 * @return affectation Association associee au symbole si la recherche a
+	 *         donne un resultat. 'Vide' sinon.
 	 */
 	public static Association affecter(String pSymbol) {
 		Association affectation = Vide;

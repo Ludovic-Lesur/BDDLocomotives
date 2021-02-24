@@ -42,7 +42,7 @@ public class Vue implements Comparable<Vue> {
 	 * VUE AVANT MODIFICATION DANS LA CLASSE 'FenetreVue'.
 	 * 
 	 * @param v
-	 *            Vue à recopier, de type 'Vue'.
+	 *            Vue a recopier, de type 'Vue'.
 	 * @return Aucun.
 	 */
 	public Vue(Vue v) {
@@ -123,10 +123,10 @@ public class Vue implements Comparable<Vue> {
 	 * MODIFIE LE VOYAGE DE LA VUE.
 	 * 
 	 * @param newDepart
-	 *            Nouvelle gare de départ de type 'String'. L'association au
+	 *            Nouvelle gare de depart de type 'String'. L'association au
 	 *            type 'Gare' est faite automatiquement.
 	 * @param newArrivee
-	 *            Nouvelle gare d'arrivée de type 'String'. L'association au
+	 *            Nouvelle gare d'arrivee de type 'String'. L'association au
 	 *            type 'Gare' est faite automatiquement.
 	 * @return Aucun.
 	 */
@@ -139,9 +139,9 @@ public class Vue implements Comparable<Vue> {
 	 * MODIFIE LE VOYAGE DE LA VUE.
 	 * 
 	 * @param newDepart
-	 *            Nouvelle gare de départ de type 'Gare'.
+	 *            Nouvelle gare de depart de type 'Gare'.
 	 * @param newArrivee
-	 *            Nouvelle gare d'arrivée de type 'Gare'.
+	 *            Nouvelle gare d'arrivee de type 'Gare'.
 	 * @return Aucun.
 	 */
 	public void setVoyage(Gare newDepart, Gare newArrivee) {
@@ -153,7 +153,7 @@ public class Vue implements Comparable<Vue> {
 	 * RETOURNE LE VOYAGE DE LA VUE.
 	 * 
 	 * @param Aucun.
-	 * @return voyage Eventuel voyage associé à la vue de type 'Voyage'.
+	 * @return voyage Eventuel voyage associe a la vue de type 'Voyage'.
 	 */
 	public Voyage getVoyage() {
 		return voyage;
@@ -163,7 +163,7 @@ public class Vue implements Comparable<Vue> {
 	 * RETOURNE LE NOM DE LA GARE DE DEPART DU VOYAGE.
 	 * 
 	 * @param Aucun.
-	 * @return Nom de la gare de départ du voyage de type 'String'.
+	 * @return Nom de la gare de depart du voyage de type 'String'.
 	 */
 	public String getNomVoyageDepart() {
 		return voyage.getNomDepart();
@@ -173,7 +173,7 @@ public class Vue implements Comparable<Vue> {
 	 * RETOURNE LA GARE DE DEPART DU VOYAGE.
 	 * 
 	 * @param Aucun.
-	 * @return Gare de départ du voyage de type 'Gare'.
+	 * @return Gare de depart du voyage de type 'Gare'.
 	 */
 	public Gare getVoyageDepart() {
 		return voyage.getDepart();
@@ -183,7 +183,7 @@ public class Vue implements Comparable<Vue> {
 	 * RETOURNE LE NOM DE LA GARE D'ARRIVEE DU VOYAGE.
 	 * 
 	 * @param Aucun.
-	 * @return Nom de la gare d'arrivée du voyage de type 'String'.
+	 * @return Nom de la gare d'arrivee du voyage de type 'String'.
 	 */
 	public String getNomVoyageArrivee() {
 		return voyage.getNomArrivee();
@@ -193,7 +193,7 @@ public class Vue implements Comparable<Vue> {
 	 * RETOURNE LA GARE D'ARRIVEE DU VOYAGE.
 	 * 
 	 * @param Aucun.
-	 * @return Gare d'arrivée du voyage de type 'Gare'.
+	 * @return Gare d'arrivee du voyage de type 'Gare'.
 	 */
 	public Gare getVoyageArrivee() {
 		return voyage.getArrivee();
@@ -257,7 +257,7 @@ public class Vue implements Comparable<Vue> {
 	 * INDIQUE SI LA CABINE DE L'ENGIN A ETE VISITEE LE JOUR DE LA VUE.
 	 * 
 	 * @param Aucun.
-	 * @return cabine 'true' si la cabine de l'engin a été visitée le jour de la
+	 * @return cabine 'true' si la cabine de l'engin a ete visitee le jour de la
 	 *         vue. 'false' sinon.
 	 */
 	public boolean getCabine() {
@@ -269,7 +269,7 @@ public class Vue implements Comparable<Vue> {
 	 * XML.
 	 * 
 	 * @param Aucun.
-	 * @return "1" si la cabine de l'engin a été visitée le jour de la vue. "0"
+	 * @return "1" si la cabine de l'engin a ete visitee le jour de la vue. "0"
 	 *         sinon.
 	 */
 	public String getNomCabine() {
@@ -295,7 +295,7 @@ public class Vue implements Comparable<Vue> {
 	 * INDIQUE L'ENGIN A ETE PHOTOGRAPHIE LE JOUR DE LA VUE.
 	 * 
 	 * @param Aucun.
-	 * @return cabine 'true' si l'engin a été photographié le jour de la vue.
+	 * @return cabine 'true' si l'engin a ete photographie le jour de la vue.
 	 *         'false' sinon.
 	 */
 	public boolean getPhoto() {
@@ -306,7 +306,7 @@ public class Vue implements Comparable<Vue> {
 	 * RETOURNE LE BOOLEEN 'PHOTO' SOUS FORME DE 'STRING' POUR LES FICHIERS XML.
 	 * 
 	 * @param Aucun.
-	 * @return "1" si l'engin a été photographié le jour de la vue. "0" sinon.
+	 * @return "1" si l'engin a ete photographie le jour de la vue. "0" sinon.
 	 */
 	public String getNomPhoto() {
 		if (photo == false) {
@@ -320,7 +320,7 @@ public class Vue implements Comparable<Vue> {
 	 * MODIFIE LE BOOLEEN 'VIDEO'.
 	 * 
 	 * @param newCabine
-	 *            Nouvelle indication de vidéo de type 'boolean'.
+	 *            Nouvelle indication de video de type 'boolean'.
 	 * @return Aucun.
 	 */
 	public void setVideo(boolean newVideo) {
@@ -331,7 +331,7 @@ public class Vue implements Comparable<Vue> {
 	 * INDIQUE L'ENGIN A ETE FILME LE JOUR DE LA VUE.
 	 * 
 	 * @param Aucun.
-	 * @return cabine 'true' si l'engin a été filmé le jour de la vue. 'false'
+	 * @return cabine 'true' si l'engin a ete filme le jour de la vue. 'false'
 	 *         sinon.
 	 */
 	public boolean getVideo() {
@@ -342,7 +342,7 @@ public class Vue implements Comparable<Vue> {
 	 * RETOURNE LE BOOLEEN 'VIDEO' SOUS FORME DE 'STRING' POUR LES FICHIERS XML.
 	 * 
 	 * @param Aucun.
-	 * @return "1" si l'engin a été filmé le jour de la vue. "0" sinon.
+	 * @return "1" si l'engin a ete filme le jour de la vue. "0" sinon.
 	 */
 	public String getNomVideo() {
 		if (video == false) {
@@ -356,7 +356,7 @@ public class Vue implements Comparable<Vue> {
 	 * PERMET DE SAVOIR SI DEUX OBJETS 'VUE' SONT IDENTIQUES.
 	 * 
 	 * @param v
-	 *            Vue à comparer avec 'this', de type 'Vue'.
+	 *            Vue a comparer avec 'this', de type 'Vue'.
 	 * @return identique 'true' si les deux objets sont identiques. 'false'
 	 *         sinon.
 	 */
@@ -396,10 +396,10 @@ public class Vue implements Comparable<Vue> {
 	 * COMPARE LA DATE DE DEUX VUE.
 	 * 
 	 * @param v
-	 *            Vue dont la date est à comparer avec celle de 'this', de type
+	 *            Vue dont la date est a comparer avec celle de 'this', de type
 	 *            'Vue'.
-	 * @return resultat -1 si 'this' est avant 'v'. 0 si 'this' est à la même
-	 *         date que 'v'. 1 si 'this' est après 'v'.
+	 * @return resultat -1 si 'this' est avant 'v'. 0 si 'this' est a la meme
+	 *         date que 'v'. 1 si 'this' est apres 'v'.
 	 */
 	public int compareTo(Vue v) {
 		int result;

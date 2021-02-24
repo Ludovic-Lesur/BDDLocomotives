@@ -14,8 +14,8 @@ public enum Lieu {
 	AL_G("Gare d'Albi-Ville"),
 	ALE_G("Gare d'Ales"),
 	
-	BRI_G("Gare de Briançon"),
-	BYE_D("Dépôt de Bayonne"),
+	BRI_G("Gare de Briancon"),
+	BYE_D("Depot de Bayonne"),
 	BYE_G("Gare de Bayonne"),
 	
 	CAH_G("Gare de Cahors"),
@@ -24,7 +24,7 @@ public enum Lieu {
 	CDC_G("Gare de Capdenac"),
 	CDC_T("Triage de Capdenac"),
 	CDF_G("Gare de Castelnau-d'Estretefonds"),
-	CLE_D("Dépôt de Clermont-Ferrand"),
+	CLE_D("Depot de Clermont-Ferrand"),
 	CLE_G("Gare de Clermont-Ferrand"),
 	CMX_G("Gare de Carmaux"),
 	CSD_G("Gare de Caussade"),
@@ -33,11 +33,11 @@ public enum Lieu {
 	DEG_G("Gare de Degagnac"),
 	DIP_G("Gare de Dieupentale"),
 	
-	ESE_G("Gare d'Espère-Caillac"),
+	ESE_G("Gare d'Espere-Caillac"),
 	
 	FEN_G("Gare de Fenouillet-Saint-Alban"),
 	
-	GE_D("Dépôt de Grenoble"),
+	GE_D("Depot de Grenoble"),
 	GO_G("Gare de Gourdon"),
 	GO_T("Triage de Gourdon"),
 	GRT_G("Gare de Gramat"),
@@ -48,21 +48,21 @@ public enum Lieu {
 	L590000_PK_555_62("Lieu-dit Le Souc"),
 	L590000_PK_558_20("Lieu-dit Le Marges"),
 	L590000_PK_579_64("Tunnel de Roques"),
-	L590000_PK_592_84("Tunnel de Mercuès"),
+	L590000_PK_592_84("Tunnel de Mercues"),
 	L590000_PK_628_66("Lieu-dit Malminot"),
 	L590000_PK_635_63("Lieu-dit Les Truquets"),
 	L590000_PN_309("PN 309 (Auniac)"),
 	L590000_PN_310("PN 310 (Auniac)"),
 	L590000_PN_311("PN 311 (Gourdon)"),
 	L590000_PN_321("PN 321 (Uzech-les-Oules)"),
-	L650000_PK_4_48("Pont de la Charbonnière"),
-	LD_D("Dépôt de Lourdes"),
+	L650000_PK_4_48("Pont de la Charbonniere"),
+	LD_D("Depot de Lourdes"),
 	LD_G("Gare de Lourdes"),
-	LGE_G("Gare de Labège"),
-	LMF_G("Gare de Lamothe-Fénelon"),
+	LGE_G("Gare de Labege"),
+	LMF_G("Gare de Lamothe-Fenelon"),
 	LNT_G("Gare de Lacourtensourt"),
 	LNQ_G("Gare de Lalbenques-Fontanes"),
-	LS_G("Gare de Limoges-Bénédictins"),
+	LS_G("Gare de Limoges-Benedictins"),
 	LSU_G("Gare de Lisle-sur-Tarn"),
 	LTL_G("Gare de Latour-de-Carol"),	
 	LYD_G("Gare de Lyon Part-Dieu"),
@@ -78,13 +78,13 @@ public enum Lieu {
 	NA_T("Triage de Narbonne"),
 	NEU_G("Gare de Neussargues"),
 	NEU_T("Triage de Neussargues"),
-	NI_RSUD("Rotonde-Sud de Nîmes"),
+	NI_RSUD("Rotonde-Sud de Nimes"),
 	
-	PPN_D("Dépôt de Perpignan"),
+	PPN_D("Depot de Perpignan"),
 	PSS_G("Gare de Portet-Saint-Simon"),
 	
 	RDZ_G("Gare de Rodez"),
-	REA_G("Gare de Réalville"),
+	REA_G("Gare de Realville"),
 	
 	SYH_G("Gare de Saint-Chely-d'Apcher"),
 	SFC_G("Gare de Saint-Flour"),
@@ -92,16 +92,16 @@ public enum Lieu {
 	SJY_T("Triage de Saint-Jory"),
 	SL_G("Gare de Sarlat"),
 	SOU_G("Gare de Souillac"),
-	TDC_G("Gare de Thédirac-Peyrilles"),
+	TDC_G("Gare de Thedirac-Peyrilles"),
 	
 	TE_A("Remise de Toulouse-Acacias"),
-	TE_D("Dépôt de Toulouse"),
+	TE_D("Depot de Toulouse"),
 	TE_E("Rotonde de Toulouse-Etoile"),
 	TE_G("Gare de Toulouse-Matabiau"),
-	TE_P("Ateliers de Toulouse-Périole"),
+	TE_P("Ateliers de Toulouse-Periole"),
 	TE_R("Triage de Toulouse-Raynal"),
-	TEW_G("Gare de Toulouse-Saint-Cyprien-Arènes"),
-	THS_G("Gare de Thuès-les-Bains"),
+	TEW_G("Gare de Toulouse-Saint-Cyprien-Arenes"),
+	THS_G("Gare de Thues-les-Bains"),
 	TRC_G("Gare de Tarascon-sur-Ariege"),
 	TS_G("Gare de Tarbes"),
 	
@@ -109,7 +109,7 @@ public enum Lieu {
 	
 	XAE_G("Gare de Saint-Agne");
 
-	// Attributs de chaque élément de l'énumération.
+	// Attributs de chaque element de l'enumeration.
 	private final String symbol;
 	private final String name;
 
@@ -129,7 +129,7 @@ public enum Lieu {
 	 * RENVOIE LE SYMBOLE DU LIEU.
 	 * 
 	 * @param Aucun.
-	 * @return symbol Symbole du lieu utilisé dans les fichiers XML, de type
+	 * @return symbol Symbole du lieu utilise dans les fichiers XML, de type
 	 *         'String'.
 	 */
 	public String getSymbol() {
@@ -150,9 +150,9 @@ public enum Lieu {
 	 * RENVOIE LE LIEU CORRESPONDANT A UN SYMBOLE DONNE.
 	 * 
 	 * @param pSymbol
-	 *            Symbole recherché de type 'String'.
-	 * @return affectation Lieu associé au symbole si la recherche a donné un
-	 *         résultat. 'Vide' sinon.
+	 *            Symbole recherche de type 'String'.
+	 * @return affectation Lieu associe au symbole si la recherche a donne un
+	 *         resultat. 'Vide' sinon.
 	 */
 	public static Lieu affecter(String pSymbol) {
 		Lieu affectation = Vide;
@@ -187,8 +187,8 @@ public enum Lieu {
 	 * PERMET DE SAVOIR SI DEUX IDENTIFIANTS SONT IDENTIQUES.
 	 * 
 	 * @param l
-	 *            Objet 'Lieu' à comparer avec 'this'.
-	 * @return 'true' si 'this' est égal à 'l'. 'false' sinon.
+	 *            Objet 'Lieu' a comparer avec 'this'.
+	 * @return 'true' si 'this' est egal a 'l'. 'false' sinon.
 	 */
 	public boolean equals(Lieu l) {
 		return (symbol.compareTo(l.getSymbol()) == 0);

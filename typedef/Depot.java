@@ -12,13 +12,13 @@ import java.awt.*;
 public enum Depot {
 
 	Vide("", Color.white),
-	STF_MP("STF Midi-Pyrénées", Color.blue),
+	STF_MP("STF Midi-Pyrenees", Color.blue),
 	STF_AQ("STF Aquitaine", Color.blue),
 	STF_LR("STF Languedoc", Color.blue), 
 	STF_AU("STF Auvergne", Color.blue),
 	STF_LIM("STF Limousin", Color.blue),
 	STF_BFC("STF Bourgogne-F.C.", Color.blue),
-	STF_RHA("STF Rhône-Alpes", Color.blue),
+	STF_RHA("STF Rhone-Alpes", Color.blue),
 	STF_CT("STF Centre-Tours", Color.blue),
 	STF_BR("STF Bretagne",Color.blue),
 	STF_PL("STF Pays de la Loire", Color.blue),
@@ -44,16 +44,16 @@ public enum Depot {
 	LNS("Lens", Color.black),
 	CR("Chambery", Color.black),
 	VSG("Villeneuve-St-G.", Color.black),
-	VSX("Vénissieux", Color.black),
+	VSX("Venissieux", Color.black),
 	MO("Montrouge", Color.black),
 	NV("Nevers", Color.black),
 	CY("Chalindrey", Color.black),
 	LUA("Longueau", Color.black),
-	NI("Nîmes", Color.black),
+	NI("Nimes", Color.black),
 	RES("Rennes", Color.black),
 	SG("Strasbourg", Color.black);
 
-	// Attributs de chaque élément de l'énumération.
+	// Attributs de chaque element de l'enumeration.
 	private final String symbol;
 	private final String name;
 	private final Color couleur;
@@ -62,9 +62,9 @@ public enum Depot {
 	 * CONSTRUCTEUR DE L'ENUMERATION DEPOT.
 	 * 
 	 * @param pName
-	 *            Nom du dépôt de type 'String'.
+	 *            Nom du depot de type 'String'.
 	 * @param pCouleur
-	 *            Code couleur du dépôt pour l'affichage de type 'Color'.
+	 *            Code couleur du depot pour l'affichage de type 'Color'.
 	 * @return Aucun.
 	 */
 	private Depot(String pName, Color pCouleur) {
@@ -77,7 +77,7 @@ public enum Depot {
 	 * RENVOIE LE SYMBOLE DU DEPOT.
 	 * 
 	 * @param Aucun.
-	 * @return symbol Symbole du dépôt utilisé dans les fichiers XML, de
+	 * @return symbol Symbole du depot utilise dans les fichiers XML, de
 	 *         type 'String'.
 	 */
 	public String getSymbol() {
@@ -88,7 +88,7 @@ public enum Depot {
 	 * RENVOIE LE NOM DU DEPOT.
 	 * 
 	 * @param Aucun.
-	 * @return name Nom du dépôt de type 'String'.
+	 * @return name Nom du depot de type 'String'.
 	 */
 	public String getName() {
 		return name;
@@ -98,7 +98,7 @@ public enum Depot {
 	 * RENVOIE LA COULEUR D'AFFICHAGE DU DEPOT.
 	 * 
 	 * @param Aucun.
-	 * @return couleur Couleur du dépôt de type 'Color'.
+	 * @return couleur Couleur du depot de type 'Color'.
 	 */
 	public Color getColor() {
 		return couleur;
@@ -108,9 +108,9 @@ public enum Depot {
 	 * RENVOIE LE DEPOT CORRESPONDANT A UN SYMBOLE DONNE.
 	 * 
 	 * @param pSymbol
-	 *            Symbole recherché de type 'String'.
-	 * @return affectation Dépôt associé au symbole si la recherche a donné un
-	 *         résultat. 'Vide' sinon.
+	 *            Symbole recherche de type 'String'.
+	 * @return affectation Depot associe au symbole si la recherche a donne un
+	 *         resultat. 'Vide' sinon.
 	 */
 	public static Depot affecter(String pSymbol) {
 		Depot affectation = Vide;
@@ -129,7 +129,7 @@ public enum Depot {
 	 * RENVOIE LA LISTE DES ITEMS SAUF VIDE.
 	 * 
 	 * @param Aucun.
-	 * @return resultat Liste des noms de dépôt, de type 'String[]'.
+	 * @return resultat Liste des noms de depot, de type 'String[]'.
 	 */
 	public static String[] getNames() {
 		Depot[] listeDepot = Depot.values();

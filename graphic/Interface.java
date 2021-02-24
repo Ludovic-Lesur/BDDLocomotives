@@ -19,16 +19,16 @@ public class Interface extends JFrame {
 
 	private static final long serialVersionUID = 1L;
 
-	// Apparence commune à tous les éléments graphiques.
-	public final static Font police = new Font("Averia", 1, 10);
+	// Apparence commune a tous les elements graphiques.
+	public final static Font police = new Font("Garamond", 1, 10);
 	public final static int COMBOBOX_HEIGHT = 20;
 
-	// Eléments graphiques.
+	// Elï¿½ments graphiques.
 	private JFrame fenetre;
 	private JPanel panel;
 	private GridBagConstraints gbc;
 	private Parc parcEngins;
-	public static final String dossierData = "C:/Users/Ludovic/Documents/Eclipse/LDBGI/data";
+	public static final String dossierData = "data";
 
 	private RechercheEngin rechercheEngin;
 	private RechercheSerie rechercheSerie;
@@ -40,7 +40,7 @@ public class Interface extends JFrame {
 	 * CONSTRUCTEUR DE LA CLASSE INTERFACE.
 	 * 
 	 * @param pParcEngins
-	 *            Parc d'engins moteurs sur lequel soit être démarée l'interface
+	 *            Parc d'engins moteurs sur lequel soit etre demarre l'interface
 	 *            graphique, de type 'Parc'.
 	 * @return Aucun.
 	 */
@@ -48,9 +48,9 @@ public class Interface extends JFrame {
 
 		parcEngins = pParcEngins;
 
-		// Création de l'interface
+		// Creation de l'interface
 		fenetre = new JFrame();
-		fenetre.setTitle("Base de données Engins Moteurs " + parcEngins.getNom());
+		fenetre.setTitle("Base de donnees Engins Moteurs " + parcEngins.getNom());
 		fenetre.setLocationRelativeTo(null);
 		fenetre.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		fenetre.setExtendedState(JFrame.MAXIMIZED_BOTH);
@@ -62,7 +62,7 @@ public class Interface extends JFrame {
 		gbc = new GridBagConstraints();
 		gbc.insets = new Insets(20, 20, 20, 20);
 
-		// Ajout des éléments
+		// Ajout des elements
 		gbc.anchor = GridBagConstraints.WEST;
 		rechercheSerie = new RechercheSerie(this, panel, gbc, parcEngins);
 		infos = new Infos(panel, gbc);
@@ -87,7 +87,7 @@ public class Interface extends JFrame {
 	 *            Engin moteur dont on doit afficher les informations, de type
 	 *            'Engin'.
 	 * @param remarque
-	 *            Booléen indiquant le mode d'affichage. 'true' = affichage des
+	 *            Booleen indiquant le mode d'affichage. 'true' = affichage des
 	 *            remarques. 'false' = affichage des vues.
 	 * @return Aucun.
 	 */
@@ -105,7 +105,7 @@ public class Interface extends JFrame {
 	 * DEFINIT L'AFFICHAGE GLOBAL POUR UNE SERIE D'ENGINS MOTEURS.
 	 * 
 	 * @param serieTrouvee
-	 *            Série d'engins moteurs dont on doit afficher les informations,
+	 *            Serie d'engins moteurs dont on doit afficher les informations,
 	 *            de type 'Serie'.
 	 * @return Aucun.
 	 */
@@ -158,7 +158,7 @@ public class Interface extends JFrame {
 	 * DEFINIT L'AFFICHAGE GLOBAL POUR LES ANNIVERSAIRES DE MISE EN SERVICE.
 	 * 
 	 * @param date
-	 *            Date de mise en service cherchée, de type 'LocalDate'.
+	 *            Date de mise en service cherchee, de type 'LocalDate'.
 	 * @return Aucun.
 	 */
 	public void afficherAnniversaires(LocalDate date) {
@@ -173,7 +173,7 @@ public class Interface extends JFrame {
 	 * TRANSMETS LA VUE SELECTIONNEE DU TABLEAU A LA CLASSE MODIFICATION.
 	 * 
 	 * @param newVue
-	 *            Objet 'Vue' sélectionné dans le tableau principal.
+	 *            Objet 'Vue' selectionne dans le tableau principal.
 	 * @return Aucun.
 	 */
 	public void setVue(Vue newVue) {
@@ -184,7 +184,7 @@ public class Interface extends JFrame {
 	 * TRANSMETS LA REMARQUE SELECTIONNEE DU TABLEAU A LA CLASSE MODIFICATION.
 	 * 
 	 * @param newRemarque
-	 *            Objet 'Remarque' sélectionné dans le tableau principal.
+	 *            Objet 'Remarque' selectionne dans le tableau principal.
 	 * @return Aucun.
 	 */
 	public void setRemarque(Remarque newRemarque) {
@@ -195,7 +195,7 @@ public class Interface extends JFrame {
 	 * TRANSMETS L'ENGIN MOTEUR SELECTIONNE DU TABLEAU A LA CLASSE MODIFICATION.
 	 * 
 	 * @param newEngin
-	 *            Objet 'Engin' sélectionné dans le tableau principal.
+	 *            Objet 'Engin' selectionne dans le tableau principal.
 	 * @return Aucun.
 	 */
 	public void setEngin(Engin newEngin) {
@@ -206,7 +206,7 @@ public class Interface extends JFrame {
 	 * TRANSMETS LA SERIE SELECTIONNEE DU TABLEAU A LA CLASSE MODIFICATION.
 	 * 
 	 * @param newRemarque
-	 *            Objet 'Serie' sélectionné dans le tableau principal.
+	 *            Objet 'Serie' selectionne dans le tableau principal.
 	 * @return Aucun.
 	 */
 	public void setSerie(Serie newSerie) {
@@ -250,7 +250,7 @@ public class Interface extends JFrame {
 	 * PERMET DE SAVOIR SI UNE LIGNE DU TABLEAU EST SELECTIONNEE.
 	 * 
 	 * @param Aucun.
-	 * @return 'true' si une ligne du tableau a été sélectionnée par un clic
+	 * @return 'true' si une ligne du tableau a ete sï¿½lectionnee par un clic
 	 *         souris. 'false' sinon.
 	 */
 	public boolean rowIsSelected() {
@@ -261,7 +261,7 @@ public class Interface extends JFrame {
 	 * RETOURNE LA DATE DE MISE A JOUR DE LA BASE DE DONNEES.
 	 * 
 	 * @param Aucun.
-	 * @return Date de vue la plus récente de la base de données de type
+	 * @return Date de vue la plus recente de la base de donnees de type
 	 *         'String'.
 	 */
 	public LocalDate getUpdate() {
@@ -283,12 +283,12 @@ public class Interface extends JFrame {
 	 * CONVERTIT UNE DATE EN CHAINE DE CARACTERES.
 	 * 
 	 * @param date
-	 *            Date à convertir de type 'LocalDate'.
+	 *            Date a convertir de type 'LocalDate'.
 	 * @param formatLong
-	 *            Booléen indiquant le format de convertion. 'true' : format
-	 *            long avec jour de la semaine et écriture complète. 'false' :
+	 *            Booleen indiquant le format de convertion. 'true' : format
+	 *            long avec jour de la semaine et ecriture complete. 'false' :
 	 *            format court xx/xx/xxxx.
-	 * @return result Chaine de caractère correspondant à la date.
+	 * @return result Chaine de caractere correspondant a la date.
 	 */
 	public static String dateToString(LocalDate date, boolean formatLong) {
 		String result = "";
@@ -324,7 +324,7 @@ public class Interface extends JFrame {
 	 * @return Aucun.
 	 */
 	public static void main(String[] args) throws IOException, JDOMException {
-		// Création du parc d'engins moteur
+		// Creation du parc d'engins moteur
 		Parc p = new Parc("SNCF");
 		// Lancement de l'interface
 		Interface i = new Interface(p);

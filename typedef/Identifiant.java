@@ -17,7 +17,7 @@ public enum Identifiant {
 	B("B"),
 	Y("Y");
 
-	// Attributs de chaque élément de l'énumération.
+	// Attributs de chaque element de l'enumeration.
 	private final String symbol;
 	private final String name;
 
@@ -37,7 +37,7 @@ public enum Identifiant {
 	 * RENVOIE LE SYMBOLE DE L'IDENTIFIANT.
 	 * 
 	 * @param Aucun.
-	 * @return symbol Symbole de l'identifiant utilisé dans les fichiers XML, de
+	 * @return symbol Symbole de l'identifiant utilise dans les fichiers XML, de
 	 *         type 'String'.
 	 */
 	public String getSymbol() {
@@ -58,9 +58,9 @@ public enum Identifiant {
 	 * RENVOIE L'IDENTIFIANT CORRESPONDANT A UN SYMBOLE DONNE.
 	 * 
 	 * @param pSymbol
-	 *            Symbole recherché de type 'String'.
-	 * @return affectation Identifiant associé au symbole si la recherche a
-	 *         donné un résultat. 'Vide' sinon.
+	 *            Symbole recherche de type 'String'.
+	 * @return affectation Identifiant associe au symbole si la recherche a
+	 *         donne un resultat. 'Vide' sinon.
 	 */
 	public static Identifiant affecter(String pSymbol) {
 		Identifiant affectation = Vide;
@@ -95,8 +95,8 @@ public enum Identifiant {
 	 * PERMET DE SAVOIR SI DEUX IDENTIFIANTS SONT IDENTIQUES.
 	 * 
 	 * @param i
-	 *            Objet 'Identifiant' à comparer avec 'this'.
-	 * @return 'true' si 'this' est égal à 'i'. 'false' sinon.
+	 *            Objet 'Identifiant' a comparer avec 'this'.
+	 * @return 'true' si 'this' est egal a 'i'. 'false' sinon.
 	 */
 	public boolean equals(Identifiant i) {
 		return (symbol.compareTo(i.getSymbol()) == 0);

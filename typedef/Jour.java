@@ -18,7 +18,7 @@ public enum Jour {
 	SAM("Samedi", "SATURDAY"),
 	DIM("Dimanche", "SUNDAY");
 
-	// Attributs de chaque élément de l'énumération.
+	// Attributs de chaque element de l'enumeration.
 	private final String symbol;
 	private final String frenchName;
 	private final String englishName;
@@ -27,7 +27,7 @@ public enum Jour {
 	 * CONSTRUCTEUR DE L'ENUMERATION JOUR.
 	 * 
 	 * @param pFrenchName
-	 *            Nom français du jour de type 'String'.
+	 *            Nom francais du jour de type 'String'.
 	 * @param pEnglishName
 	 *            Nom anglais du jour de type 'String'.
 	 * @return Aucun.
@@ -42,7 +42,7 @@ public enum Jour {
 	 * RENVOIE LE SYMBOLE DU JOUR.
 	 * 
 	 * @param Aucun.
-	 * @return symbol Symbole du jour utilisé dans les fichiers XML, de type
+	 * @return symbol Symbole du jour utilise dans les fichiers XML, de type
 	 *         'String'.
 	 */
 	public String getSymbol() {
@@ -53,7 +53,7 @@ public enum Jour {
 	 * RENVOIE LE NOM FRANCAIS DU JOUR.
 	 * 
 	 * @param Aucun.
-	 * @return frenchName Nom français du jour de type 'String'.
+	 * @return frenchName Nom francais du jour de type 'String'.
 	 */
 	public String getFrenchName() {
 		return frenchName;
@@ -74,9 +74,9 @@ public enum Jour {
 	 * LOCALDATE).
 	 * 
 	 * @param pEnglishName
-	 *            Nom recherché de type 'String'.
-	 * @return affectation Jour associé à 'pEnglishName' si la recherche a donné
-	 *         un résultat. 'Vide' sinon.
+	 *            Nom recherche de type 'String'.
+	 * @return affectation Jour associe a 'pEnglishName' si la recherche a donne
+	 *         un resultat. 'Vide' sinon.
 	 */
 	public static Jour affecter(String pEnglishName) {
 		Jour affectation = Vide;
@@ -95,7 +95,7 @@ public enum Jour {
 	 * RENVOIE LA LISTE DES NUMEROS DE JOURS.
 	 * 
 	 * @param Aucun.
-	 * @return listeJours Liste des numéros de jour de 0 à 31, de type
+	 * @return listeJours Liste des numeros de jour de 0 a 31, de type
 	 *         'String[]'.
 	 */
 	public static String[] getNumJours() {

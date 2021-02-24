@@ -37,18 +37,18 @@ public class FenetreSuppression extends JFrame implements ActionListener {
 	 * CONSTRUCTEUR DE LA CLASSE FENETRESUPPRESSION.
 	 * 
 	 * @param pI
-	 *            Interface graphique mère, de type 'Interface'.
+	 *            Interface graphique mere, de type 'Interface'.
 	 * @param pEngin
 	 *            Engin dont on doit supprimer un attribut (vue ou remarque), de
 	 *            type 'Engin'.
 	 * @param pVue
-	 *            Objet 'Vue' à supprimer si pBoolRemarque = 'false'. 'null'
+	 *            Objet 'Vue' a supprimer si pBoolRemarque = 'false'. 'null'
 	 *            sinon.
 	 * @param pRemarque
-	 *            Objet 'Remarque' à supprimer si pBoolRemarque = 'true'. 'null'
+	 *            Objet 'Remarque' a supprimer si pBoolRemarque = 'true'. 'null'
 	 *            sinon.
 	 * @param pBoolRemarque
-	 *            Booléen indiquant l'attribut à supprimer. 'true' = suppression
+	 *            Booleen indiquant l'attribut a supprimer. 'true' = suppression
 	 *            d'une remarque. 'false' = suppression d'une vue.
 	 * @return Aucun.
 	 */
@@ -60,7 +60,7 @@ public class FenetreSuppression extends JFrame implements ActionListener {
 		remarqueCourante = pRemarque;
 		remarque = pBoolRemarque;
 
-		// Création de l'interface
+		// Creation de l'interface
 		fenetre = new JFrame();
 		if (remarque == false) {
 			fenetre.setTitle("Supprimer vue");
@@ -133,7 +133,7 @@ public class FenetreSuppression extends JFrame implements ActionListener {
 		non.addActionListener(this);
 		panel.add(non, gbc);
 
-		// Affichage de la fenêtre
+		// Affichage de la fenetre
 		fenetre.setContentPane(panel);
 		fenetre.setVisible(true);
 	}
@@ -142,7 +142,7 @@ public class FenetreSuppression extends JFrame implements ActionListener {
 	 * DEFINIT LES ACTIONS DES BOUTONS.
 	 * 
 	 * @param e
-	 *            Evènement déclenché par l'appui sur un bouton.
+	 *            Evenement declenche par l'appui sur un bouton.
 	 * @return Aucun.
 	 */
 	public void actionPerformed(ActionEvent e) {

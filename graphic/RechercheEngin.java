@@ -25,7 +25,7 @@ public class RechercheEngin extends JFrame implements ActionListener, DocumentLi
 	private JPanel panel;
 	private GridBagConstraints gbc;
 
-	// Eléments graphiques.
+	// Elements graphiques.
 	private JLabel titre;
 	private JComboBox<String> choixIdentifiant;
 	private Identifiant identifiantCourant;
@@ -49,11 +49,11 @@ public class RechercheEngin extends JFrame implements ActionListener, DocumentLi
 	 * CONSTRUCTEUR DE LA CLASSE RECHERCHERENGIN.
 	 * 
 	 * @param pI
-	 *            Interface graphique mère, de type 'Interface'.
+	 *            Interface graphique mere, de type 'Interface'.
 	 * @param mainPanel
-	 *            Panel de l'interface graphique mère, de type 'JPanel'.
+	 *            Panel de l'interface graphique mere, de type 'JPanel'.
 	 * @param mainGbc
-	 *            Contraintes de l'interface graphique mère, de type
+	 *            Contraintes de l'interface graphique mere, de type
 	 *            'GridBagConstraints'.
 	 * @param parcEngins
 	 *            Parc d'engins moteurs dans lequel doit s'effectuer les
@@ -144,7 +144,7 @@ public class RechercheEngin extends JFrame implements ActionListener, DocumentLi
 		gbc.gridwidth = 1;
 		gbc.gridx = 1;
 		gbc.gridy = 2;
-		resultat = new JLabel("Aucun résultat.");
+		resultat = new JLabel("Aucun resultat.");
 		resultat.setFont(Interface.police);
 		resultat.setForeground(Color.orange);
 		panel.add(resultat, gbc);
@@ -188,20 +188,20 @@ public class RechercheEngin extends JFrame implements ActionListener, DocumentLi
 	 * RENVOIE L'ENGIN MOTEUR CHERCHE.
 	 * 
 	 * @param Aucun.
-	 * @return enginTrouve Engin moteur trouvé si la recherche a donné un
-	 *         résultat. 'null' sinon.
+	 * @return enginTrouve Engin moteur trouve si la recherche a donne un
+	 *         resultat. 'null' sinon.
 	 */
 	private Engin chercher() {
 		Engin enginTrouve = null;
 		String numCherche = champRecherche.getText();
 		enginTrouve = p.rechercherEngin(identifiantCourant, numCherche);
 		if (enginTrouve == null) {
-			resultat.setText("Aucun résultat.");
+			resultat.setText("Aucun resultat.");
 			resultat.setForeground(Color.orange);
 			precedent.setEnabled(false);
 			suivant.setEnabled(false);
 		} else {
-			resultat.setText("1 résultat.");
+			resultat.setText("1 resultat.");
 			resultat.setForeground(Color.green);
 			checkNumero();
 		}
@@ -218,7 +218,7 @@ public class RechercheEngin extends JFrame implements ActionListener, DocumentLi
 	public void setEnginCourant(Engin newEngin) {
 		if (newEngin != null) {
 			enginCourant = newEngin;
-			// Sélection de l'identifiant.
+			// Selection de l'identifiant.
 			String identifiantCourant = enginCourant.getSerie().getIdentifiant().getName();
 			String[] listeIdentifiants = Identifiant.getNames();
 			int k = 0;
@@ -228,7 +228,7 @@ public class RechercheEngin extends JFrame implements ActionListener, DocumentLi
 				}
 			}
 			choixIdentifiant.setSelectedIndex(k);
-			// Sélection du numéro.
+			// Selection du numero.
 			champRecherche.setText(enginCourant.getNumero());
 			chercher();
 		}
@@ -305,7 +305,7 @@ public class RechercheEngin extends JFrame implements ActionListener, DocumentLi
 	 * DEFINIT LES ACTIONS DES BOUTONS.
 	 * 
 	 * @param e
-	 *            Evènement déclenché par l'appui sur un bouton.
+	 *            Evenement declenche par l'appui sur un bouton.
 	 * @return Aucun.
 	 */
 	public void actionPerformed(ActionEvent e) {
@@ -347,7 +347,7 @@ public class RechercheEngin extends JFrame implements ActionListener, DocumentLi
 	 * FONCTIONS DE VERIFICATION DE SAISIE CLAVIER.
 	 * 
 	 * @param e
-	 *            Evènement déclenché par une saisie clavier.
+	 *            Evenement declenche par une saisie clavier.
 	 * @return Aucun.
 	 */
 	@Override

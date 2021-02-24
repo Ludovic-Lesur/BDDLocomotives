@@ -43,7 +43,7 @@ public class FenetreSerie extends JFrame implements ActionListener, DocumentList
 	 * CONSTRUCTEUR DE LA CLASSE FENETRERESERIE.
 	 * 
 	 * @param pParc
-	 *            Parc d'engin moteurs auquel la série doit être ajoutée, de
+	 *            Parc d'engin moteurs auquel la serie doit etre ajoutee, de
 	 *            type 'Parc'.
 	 * @return Aucun.
 	 */
@@ -52,9 +52,9 @@ public class FenetreSerie extends JFrame implements ActionListener, DocumentList
 		i = pI ;
 		parc = pParc;
 
-		// Création de l'interface
+		// Creation de l'interface
 		fenetre = new JFrame();
-		fenetre.setTitle("Créer série");
+		fenetre.setTitle("Creer serie");
 		fenetre.setSize(350, 220);
 		fenetre.setResizable(false);
 		fenetre.setLocationRelativeTo(null);
@@ -79,7 +79,7 @@ public class FenetreSerie extends JFrame implements ActionListener, DocumentList
 
 		gbc.gridx = 1;
 		gbc.gridy = 0;
-		serie = new JLabel("Série");
+		serie = new JLabel("Serie");
 		serie.setFont(Interface.police);
 		serie.setForeground(Color.yellow);
 		panel.add(serie, gbc);
@@ -118,7 +118,7 @@ public class FenetreSerie extends JFrame implements ActionListener, DocumentList
 		gbc.gridwidth = 3;
 		gbc.gridx = 0;
 		gbc.gridy = 2;
-		appariement = new JCheckBox("Numérotation appariée");
+		appariement = new JCheckBox("Numerotation appariee");
 		appariement.setFont(Interface.police);
 		appariement.addActionListener(this);
 		appariement.setBackground(Color.gray);
@@ -130,7 +130,7 @@ public class FenetreSerie extends JFrame implements ActionListener, DocumentList
 		gbc.gridx = 1;
 		gbc.gridy = 3;
 		ok = new JButton();
-		ok.setText("Créer fichier XML");
+		ok.setText("Creer fichier XML");
 		ok.setFont(Interface.police);
 		ok.setForeground(new Color(100, 200, 0));
 		ok.addActionListener(this);
@@ -145,7 +145,7 @@ public class FenetreSerie extends JFrame implements ActionListener, DocumentList
 		annuler.addActionListener(this);
 		panel.add(annuler, gbc);
 
-		// Affichage de la fenêtre
+		// Affichage de la fenetre
 		fenetre.setContentPane(panel);
 		fenetre.setVisible(true);
 	}
@@ -215,7 +215,7 @@ public class FenetreSerie extends JFrame implements ActionListener, DocumentList
 	 * DEFINIT LES ACTIONS DES BOUTONS.
 	 * 
 	 * @param e
-	 *            Evènement déclenché par l'appui sur un bouton.
+	 *            Evenement declenche par l'appui sur un bouton.
 	 * @return Aucun.
 	 */
 	public void actionPerformed(ActionEvent e) {
@@ -235,7 +235,7 @@ public class FenetreSerie extends JFrame implements ActionListener, DocumentList
 	 * FONCTIONS DE VERIFICATION DE SAISIE CLAVIER.
 	 * 
 	 * @param e
-	 *            Evènement déclenché par une saisie clavier.
+	 *            Evenement declenche par une saisie clavier.
 	 * @return Aucun.
 	 */
 	@Override

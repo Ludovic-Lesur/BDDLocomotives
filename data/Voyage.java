@@ -31,7 +31,7 @@ public class Voyage {
 	 * UNE VUE AVANT MODIFICATION DANS LA CLASSE 'FenetreVue'.
 	 * 
 	 * @param v
-	 *            Voyage à recopier, de type 'Voyage'.
+	 *            Voyage a recopier, de type 'Voyage'.
 	 * @return Aucun.
 	 */
 	public Voyage(Voyage v) {
@@ -43,7 +43,7 @@ public class Voyage {
 	 * MODIFIE LA GARE DE DEPART DU VOYAGE.
 	 * 
 	 * @param newDepart
-	 *            Nouvelle gare de départ de type 'String'. L'association au
+	 *            Nouvelle gare de depart de type 'String'. L'association au
 	 *            type 'Gare' est faite automatiquement.
 	 * @return Aucun.
 	 */
@@ -55,7 +55,7 @@ public class Voyage {
 	 * MODIFIE LA GARE DE DEPART DU VOYAGE.
 	 * 
 	 * @param newDepart
-	 *            Nouvelle gare de départ de type 'Gare'.
+	 *            Nouvelle gare de depart de type 'Gare'.
 	 * @return Aucun.
 	 */
 	public void setDepart(Gare newDepart) {
@@ -66,7 +66,7 @@ public class Voyage {
 	 * RETOURNE LE NOM DE LA GARE DE DEPART.
 	 * 
 	 * @param Aucun.
-	 * @return Nom de la gare de départ de type 'String'.
+	 * @return Nom de la gare de depart de type 'String'.
 	 */
 	public String getNomDepart() {
 		return depart.getName();
@@ -76,7 +76,7 @@ public class Voyage {
 	 * RETOURNE LA GARE DE DEPART.
 	 * 
 	 * @param Aucun.
-	 * @return depart Gare de départ de type 'Gare'.
+	 * @return depart Gare de depart de type 'Gare'.
 	 */
 	public Gare getDepart() {
 		return depart;
@@ -86,7 +86,7 @@ public class Voyage {
 	 * MODIFIE LA GARE D'ARRIVEE DU VOYAGE.
 	 * 
 	 * @param newDepart
-	 *            Nouvelle gare d'arrivée de type 'String'. L'association au
+	 *            Nouvelle gare d'arrivee de type 'String'. L'association au
 	 *            type 'Gare' est faite automatiquement.
 	 * @return Aucun.
 	 */
@@ -98,7 +98,7 @@ public class Voyage {
 	 * MODIFIE LA GARE D'ARRIVEE DU VOYAGE.
 	 * 
 	 * @param newDepart
-	 *            Nouvelle gare d'arrivée de type 'Gare'.
+	 *            Nouvelle gare d'arrivee de type 'Gare'.
 	 * @return Aucun.
 	 */
 	public void setArrivee(Gare newArrivee) {
@@ -109,7 +109,7 @@ public class Voyage {
 	 * RETOURNE LE NOM DE LA GARE D'ARRIVEE.
 	 * 
 	 * @param Aucun.
-	 * @return Nom de la gare d'arrivée de type 'String'.
+	 * @return Nom de la gare d'arrivee de type 'String'.
 	 */
 	public String getNomArrivee() {
 		return arrivee.getName();
@@ -119,7 +119,7 @@ public class Voyage {
 	 * RETOURNE LA GARE D'ARRIVEE.
 	 * 
 	 * @param Aucun.
-	 * @return depart Gare d'arrivée de type 'Gare'.
+	 * @return depart Gare d'arrivee de type 'Gare'.
 	 */
 	public Gare getArrivee() {
 		return arrivee;
@@ -129,7 +129,7 @@ public class Voyage {
 	 * PERMET DE SAVOIR SI DEUX OBJETS 'VOYAGE' SONT IDENTIQUES.
 	 * 
 	 * @param v
-	 *            Voyage à comparer avec 'this', de type 'Voyage'.
+	 *            Voyage a comparer avec 'this', de type 'Voyage'.
 	 * @return identique 'true' si les deux objets sont identiques. 'false'
 	 *         sinon.
 	 */

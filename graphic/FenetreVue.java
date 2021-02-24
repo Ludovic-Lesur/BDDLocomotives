@@ -69,13 +69,13 @@ public class FenetreVue extends JFrame implements ActionListener {
 	 * CONSTRUCTEUR DE LA CLASSE FENETREVUE.
 	 * 
 	 * @param pI
-	 *            Interface graphique mère, de type 'Interface'.
+	 *            Interface graphique mere, de type 'Interface'.
 	 * @param pModif
-	 *            Booléen indiquant si la fenêtre doit s'ouvrir en mode ajout ou
+	 *            Booleen indiquant si la fenetre doit s'ouvrir en mode ajout ou
 	 *            en mode modification. 'true' = modification d'une vue
 	 *            existante. 'false' = ajout d'une nouvelle vue.
 	 * @param pVue
-	 *            Objet 'Vue' à modifier si modif = 'true'. 'null' si modif =
+	 *            Objet 'Vue' a modifier si modif = 'true'. 'null' si modif =
 	 *            'false'.
 	 * @param pEngin
 	 *            Engin moteur dont on doit modifier la vue, de type 'Engin'.
@@ -98,7 +98,7 @@ public class FenetreVue extends JFrame implements ActionListener {
 			newVue = new Vue(pVue);
 		}
 
-		// Création de l'interface
+		// Creation de l'interface
 		fenetre = new JFrame();
 		if (modif == false) {
 			fenetre.setTitle("Ajouter vue");
@@ -220,14 +220,14 @@ public class FenetreVue extends JFrame implements ActionListener {
 		gbc.gridwidth = 2;
 		gbc.gridx = 2;
 		gbc.gridy = 2;
-		depart = new JLabel("Départ");
+		depart = new JLabel("Depart");
 		depart.setFont(Interface.police);
 		depart.setForeground(Color.white);
 		panel.add(depart, gbc);
 
 		gbc.gridx = 4;
 		gbc.gridy = 2;
-		arrivee = new JLabel("Arrivée");
+		arrivee = new JLabel("Arrivee");
 		arrivee.setFont(Interface.police);
 		arrivee.setForeground(Color.white);
 		panel.add(arrivee, gbc);
@@ -296,7 +296,7 @@ public class FenetreVue extends JFrame implements ActionListener {
 		gbc.insets.top = 0;
 		gbc.gridx = 2;
 		gbc.gridy = 6;
-		video = new JCheckBox("Vidéo");
+		video = new JCheckBox("Video");
 		video.setBackground(Color.gray);
 		video.setFont(Interface.police);
 		video.setForeground(Color.white);
@@ -319,7 +319,7 @@ public class FenetreVue extends JFrame implements ActionListener {
 		espace.setForeground(Color.gray);
 		panel.add(espace, gbc);
 
-		// Affichage de la fenêtre
+		// Affichage de la fenetre
 		fenetre.setContentPane(panel);
 		fenetre.setVisible(true);
 	}
@@ -328,10 +328,10 @@ public class FenetreVue extends JFrame implements ActionListener {
 	 * SELECTIONNE L'ITEM CORRECT EN FONCTION DE LA DATE ACTUELLE DE LA VUE.
 	 * 
 	 * @param v
-	 *            Objet 'Vue' à modifier si modif = 'true'. 'null' si modif =
+	 *            Objet 'Vue' a modifier si modif = 'true'. 'null' si modif =
 	 *            'false'.
 	 * @param mode
-	 *            Booléen indiquant si la fenêtre doit s'ouvrir en mode ajout ou
+	 *            Booleen indiquant si la fenetre doit s'ouvrir en mode ajout ou
 	 *            en mode modification. 'true' = modification d'une vue
 	 *            existante. 'false' = ajout d'une nouvelle vue.
 	 * @return Aucun.
@@ -356,10 +356,10 @@ public class FenetreVue extends JFrame implements ActionListener {
 	 * SELECTIONNE LES ITEMS CORRECTS EN FONCTION DU CONTEXTE ACTUEL DE LA VUE.
 	 * 
 	 * @param v
-	 *            Objet 'Vue' à modifier si modif = 'true'. 'null' si modif =
+	 *            Objet 'Vue' a modifier si modif = 'true'. 'null' si modif =
 	 *            'false'.
 	 * @param mode
-	 *            Booléen indiquant si la fenêtre doit s'ouvrir en mode ajout ou
+	 *            Booleen indiquant si la fenetre doit s'ouvrir en mode ajout ou
 	 *            en mode modification. 'true' = modification d'une vue
 	 *            existante. 'false' = ajout d'une nouvelle vue.
 	 * @return Aucun.
@@ -393,10 +393,10 @@ public class FenetreVue extends JFrame implements ActionListener {
 	 * SELECTIONNE L'ITEM CORRECT EN FONCTION DU LIEU ACTUEL DE LA VUE.
 	 * 
 	 * @param v
-	 *            Objet 'Vue' à modifier si modif = 'true'. 'null' si modif =
+	 *            Objet 'Vue' a modifier si modif = 'true'. 'null' si modif =
 	 *            'false'.
 	 * @param mode
-	 *            Booléen indiquant si la fenêtre doit s'ouvrir en mode ajout ou
+	 *            Booleen indiquant si la fenetre doit s'ouvrir en mode ajout ou
 	 *            en mode modification. 'true' = modification d'une vue
 	 *            existante. 'false' = ajout d'une nouvelle vue.
 	 * @return Aucun.
@@ -416,17 +416,17 @@ public class FenetreVue extends JFrame implements ActionListener {
 	 * SELECTIONNE LES ITEMS CORRECTS EN FONCTION DU VOYAGE ACTUEL DE LA VUE.
 	 * 
 	 * @param v
-	 *            Objet 'Vue' à modifier si modif = 'true'. 'null' si modif =
+	 *            Objet 'Vue' a modifier si modif = 'true'. 'null' si modif =
 	 *            'false'.
 	 * @param mode
-	 *            Booléen indiquant si la fenêtre doit s'ouvrir en mode ajout ou
+	 *            Booleen indiquant si la fenetre doit s'ouvrir en mode ajout ou
 	 *            en mode modification. 'true' = modification d'une vue
 	 *            existante. 'false' = ajout d'une nouvelle vue.
 	 * @return Aucun.
 	 */
 	private void selectDepartArrivee(Vue v) {
 		int i = 0;
-		// Départ
+		// Depart
 		for (i = 0; i < choixDepart.getItemCount(); i++) {
 			if (choixDepart.getItemAt(i).compareTo(v.getNomVoyageDepart()) == 0) {
 				choixDepart.setSelectedIndex(i);
@@ -434,7 +434,7 @@ public class FenetreVue extends JFrame implements ActionListener {
 				break;
 			}
 		}
-		// Arrivée
+		// Arrivee
 		for (i = 0; i < choixArrivee.getItemCount(); i++) {
 			if (choixArrivee.getItemAt(i).compareTo(v.getNomVoyageArrivee()) == 0) {
 				choixArrivee.setSelectedIndex(i);
@@ -448,10 +448,10 @@ public class FenetreVue extends JFrame implements ActionListener {
 	 * SELECTIONNE L' ITEM CORRECT EN FONCTION DU TRAIN ACTUEL DE LA VUE.
 	 * 
 	 * @param v
-	 *            Objet 'Vue' à modifier si modif = 'true'. 'null' si modif =
+	 *            Objet 'Vue' a modifier si modif = 'true'. 'null' si modif =
 	 *            'false'.
 	 * @param mode
-	 *            Booléen indiquant si la fenêtre doit s'ouvrir en mode ajout ou
+	 *            Booleen indiquant si la fenetre doit s'ouvrir en mode ajout ou
 	 *            en mode modification. 'true' = modification d'une vue
 	 *            existante. 'false' = ajout d'une nouvelle vue.
 	 * @return Aucun.
@@ -476,10 +476,10 @@ public class FenetreVue extends JFrame implements ActionListener {
 	 * ACTUELLES DE LA VUE.
 	 * 
 	 * @param v
-	 *            Objet 'Vue' à modifier si modif = 'true'. 'null' si modif =
+	 *            Objet 'Vue' a modifier si modif = 'true'. 'null' si modif =
 	 *            'false'.
 	 * @param mode
-	 *            Booléen indiquant si la fenêtre doit s'ouvrir en mode ajout ou
+	 *            Booleen indiquant si la fenetre doit s'ouvrir en mode ajout ou
 	 *            en mode modification. 'true' = modification d'une vue
 	 *            existante. 'false' = ajout d'une nouvelle vue.
 	 * @return Aucun.
@@ -613,7 +613,7 @@ public class FenetreVue extends JFrame implements ActionListener {
 	 * DEFINIT LES ACTIONS DES BOUTONS.
 	 * 
 	 * @param e
-	 *            Evènement déclenché par l'appui sur un bouton.
+	 *            Evenement declenche par l'appui sur un bouton.
 	 * @return Aucun.
 	 */
 	public void actionPerformed(ActionEvent e) {

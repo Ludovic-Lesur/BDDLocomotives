@@ -12,14 +12,14 @@ public enum Gare {
 	Vide(""),
 	
 	AG("Agen"),
-	AMB("Ambérieu"),
+	AMB("Amberieu"),
 	AER("Assier"),
 	AUG("Augsburg"),
 	AV("Avignon"),
 	
 	BLG("Brive-la-Gaillarde"),
 	BLV("Blainville"),
-	BRI("Briançon"),
+	BRI("Briancon"),
 	BYE("Bayonne"),
 	
 	CAH("Cahors"),
@@ -27,7 +27,7 @@ public enum Gare {
 	CMX("Carmaux"),
 	CMS("Clelles-Mens"),
 	CLE("Clermont-Ferrand"),
-	COB("Connerré-Beille"),
+	COB("Connerre-Beille"),
 	
 	DIP("Dieupentale"),
 	
@@ -56,13 +56,13 @@ public enum Gare {
 	MSE("Mulhouse"),
 	
 	NA("Narbonne"),
-	NI("Nîmes"),
+	NI("Nimes"),
 	NEU("Neussargues"),
 	
 	TE("Toulouse"),
 	TS("Tarbes"),
-	TDC("Thédirac-Peyrilles"),
-	THS("Thuès-les-Bains"),
+	TDC("Thedirac-Peyrilles"),
+	THS("Thues-les-Bains"),
 	
 	RDZ("Rodez"),
 	
@@ -71,7 +71,7 @@ public enum Gare {
 	
 	V("Vierzon");
 
-	// Attributs de chaque élément de l'énumération.
+	// Attributs de chaque element de l'enumeration.
 	private final String symbol;
 	private final String name;
 
@@ -91,7 +91,7 @@ public enum Gare {
 	 * RENVOIE LE SYMBOLE DE LA GARE.
 	 * 
 	 * @param Aucun.
-	 * @return symbol Symbole de la gare utilisé dans les fichiers XML, de type
+	 * @return symbol Symbole de la gare utilise dans les fichiers XML, de type
 	 *         'String'.
 	 */
 	public String getSymbol() {
@@ -112,9 +112,9 @@ public enum Gare {
 	 * RENVOIE LA GARE CORRESPONDANT A UN SYMBOLE DONNE.
 	 * 
 	 * @param pSymbol
-	 *            Symbole recherché de type 'String'.
-	 * @return affectation Gare associée au symbole si la recherche a donné un
-	 *         résultat. 'Vide' sinon.
+	 *            Symbole recherche de type 'String'.
+	 * @return affectation Gare associee au symbole si la recherche a donne un
+	 *         resultat. 'Vide' sinon.
 	 */
 	public static Gare affecter(String pSymbol) {
 		Gare affectation = Vide;
@@ -149,8 +149,8 @@ public enum Gare {
 	 * PERMET DE SAVOIR SI DEUX GARES SONT IDENTIQUES.
 	 * 
 	 * @param g
-	 *            Objet 'Gare' à comparer avec 'this'.
-	 * @return 'true' si 'this' est égal à 'g'. 'false' sinon.
+	 *            Objet 'Gare' a comparer avec 'this'.
+	 * @return 'true' si 'this' est egal a 'g'. 'false' sinon.
 	 */
 	public boolean equals(Gare g) {
 		return (symbol.compareTo(g.getSymbol()) == 0);

@@ -12,10 +12,10 @@ public enum Etat {
 	Vide(""),
 	AMES("En attente de mise en service"),
 	ES("En service"),
-	R("Radié"),
-	PR("Préservé");
+	R("Radie"),
+	PR("Preserve");
 
-	// Attributs de chaque élément de l'énumération.
+	// Attributs de chaque element de l'enumeration.
 	private final String symbol;
 	private final String name;
 
@@ -23,7 +23,7 @@ public enum Etat {
 	 * CONSTRUCTEUR DE L'ENUMERATION ETAT.
 	 * 
 	 * @param pName
-	 *            Nom de l'état de type 'String'.
+	 *            Nom de l'etat de type 'String'.
 	 * @return Aucun.
 	 */
 	private Etat(String pName) {
@@ -35,7 +35,7 @@ public enum Etat {
 	 * RENVOIE LE SYMBOLE DE L'ETAT.
 	 * 
 	 * @param Aucun.
-	 * @return symbol Symbole de l'association utilisé dans les fichiers XML, de
+	 * @return symbol Symbole de l'association utilise dans les fichiers XML, de
 	 *         type 'String'.
 	 */
 	public String getSymbol() {
@@ -46,7 +46,7 @@ public enum Etat {
 	 * RENVOIE LE NOM DE L'ETAT.
 	 * 
 	 * @param Aucun.
-	 * @return name Nom de l'état de type 'String'.
+	 * @return name Nom de l'etat de type 'String'.
 	 */
 	public String getName() {
 		return name;
@@ -56,9 +56,9 @@ public enum Etat {
 	 * RENVOIE L'ETAT CORRESPONDANT A UN SYMBOLE DONNE.
 	 * 
 	 * @param pSymbol
-	 *            Symbole recherché de type 'String'.
-	 * @return affectation Etat associé au symbole si la recherche a donné un
-	 *         résultat. 'Vide' sinon.
+	 *            Symbole recherche de type 'String'.
+	 * @return affectation Etat associe au symbole si la recherche a donne un
+	 *         resultat. 'Vide' sinon.
 	 */
 	public static Etat affecter(String pSymbol) {
 		Etat affectation = Vide;

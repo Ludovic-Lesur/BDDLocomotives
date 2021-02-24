@@ -31,7 +31,7 @@ public class Remarque implements Comparable<Remarque> {
 	 * REMARQUE AVANT MODIFICATION DANS LA CLASSE 'FenetreRemarque'.
 	 * 
 	 * @param r
-	 *            Remarque à recopier, de type 'Remarque'.
+	 *            Remarque a recopier, de type 'Remarque'.
 	 * @return Aucun.
 	 */
 	public Remarque(Remarque r) {
@@ -85,7 +85,7 @@ public class Remarque implements Comparable<Remarque> {
 	 * PERMET DE SAVOIR SI DEUX OBJETS 'REMARQUE' SONT IDENTIQUES.
 	 * 
 	 * @param r
-	 *            Remarque à comparer avec 'this', de type 'Remarque'.
+	 *            Remarque a comparer avec 'this', de type 'Remarque'.
 	 * @return identique 'true' si les deux objets sont identiques. 'false'
 	 *         sinon.
 	 */
@@ -105,10 +105,10 @@ public class Remarque implements Comparable<Remarque> {
 	 * COMPARE LA DATE DE DEUX REMARQUES.
 	 * 
 	 * @param r
-	 *            Remarque dont la date est à comparer avec celle de 'this', de
+	 *            Remarque dont la date est a comparer avec celle de 'this', de
 	 *            type 'Remarque'.
-	 * @return resultat -1 si 'this' est avant 'r'. 0 si 'this' est à la même
-	 *         date que 'r'. 1 si 'this' est après 'r'.
+	 * @return resultat -1 si 'this' est avant 'r'. 0 si 'this' est a la meme
+	 *         date que 'r'. 1 si 'this' est apres 'r'.
 	 */
 	public int compareTo(Remarque r) {
 		int resultat;

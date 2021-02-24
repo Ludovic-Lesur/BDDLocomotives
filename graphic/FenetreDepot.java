@@ -37,11 +37,11 @@ public class FenetreDepot extends JFrame implements ActionListener {
 	 * CONSTRUCTEUR DE LA CLASSE FENETREDEPOT.
 	 * 
 	 * @param pI
-	 *            Interface graphique mère, de type 'Interface'.
+	 *            Interface graphique mere, de type 'Interface'.
 	 * @param pEngin
-	 *            Engin moteur dont on doit modifier le dépôt, de type 'Engin'.
+	 *            Engin moteur dont on doit modifier le depot, de type 'Engin'.
 	 * @param pRemarque
-	 *            Booléen indiquant le type de vue actuellement sélectionné.
+	 *            Booleen indiquant le type de vue actuellement selectionne.
 	 *            'true' = affichage des remarques. 'false' = affichage des
 	 *            vues.
 	 * @return Aucun.
@@ -52,9 +52,9 @@ public class FenetreDepot extends JFrame implements ActionListener {
 		remarque = pRemarque;
 		engin = pEngin;
 
-		// Création de l'interface
+		// Creation de l'interface
 		fenetre = new JFrame();
-		fenetre.setTitle("Modifier dépôt");
+		fenetre.setTitle("Modifier depot");
 		fenetre.setSize(250, 200);
 		fenetre.setResizable(false);
 		fenetre.setLocationRelativeTo(null);
@@ -72,7 +72,7 @@ public class FenetreDepot extends JFrame implements ActionListener {
 
 		gbc.gridx = 0;
 		gbc.gridy = 0;
-		depot = new JLabel("Dépôt");
+		depot = new JLabel("Depot");
 		depot.setFont(Interface.police);
 		depot.setForeground(Color.yellow);
 		panel.add(depot, gbc);
@@ -113,7 +113,7 @@ public class FenetreDepot extends JFrame implements ActionListener {
 		annuler.addActionListener(this);
 		panel.add(annuler, gbc);
 
-		// Affichage de la fenêtre
+		// Affichage de la fenetre
 		fenetre.setContentPane(panel);
 		fenetre.setVisible(true);
 	}
@@ -122,7 +122,7 @@ public class FenetreDepot extends JFrame implements ActionListener {
 	 * SELECTIONNE L'ITEM CORRECT EN FONCTION DU DEPOT ACTUEL.
 	 * 
 	 * @param e
-	 *            Engin moteur dont on doit modifier le dépôt, de type 'Engin'.
+	 *            Engin moteur dont on doit modifier le depot, de type 'Engin'.
 	 * @return Aucun.
 	 */
 	private void selectDepot(Engin e) {
@@ -163,7 +163,7 @@ public class FenetreDepot extends JFrame implements ActionListener {
 	 * DEFINIT LES ACTIONS DES BOUTONS.
 	 * 
 	 * @param e
-	 *            Evènement déclenché par l'appui sur un bouton.
+	 *            Evenement declenche par l'appui sur un bouton.
 	 * @return Aucun.
 	 */
 	public void actionPerformed(ActionEvent e) {

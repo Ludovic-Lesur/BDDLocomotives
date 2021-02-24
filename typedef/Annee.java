@@ -11,7 +11,7 @@ import java.time.*;
 
 public class Annee {
 
-	// Années limites proposées dans les listes déroulantes.
+	// Annees limites proposees dans les listes deroulantes.
 	public static final int oldestView = 1994;
 	public static final int oldestRemark = 1900;
 
@@ -19,7 +19,7 @@ public class Annee {
 	 * RENVOIE LA LISTE DES ANNEES POSSIBLES POUR UNE VUE.
 	 * 
 	 * @param Aucun.
-	 * @return resultat Liste des années possibles, de type 'String[]'.
+	 * @return resultat Liste des annees possibles, de type 'String[]'.
 	 */
 	public static String[] getAnneesVue() {
 		int currentYear = LocalDate.now().getYear();
@@ -36,7 +36,7 @@ public class Annee {
 	 * RENVOIE LA LISTE DES ANNEES POSSIBLES POUR UNE REMARQUE.
 	 * 
 	 * @param Aucun.
-	 * @return resultat Liste des années possibles, de type 'String[]'.
+	 * @return resultat Liste des annees possibles, de type 'String[]'.
 	 */
 	public static String[] getAnneesRemarque() {
 		int currentYear = LocalDate.now().getYear();

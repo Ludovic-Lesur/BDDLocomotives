@@ -12,15 +12,15 @@ public enum Train {
 	Vide(""),
 	TER("TER"),
 	RRR("RRR"),
-	IC("Intercité"),
-	LUNEA("Lunéa"),
-	LUNEA_ECO("Lunéa Eco"),
+	IC("Intercite"),
+	LUNEA("Lunea"),
+	LUNEA_ECO("Lunea Eco"),
 	FRET("Fret"),
 	INFRA("Infra"),
 	TM("TM"),
 	HLP("HLP");
 
-	// Attributs de chaque élément de l'énumération.
+	// Attributs de chaque element de l'enumeration.
 	private final String symbol;
 	private final String name;
 
@@ -40,7 +40,7 @@ public enum Train {
 	 * RENVOIE LE SYMBOLE DU TRAIN.
 	 * 
 	 * @param Aucun.
-	 * @return symbol Symbole du train utilisé dans les fichiers XML, de type
+	 * @return symbol Symbole du train utilise dans les fichiers XML, de type
 	 *         'String'.
 	 */
 	public String getSymbol() {
@@ -61,9 +61,9 @@ public enum Train {
 	 * RENVOIE LE TRAIN CORRESPONDANT A UN SYMBOLE DONNE.
 	 * 
 	 * @param pSymbol
-	 *            Symbole recherché de type 'String'.
-	 * @return affectation Train associé au symbole si la recherche a donné un
-	 *         résultat. 'Vide' sinon.
+	 *            Symbole recherche de type 'String'.
+	 * @return affectation Train associe au symbole si la recherche a donne un
+	 *         resultat. 'Vide' sinon.
 	 */
 	public static Train affecter(String pSymbol) {
 		Train affectation = Vide;
@@ -98,8 +98,8 @@ public enum Train {
 	 * PERMET DE SAVOIR SI DEUX TRAINS SONT IDENTIQUES.
 	 * 
 	 * @param t
-	 *            Objet 'Train' à comparer avec 'this'.
-	 * @return 'true' si 'this' est égal à 't'. 'false' sinon.
+	 *            Objet 'Train' a comparer avec 'this'.
+	 * @return 'true' si 'this' est egal a 't'. 'false' sinon.
 	 */
 	public boolean equals(Train t) {
 		return (symbol.compareTo(t.getSymbol()) == 0);

@@ -9,7 +9,7 @@ package typedef;
 
 public class BaliseXML {
 
-	// Balises utilisées dans les fichiers XML.
+	// Balises utilisees dans les fichiers XML.
 
 	public static final String XML_IDENTIFIANT = "identifiant";
 	public static final String XML_SERIE = "serie";
