@@ -31,7 +31,7 @@ public class Engin {
 	// Photo
 	private boolean photo;
 	private String cheminPhoto;
-	public static final String cheminPhotoVide = Parc.dossierParc + "/photos/vide.jpg";
+	public static final String cheminPhotoVide = Parc.dossierParc + "/photos/empty.jpg";
 	// Vues
 	private int nbVues;
 	Vector<Vue> listeVues;

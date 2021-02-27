@@ -23,7 +23,7 @@ public class Interface extends JFrame {
 	public final static Font police = new Font("Garamond", 1, 10);
 	public final static int COMBOBOX_HEIGHT = 20;
 
-	// El�ments graphiques.
+	// Elements graphiques.
 	private JFrame fenetre;
 	private JPanel panel;
 	private GridBagConstraints gbc;
@@ -250,7 +250,7 @@ public class Interface extends JFrame {
 	 * PERMET DE SAVOIR SI UNE LIGNE DU TABLEAU EST SELECTIONNEE.
 	 * 
 	 * @param Aucun.
-	 * @return 'true' si une ligne du tableau a ete s�lectionnee par un clic
+	 * @return 'true' si une ligne du tableau a ete selectionnee par un clic
 	 *         souris. 'false' sinon.
 	 */
 	public boolean rowIsSelected() {
@@ -325,7 +325,7 @@ public class Interface extends JFrame {
 	 */
 	public static void main(String[] args) throws IOException, JDOMException {
 		// Creation du parc d'engins moteur
-		Parc p = new Parc("SNCF");
+		Parc p = new Parc("sncf");
 		// Lancement de l'interface
 		Interface i = new Interface(p);
 		i.setEnableFalse();

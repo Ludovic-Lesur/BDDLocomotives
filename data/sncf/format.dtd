@@ -1,0 +1,30 @@
+<!ELEMENT serieLocos (identifiant, serie, engin+)>
+
+<!ELEMENT identifiant (#PCDATA)>
+<!ELEMENT serie (#PCDATA)>
+<!ELEMENT engin (numero, renumerotation, dateMES, etat, preservation, dateRAD, livree, depot, vue*, remarque*)>
+
+<!ELEMENT renumerotation (#PCDATA)>
+<!ELEMENT numero (#PCDATA)>
+<!ELEMENT dateMES (#PCDATA)>
+<!ELEMENT etat (#PCDATA)>
+<!ELEMENT preservation (#PCDATA)>
+<!ELEMENT dateRAD (#PCDATA)>
+<!ELEMENT livree (#PCDATA)>
+<!ELEMENT depot (#PCDATA)>
+
+<!ELEMENT vue (dateVUE, lieu, voyage, train, cabine, photo, video)>
+<!ELEMENT dateVUE (#PCDATA)>
+<!ELEMENT lieu (#PCDATA)>
+<!ELEMENT voyage (depart, arrivee)>
+<!ELEMENT depart (#PCDATA)>
+<!ELEMENT arrivee (#PCDATA)>
+<!ELEMENT train (#PCDATA)>
+<!ELEMENT cabine (#PCDATA)>
+<!ELEMENT photo (#PCDATA)>
+<!ELEMENT video (#PCDATA)>
+
+<!ELEMENT remarque (dateREM, texte)>
+<!ELEMENT dateREM (#PCDATA)>
+<!ELEMENT texte (#PCDATA)>
+
